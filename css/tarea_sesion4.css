@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+#tab {
+    width: 80%;
+    border: 2px;
+    margin: auto;
+    background: black;
+}
+
+.tabla {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: Bolt;
+}
+
+th {
+    border: 2px;
+    background-color: #275291;
+}
+
+tr:nth-child(even) {
+    background-color: #1c7420;
+}
+
+td:nth-child(body) {
+    background-color: white;
+}
