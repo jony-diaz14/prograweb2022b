@@ -40,9 +40,9 @@
                     <option value="EE"> 50 </option>
                 </select>
 
-                <input type="hidden" name="txtjesus" id="txtjesus" value="Jonathan Diaz" />
+                <input type="hidden" name="txtjesus" id="txtjesus" size="15" value="Jonathan Jesus Diaz Jimenez" />
                 </br> </br>
-                <input type="submit" value=">Enviar estos datos<" />
+                <input type="submit" value=".:Enviar estos datos:." />
             </form>
         </fieldset>
     </div>
