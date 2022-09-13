@@ -34,7 +34,6 @@ $miNombre = $_POST["txtjesus"];
         echo "<br /><br />";
         echo "<h3>Este reto lo programo: " . $miNombre . "</h3>";
         echo "<br />";
-
         ?>
         </table>
         </div>
