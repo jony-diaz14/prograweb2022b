@@ -33,11 +33,11 @@
                 <p>Seleccionar un número: </p>
                 <select id="BoxNumbers" name="BoxNumbers">
                     <option value="0"> --- Selecciona un número --- </option>
-                    <option value="AA"> 10 </option>
-                    <option value="BB"> 20 </option>
-                    <option value="CC"> 30 </option>
-                    <option value="DD"> 40 </option>
-                    <option value="EE"> 50 </option>
+                    <option value="10"> 10 </option>
+                    <option value="20"> 20 </option>
+                    <option value="30"> 30 </option>
+                    <option value="40"> 40 </option>
+                    <option value="50"> 50 </option>
                 </select>
 
                 <input type="hidden" name="txtjesus" id="txtjesus" size="15" value="Jonathan Jesus Diaz Jimenez" />

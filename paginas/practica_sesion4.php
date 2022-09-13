@@ -16,7 +16,6 @@
                 echo "<td align='center'><img src='../imagenes/". $cuad . ".jpg'></td>";
                 echo "</tr>";
 
-
             }
             
             ?>

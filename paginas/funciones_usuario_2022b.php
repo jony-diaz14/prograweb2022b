@@ -12,29 +12,29 @@ $miNombre = $_POST["txtjesus"];
         <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Funcion Usuario Practica Tarea 5</title>
 </head>
 
 <body>
 <div align='center'>
-        <table width = 90% border="1">
+        <table align="center" border="1px" width = 90%>
         <?php
 
-        function Mitabla($num){
+        function CrearTabla($num){
             for ($i = 1; $i <= $num; $i++){
                 echo "<tr>";
-                echo "<td align = 'center'>" . $num . "</td>";
-                echo "<td align = 'center'>" . $num . "</td>";
-                echo "<td align = 'center'>" . $num . "</td>";
+                echo "<td align = 'center' style = 'background-color:#9ad051'>" . $num . "</td>";
+                echo "<th >" . $num . "</td>";
+                echo "<td align = 'center'  style = 'background-color:#9ad051'>" . $num . "</td>";
                 echo "</tr>";
             }
 
         }
-        Mitabla($num);
+        CrearTabla($num);
         echo "<br /><br />";
-        echo "<h3>Este reto lo programo: " . $miNombre . "</h3>";
+        echo "<h3>Este reto de PHP lo programo: " . $miNombre . "</h3>";
         echo "<br />";
-
         ?>
         </table>
         </div>
