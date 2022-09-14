@@ -2,9 +2,10 @@
 <html lang="es">
 
 <head>
+
     <meta charset="utf-8">
     <title>Práctica de la Sesión 5</title>
-
+    
     <script language="javascript">
         function validar_funciones_usuario() {
             //Recuperamos el contenido de la caja de seleccion BoxNumbers para hacer una verificación de que no este 
@@ -21,6 +22,7 @@
     </script>
 
 </head>
+
 
 <body style="background-color:green">
     <div>
