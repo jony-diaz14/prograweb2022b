@@ -1,9 +1,9 @@
 <?php
 // delcaracion de las 4 variables para la conexion de la base de date_offset_get
 $servername = "fdb33.atspace.me";      // *****servidor donde esta la BD
-$username ="3914247_cinepolis";              // *****Usuario para entrar a la BD
+$username ="3914247_prograweb2022";              // *****Usuario para entrar a la BD
 $password ="140120jd";           // *****Contraseña para entrar a la BD
-$BasedeDatos = "3914247_cinepolis";     // ***** Nombre de la BD
+$BasedeDatos = "3914247_prograweb2022";     // ***** Nombre de la BD
 // En un bloque try, escribimos la linea de conexion
 try {
     /*
