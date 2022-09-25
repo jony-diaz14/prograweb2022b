@@ -4,8 +4,8 @@ require_once "conn_mysql2.php";
 $result;
 // Escribimos la consulta para recuperar los registros de la tabla de MySQL
 //$sql = 'SELECT * FROM empleados';
-$sql = 'SELECT E.numero, E.nombre, E.salario, E.categoria, E.sexo, D.descripcion FROM empleados E ';
-$sql2 = $sql . 'INNER JOIN departamentos D ON E.departamento = D.departamento';
+$sql = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera FROM estudiantes E ';
+$sql2 = $sql . 'INNER JOIN carrera C ON E.id_carrera = C.id_carrera';
 // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
 $result = $conn->query($sql2);
 // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
@@ -19,7 +19,7 @@ $rows = $result->fetchAll();
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Reporte de PHP conectado a MySQL</title>
 </head>
 
@@ -31,10 +31,13 @@ $rows = $result->fetchAll();
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Salario</th>
-                    <th>Categoria</th>
-                    <th>Sexo</th>
-                    <th>Departamento</th>
+                    <th>apeido</th>
+                    <th>telefono</th>
+                    <th>fecha de nacimiento</th>
+                    <th>genero</th>
+                    <th>direccion</th>
+                    <th>correo</th>
+                    <th>nombre de la carrera</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,24 +47,25 @@ $rows = $result->fetchAll();
                     //Imprimimos en la página un renglon de tabla HTML por cada registro de tabla de MySQL
                 ?>
                     <tr>
-                        <td><?php echo $row['numero']; ?></td>
+                        <td><?php echo $row['codigo']; ?></td>
                         <td>
-                            <a href="detalle_empleado.php?id=<?php echo $row['numero']; ?>">
-                                <?php echo $row['nombre']; ?>
+                            <a href="detalle_empleado.php?id=<?php echo $row['codigo']; ?>">
+                                <?php echo $row['nombre_estudiante']; ?>
                             </a>
                     </td>
 
-                        <td><?php echo $row['salario']; ?></td>
-                        <td><?php echo $row['categoria']; ?></td>
-                        <td><?php echo $row['sexo']; ?></td>
-                        <td><?php echo $row['descripcion']; ?></td>
+                        <td><?php echo $row['apeido']; ?></td>
+                        <td><?php echo $row['telefono']; ?></td>
+                        <td><?php echo $row['fecha_nac']; ?></td>
+                        <td><?php echo $row['genero']; ?></td>
+                        <td><?php echo $row['direccion']; ?></td>
+                        <td><?php echo $row['correo']; ?></td>
+                        <td><?php echo $row['nombre_carrera']; ?></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
-        <h2>Jonathan Jesus Diaz Jimenez</h2>
     </div>
-
     <?php
     //Cerramos la oonexion a la base de datos 
     $conn = null;
