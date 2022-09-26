@@ -29,12 +29,12 @@ $rows = $result->fetchAll();
         <table border="1" width="90%">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Codigo</th>
                     <th>Nombre</th>
                     <th>apeido</th>
                     <th>telefono</th>
-                    <th>fecha de nacimiento</th>
                     <th>genero</th>
+                    <th>fecha de nacimiento</th>
                     <th>direccion</th>
                     <th>correo</th>
                     <th>nombre de la carrera</th>
@@ -49,15 +49,15 @@ $rows = $result->fetchAll();
                     <tr>
                         <td><?php echo $row['codigo']; ?></td>
                         <td>
-                            <a href="detalle_empleado.php?id=<?php echo $row['codigo']; ?>">
+                            <a href="detalle_registro.php?id=<?php echo $row['codigo']; ?>">
                                 <?php echo $row['nombre_estudiante']; ?>
                             </a>
                     </td>
 
                         <td><?php echo $row['apeido']; ?></td>
                         <td><?php echo $row['telefono']; ?></td>
-                        <td><?php echo $row['fecha_nac']; ?></td>
                         <td><?php echo $row['genero']; ?></td>
+                        <td><?php echo $row['fecha_nac']; ?></td>
                         <td><?php echo $row['direccion']; ?></td>
                         <td><?php echo $row['correo']; ?></td>
                         <td><?php echo $row['nombre_carrera']; ?></td>

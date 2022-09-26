@@ -4,29 +4,29 @@ require_once "conn_mysql2.php";
 $result;
 
 // Recuperamos los valores de los objetos de QUERYSTRING que viene desde la URL mediante GET ******
-$idempleado = $_GET["id"];
+$idestudiante = $_GET["id"];
 
 // Conversión explicita de CARACTER a ENTERO mediante el forzado de (int), 
 // los valores por GET son tipo STRING ************************************************************
-$idempleado = (int)$idempleado; //*****************************************************************
+$idestudiante = (int)$idestudiante; //*****************************************************************
 
 //Verificamos que SI VENGA EL NUMERO DE EMPLEADO **************************************************
-if ($idempleado == "") {
-    header("Location: empleado_no_encontrado.php"); //Este archivo lo tienes que generar 
+if ($idestudiante == "") {
+    header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar 
     exit;
 }
-if (is_null($idempleado)) {
-    header("Location: empleado_no_encontrado.php"); //Este archivo lo tienes que generar //////////
+if (is_null($idestudiante)) {
+    header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar //////////
     exit;
 }
-if (!is_int($idempleado)) {
-    header("Location: empleado_no_encontrado.php"); //Este archivo lo tienes que generar //////////
+if (!is_int($idestudiante)) {
+    header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar //////////
     exit;
 }
 
 // Escribimos la consulta para recuperar el UNICO REGISTRO de MySQL mediante el ID obtenido por _GET
-$sql2 = 'SELECT E.numero, E.nombre, E.salario, E.categoria, E.sexo, D.descripcion FROM empleados E ';
-$sql3 = $sql2 . 'INNER JOIN departamentos D ON E.departamento = D.departamento WHERE E.numero=' . $idempleado;
+$sql = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera FROM estudiantes E ';
+$sql3 = $sql . 'INNER JOIN carrera C ON E.id_carrera = C.id_carrera WHERE E.codigo=' . $idestudiante;
 
 
 // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
@@ -50,12 +50,16 @@ $rows = $result->fetchAll();
         <table border="1" width="90%">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Codigo</th>
                     <th>Nombre</th>
                     <th>Salario</th>
-                    <th>Categoria</th>
-                    <th>Sexo</th>
-                    <th>Departamento</th>
+                    <th>telefono</th>
+                    <th>Genero</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Direccion</th>
+                    <th>Correo</th>
+                    <th>Nombre de la Carrera</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -65,21 +69,25 @@ $rows = $result->fetchAll();
                     //Imprimimos en la página EL UNICO REGISTRO de MySQL en un renglon de HTML
                 ?>
                     <tr>
-                        <td><?php echo $row['numero']; ?></td>
+                        <td><?php echo $row['codigo']; ?></td>
                         <!-- Creamos una celda con un enlace HTML que apunta a otro archivo PHP -->
-                        <td><?php echo $row['nombre']; ?></td>
-                        <td><?php echo $row['salario']; ?></td>
-                        <td><?php echo $row['categoria']; ?></td>
+                        <td><?php echo $row['nombre_estudiante']; ?></td>
+                        <td><?php echo $row['apeido']; ?></td>
+                        <td><?php echo $row['telefono']; ?></td>
                         <?php
-                        $sexo = $row['sexo'];
-                        if ($sexo == "M") {
+                        $genero = $row['genero'];
+                        if ($genero == "M") {
                             $sexo2 = "Masculino";
                         } else {
                             $sexo2 = "Femenino";
                         }
                         ?>
                         <td><?php echo ($sexo2); ?></td>
-                        <td><?php echo $row['descripcion']; ?></td>
+                        <td><?php echo $row['fecha_nac']; ?></td>
+                        <td><?php echo $row['direccion']; ?></td>
+                        <td><?php echo $row['correo']; ?></td>
+                        <td><?php echo $row['nombre_carrera']; ?></td>
+
                     </tr>
                 <?php } ?>
                 <tr>
@@ -92,7 +100,7 @@ $rows = $result->fetchAll();
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td><a href="reporte_con_enlaces_pdo.php">
+                    <td><a href="reporte_general_jonathand.php">
                             <<< --- Regresar al reporte completo (Maestro) </a>
                     </td>
                     <td>&nbsp;</td>
