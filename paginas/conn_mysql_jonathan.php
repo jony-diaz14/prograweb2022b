@@ -15,8 +15,8 @@ try {
     // asignamos los atributos de conexion
     $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // imprimimos en pantalla en caso de que si se pueda conectar a la BD
-    echo "<div align = 'center'><h1>Si me conecte</h1></div>";
-    echo "<div align = 'center'><h3>Jonathan Jesus Diaz Jimenez</h3></div>";
+    //echo "<div align = 'center'><h1>Si me conecte</h1></div>";
+    //echo "<div align = 'center'><h3>Jonathan Jesus Diaz Jimenez</h3></div>";
 } 
 catch (PDOException $e) {
     // Imprimimos en pantalla en caso de que no se pueda conectar a la BD
