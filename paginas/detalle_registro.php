@@ -2,25 +2,22 @@
 // Insertamos el código PHP donde nos conectamos a la base de datos *******************************
 require_once "conn_mysql2.php";
 $result;
-
 // Recuperamos los valores de los objetos de QUERYSTRING que viene desde la URL mediante GET ******
 $idestudiante = $_GET["id"];
-
 // Conversión explicita de CARACTER a ENTERO mediante el forzado de (int), 
-// los valores por GET son tipo STRING ************************************************************
-$idestudiante = (int)$idestudiante; //*****************************************************************
-
-//Verificamos que SI VENGA EL NUMERO DE EMPLEADO **************************************************
+// los valores por GET son tipo STRING 
+$idestudiante = (int)$idestudiante; 
+//Verificamos que SI VENGA el codigo del estudiante 
 if ($idestudiante == "") {
     header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar 
     exit;
 }
 if (is_null($idestudiante)) {
-    header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar //////////
+    header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar 
     exit;
 }
 if (!is_int($idestudiante)) {
-    header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar //////////
+    header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar 
     exit;
 }
 
@@ -52,7 +49,7 @@ $rows = $result->fetchAll();
                 <tr>
                     <th>Codigo</th>
                     <th>Nombre</th>
-                    <th>Salario</th>
+                    <th>Apeido</th>
                     <th>telefono</th>
                     <th>Genero</th>
                     <th>Fecha de Nacimiento</th>
@@ -97,16 +94,22 @@ $rows = $result->fetchAll();
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                     <td><a href="reporte_general_jonathand.php">
-                            <<< --- Regresar al reporte completo (Maestro) </a>
+                            <<< --- Regresar al reporte completo </a>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+
                 </tr>
             </tbody>
         </table>

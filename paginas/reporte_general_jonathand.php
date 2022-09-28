@@ -1,9 +1,8 @@
 <?php
-//Insertamos el código PHP donde nos conectamos a la base de datos *********************
+//Insertamos el código PHP donde nos conectamos a la base de datos 
 require_once "conn_mysql2.php";
 $result;
 // Escribimos la consulta para recuperar los registros de la tabla de MySQL
-//$sql = 'SELECT * FROM empleados';
 $sql = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera FROM estudiantes E ';
 $sql2 = $sql . 'INNER JOIN carrera C ON E.id_carrera = C.id_carrera';
 // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
@@ -13,7 +12,7 @@ $rows = $result->fetchAll();
 // Los valores que tendrá la variable $rows se organizan en un arreglo asociativo
 // (Variable con varias valores)
 // y se usará un ciclo foreach para recuper los valores uno a uno de ese arreglo
-// El resultado se mostrará en una tabla HTML ********************************************
+// El resultado se mostrará en una tabla HTML 
 ?>
 <!doctype html>
 <html>
@@ -29,6 +28,7 @@ $rows = $result->fetchAll();
         <table border="1" width="90%">
             <thead>
                 <tr>
+                    <!-- estos son los titulos de la primera fila de la tabla HTML -->
                     <th>Codigo</th>
                     <th>Nombre</th>
                     <th>apeido</th>
@@ -45,6 +45,7 @@ $rows = $result->fetchAll();
                 <?php
                 foreach ($rows as $row) {
                     //Imprimimos en la página un renglon de tabla HTML por cada registro de tabla de MySQL
+                    //Tenemos que tener mucho cuidado de llamar las tablas con exactamente el mismo nombre de la Base de Datos
                 ?>
                     <tr>
                         <td><?php echo $row['codigo']; ?></td>
@@ -53,7 +54,6 @@ $rows = $result->fetchAll();
                                 <?php echo $row['nombre_estudiante']; ?>
                             </a>
                     </td>
-
                         <td><?php echo $row['apeido']; ?></td>
                         <td><?php echo $row['telefono']; ?></td>
                         <td><?php echo $row['genero']; ?></td>
@@ -67,7 +67,7 @@ $rows = $result->fetchAll();
         </table>
     </div>
     <?php
-    //Cerramos la oonexion a la base de datos 
+    //Cerramos la oonexion a la base de datos, limpiamos memoria
     $conn = null;
     ?>
 
