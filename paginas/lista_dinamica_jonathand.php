@@ -187,8 +187,9 @@ if (empty($rows)) {
 						</div>
 					</form>
 				</fieldset>
-			</div>
+    			</div>
 		</div>
+        <h3 align="center">Jonathan Diaz</h3>
 	</div>
 	<?php
 	//Cerramos la oonexion a la base de datos **********************************************
