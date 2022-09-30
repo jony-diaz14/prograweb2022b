@@ -13,7 +13,6 @@
 
     // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
     $result = $conn->query($sql2);
-      
     // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
     $rows = $result->fetchAll();
     // El resultado se mostrará en la página, en el BODY ***************************************************
@@ -26,7 +25,6 @@
         echo $resultado;
         foreach ($rows as $row) 
 	    {
-           echo '<option value="'.$row['codigo'].'">'.$row['nombre_estudiante'].'</option>';
+            echo '<option value="'.$row['codigo'].'">'.$row['nombre_estudiante'].'</option>';
         }
 	}
-?>
