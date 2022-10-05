@@ -2,14 +2,13 @@
 // Insertamos el código PHP donde nos conectamos a la base de datos *******************************
 require_once "conn_mysql2.php";
 $result = "";
-
-// Escribimos la consulta para recuperar los nom_unis de la tabla nom_unis **************
+// Escribimos la consulta para recuperar los nombres de la universidad de la tabla de carrera 
 $sql = 'SELECT id_carrera,nombre_carrera FROM carrera';
-// Almacenamos los resultados de la consulta en una variable llamada $smtp a partir de la conexión
+// Almacenamos los resultados de la consulta en una variable llamada $smtp
 $stmt = $conn->query($sql);
 // Recuperamos los valores de los registros de la tabla que ya están en la variable $stmt
 $rows = $stmt->fetchAll();
-// Verificamos si está vacia la variable $smtp, si es positivo imprimimos en pantalla que no trae
+// Verificamos si está vacia la variable $smtp, si es positivo imprimimos en pantalla que no trae nada
 if (empty($rows)) {
 	$result = "No se encontraron resultados !!";
 }
@@ -20,9 +19,11 @@ if (empty($rows)) {
 <head>
 	<meta charset="utf-8">
 	<title>Combobox Enlazados con PHP AJAX y MySQL</title>
+	<!-- Aqui mando a llamar el CSS para darle diseño a las cajas y las letras -->
 	<link href="../css/lista_dinamica.css" rel="stylesheet" type="text/css" media="screen">
 
-	<!-- <style type="text/css" media="screen">
+	<!--Esto es para codigo CSS el que le da el diseño pero lo puse en un archivo externo y en la parte de arriba lo mando a llamar
+		<style type="text/css" media="screen">
 		body{
 			background-color: #1535eb;
 		}

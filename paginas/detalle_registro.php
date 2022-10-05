@@ -1,13 +1,13 @@
 <?php
-// Insertamos el código PHP donde nos conectamos a la base de datos *******************************
+// Insertamos el código PHP donde nos conectamos a la base de datos
 require_once "conn_mysql2.php";
 $result;
-// Recuperamos los valores de los objetos de QUERYSTRING que viene desde la URL mediante GET ******
+// Recuperamos los valores de los objetos de QUERYSTRING que viene desde la URL mediante GET y lo almacenamos en una variable
 $idestudiante = $_GET["id"];
-// Conversión explicita de CARACTER a ENTERO mediante el forzado de (int), 
-// los valores por GET son tipo STRING 
+// Conversión de CARACTER a ENTERO mediante el forzado de (int)
+// *los valores por GET son tipo STRING*
 $idestudiante = (int)$idestudiante; 
-//Verificamos que SI VENGA el codigo del estudiante 
+//Verificamos que SI VENGA el codigo del estudiante
 if ($idestudiante == "") {
     header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar 
     exit;
