@@ -20,85 +20,13 @@ if (empty($rows)) {
 <head>
 	<meta charset="utf-8">
 	<title>Combobox Enlazados con PHP AJAX y MySQL</title>
+	<link href="../css/lista_dinamica.css" rel="stylesheet" type="text/css" media="screen">
 
-	<style type="text/css" media="screen">
-		body {
-			background-color: #999;
+	<!-- <style type="text/css" media="screen">
+		body{
+			background-color: #1535eb;
 		}
-
-		#wrapper {
-			margin: auto;
-			width: 960px;
-			height: 500px;
-			background-color: #CCC;
-		}
-
-		#caja1 {
-			width: 300px;
-			height: 50px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #69F;
-			float: left;
-		}
-
-		#caja2 {
-			width: 300px;
-			height: 50px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #F60;
-			float: left;
-		}
-
-		#caja3 {
-			width: 300px;
-			height: 50px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #C99;
-			float: left;
-		}
-
-		#caja4 {
-			width: 940px;
-			height: 350px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 40px;
-			background-color: #FF9;
-			clear: both;
-			/*
-		 position:absolute; 
-		 top:200px;
-		 */
-
-			position: relative;
-			top: 10px;
-		}
-
-		#imagen1 {
-			position: relative;
-			top: 10px;
-			right: -10px;
-		}
-
-		#texto1 {
-			width: 500px;
-			height: 290px;
-			margin-left: 5px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #CCC;
-			padding: 5px;
-			float: right;
-			right: -10px;
-			top: 10px;
-		}
-	</style>
+	</style> -->
 
 	<script language="JavaScript" type="text/javascript">
 		/* Se define la función que se usará para instanciar objetos XMLHttpRequest */
