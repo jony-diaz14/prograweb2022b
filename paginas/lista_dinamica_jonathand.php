@@ -1,9 +1,9 @@
 <?php
 // Insertamos el código PHP donde nos conectamos a la base de datos *******************************
-require_once "conn_mysql2.php";
+require_once "conn_mysql_jonathan.php";
 $result = "";
 // Escribimos la consulta para recuperar los nombres de la universidad de la tabla de carrera 
-$sql = 'SELECT id_carrera,nombre_carrera FROM carrera';
+$sql = 'SELECT * FROM carrera';
 // Almacenamos los resultados de la consulta en una variable llamada $smtp
 $stmt = $conn->query($sql);
 // Recuperamos los valores de los registros de la tabla que ya están en la variable $stmt

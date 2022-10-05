@@ -1,6 +1,6 @@
 <?php
     // Insertamos el código PHP donde nos conectamos a la base de datos
-    require_once "conn_mysql2.php";
+    require_once "conn_mysql_jonathan.php";
     $result;
     // Estas son las opciones que se muestran al principio sin que hayas seleccionado nada aun
 	$resultado = "<option value='0'>Estos son los estudiantes de la carrera</option>";
