@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Validación de Caja de Texto con JavaScript</title>
+<style type="text/css" media="screen">
+
+#contenedor{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#menu{
+	width:18%;
+	float:left;
+	background-color:#6CF;
+	height:150px;;
+	}
+	
+#formulario {
+	width:58%;
+	float:left;
+	background-color:#CCC;
+	margin:5px;
+	}
+	
+#lateral{
+	width:18%;
+	float:left;
+	background-color:#06C;
+	height:150px;
+	}
+
+</style>
+<script language="javascript">
+	  function ValidaFormulario()
+	  { 
+		  //Recuperamos lo escrito en la caja de texto del Nombre:
+		 var valorNombre = document.getElementById("txtnombre").value;
+				
+		 //VALIDACIONES *****************************************************************
+		 //Caja de Texto ****************************************************************
+         if(valorNombre == null || valorNombre.length == 0 || /^\s+$/.test(valorNombre)) 
+		 {
+			 alert("Debes escribir tu nombre completo");
+			 document.getElementById("txtnombre").focus();
+             return false;
+         } 
+			 return true; 
+	 }
+  //-->
+</script>
+</head>
+
+<h2>Formulario para registro de aspirantes a CUValles</h2>
+
+<div id="contenedor">
+<div id="menu">Aqui va el menu de navegación</div>
+<div id="formulario" align="left">
+<form method="post" action="grabar_datos.php" id="formulario_registro" onsubmit="return ValidaFormulario();">
+<fieldset>
+<legend>Datos del aspirante a CUValles :</legend>
+<br />
+
+     Nombre del Aspirante:<input type="text" name="txtnombre" id="txtnombre" size="60">
+  
+<br />
+<br />
+
+     <input type="submit" value="        Grabar Datos        " id="btn_grabar">
+
+<br>
+
+</fieldset>
+</form>
+</div>
+<div id="lateral">Aqui va el lateral</div>
+</div>
+</body>
+</html>

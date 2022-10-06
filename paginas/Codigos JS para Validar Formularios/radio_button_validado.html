@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Validación de Radio Button con JavaScript</title>
+<style type="text/css" media="screen">
+
+#contenedor{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#menu{
+	width:18%;
+	float:left;
+	background-color:#6CF;
+	height:150px;;
+	}
+	
+#formulario {
+	width:58%;
+	float:left;
+	background-color:#CCC;
+	margin:5px;
+	}
+	
+#lateral{
+	width:18%;
+	float:left;
+	background-color:#06C;
+	height:150px;
+	}
+
+</style>
+<script language="javascript">
+  <!--
+	  function ValidaFormulario()
+	  { 
+		 //Recuperamos lo elegido en los radio buttons de la escuela de procedencia
+		 var radios = document.getElementsByName("procedencia");
+		
+         //Validación de los radio button -- Se recorren todos los radios con un FOR
+		 var seleccionado = false;
+		 for(var i=0; i<radios.length; i++) {    
+		    if(radios[i].checked) {
+			   seleccionado = true;
+			   break;
+		    }
+		 }
+		 
+		 //VALIDACIONES *********************************************************************
+		 //Radio Button ****************************************************************
+         if (!seleccionado){
+			 alert("Debes elegir una escuela de procedencia");
+			 document.getElementById("procedencia1").focus();
+             return false;
+         } 
+			 return true; 
+	 }
+  //-->
+</script>
+</head>
+
+<h2>Formulario para registro de aspirantes a CUValles</h2>
+
+<div id="contenedor">
+<div id="menu">Aqui va el menu de navegación</div>
+<div id="formulario" align="left">
+<form method="post" action="grabar_datos.php" id="formulario_registro" onsubmit="return ValidaFormulario();">
+<fieldset>
+<legend>Datos del aspirante a CUValles :</legend>
+<br />
+
+       Escuela de procedencia: <br /><br />
+		 <input type="radio" name="procedencia" value="Prepa Ameca" id="procedencia1">Preparatoria de Ameca
+		<br />
+		 <input type="radio" name="procedencia" value="Prepa Ahualulco" id="procedencia2">Preparatoria de Ahualulco
+		<br />
+		 <input type="radio" name="procedencia" value="CETIs 161" id="procedencia3">CETIs 161 de Tala
+		<br />
+		 <input type="radio" name="procedencia" value="CETIs 63" id="procedencia4">CETIs 63 de Ameca
+		<br />
+		 <input type="radio" name="procedencia" value="COBAEJ de Cuisillos" id="procedencia5">COBAEJ de Cuisillos
+		<br />
+		 <input type="radio" name="procedencia" value="OTRA" id="procedencia6">Otra escuela
+  
+<br />
+<br />
+
+     <input type="submit" value="        Grabar Datos        " id="btn_grabar">
+
+<br>
+
+</fieldset>
+</form>
+</div>
+<div id="lateral">Aqui va el lateral</div>
+</div>
+</body>
+</html>

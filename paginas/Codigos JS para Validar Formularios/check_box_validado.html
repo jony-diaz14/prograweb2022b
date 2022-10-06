@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Validación de Check Box con JavaScript</title>
+<style type="text/css" media="screen">
+
+#contenedor{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#menu{
+	width:18%;
+	float:left;
+	background-color:#6CF;
+	height:150px;;
+	}
+	
+#formulario {
+	width:58%;
+	float:left;
+	background-color:#CCC;
+	margin:5px;
+	}
+	
+#lateral{
+	width:18%;
+	float:left;
+	background-color:#06C;
+	height:150px;
+	}
+
+</style>
+<script language="javascript">
+  <!--
+	  function ValidaFormulario()
+	  { 
+		 //En una variable guardamos el checkbox del formulario, de los días de clases, se selecciona ByName
+         var checkBox = document.getElementsByName("DiadeClases");
+		
+         //Validación de los check box ********* -- Se recorren todos los checkBox con un FOR
+		 var seleccionado2 = false;
+		 for(var b=0; b<checkBox.length; b++) {    
+		    if(checkBox[b].checked) {
+			   seleccionado2 = true;
+			   break;
+		    }
+		 }
+		 
+		 //VALIDACIONES *********************************************************************
+		 //CheckBox        ******************************************************************
+         if (!seleccionado2){
+			 alert("Debes elegir por lo menos un día de la semana de clases");
+			 document.getElementById("DiadeClases1").focus();
+             return false;
+         } 
+			 return true; 
+	 }
+  //-->
+</script>
+</head>
+
+<h2>Formulario para registro de aspirantes a CUValles</h2>
+
+<div id="contenedor">
+<div id="menu">Aqui va el menu de navegación</div>
+<div id="formulario" align="left">
+<form method="post" action="grabar_datos.php" id="formulario_registro" onsubmit="return ValidaFormulario();">
+<fieldset>
+<legend>Datos del aspirante a CUValles :</legend>
+<br />
+
+       Elige cuáles días de la semana te gustaría asistir al CUValles: <br /><br />
+		<input type="checkbox" name="DiadeClases" value="Lunes" id="DiadeClases1">Lunes
+		<br />
+		<input type="checkbox" name="DiadeClases" value="Martes" id="DiadeClases2">Martes
+		<br />
+		<input type="checkbox" name="DiadeClases" value="Miercoles" id="DiadeClases3">Miercoles
+		<br />
+		<input type="checkbox" name="DiadeClases" value="Jueves" id="DiadeClases4">Jueves
+		<br />
+		<input type="checkbox" name="DiadeClases" value="Viernes" id="DiadeClases5">Viernes
+  
+<br />
+<br />
+
+     <input type="submit" value="        Grabar Datos        " id="btn_grabar">
+
+<br>
+
+</fieldset>
+</form>
+</div>
+<div id="lateral">Aqui va el lateral</div>
+</div>
+</body>
+</html>

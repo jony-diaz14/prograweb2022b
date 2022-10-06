@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Validación de Formularios con JavaScript</title>
+<style type="text/css" media="screen">
+
+#contenedor{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#menu{
+	width:18%;
+	float:left;
+	background-color:#6CF;
+	height:900px;;
+	}
+	
+#formulario {
+	width:58%;
+	float:left;
+	background-color:#CCC;
+	margin:5px;
+	}
+	
+#lateral{
+	width:18%;
+	float:left;
+	background-color:#06C;
+	height:900px;
+	}
+
+</style>
+<script language="javascript">
+  <!--
+	  function ValidaFormulario()
+	  {
+		 
+		  //Recuperamos lo escrito en la caha de texto del Nombre:
+		 var valorNombre = document.getElementById("txtnombre").value;
+		 //Recuperamos lo elegido en el combo de las carreras
+		 var carrera = document.getElementById("combo_carreras").selectedIndex;
+		 //Recuperamos lo elegido en los radio buttons de la escuela de procedencia
+		 var radios = document.getElementsByName("procedencia");
+		 //En una variable guardamos el checkbox del formulario, de los días de clases
+         var checkBox = document.getElementsByName("DiadeClases");
+		 
+		 //FALTA POR VALIDAR :::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		 
+		 //Caja de texto de la edad que solamente admita NUMEROS ENTEROS
+		 //Caja de Selección del DIA
+		 //Caja de Selección del MES
+		 //Caja de Selección del AÑO
+		 //Caja de texto del comentario o sugerencia
+		 
+		 //NOTA: Debes de recuperar los valores de caja objeto de formulario que falta por validad y después incorporar su respectivo ELSE IF líneas abajo.
+		 	   
+		 //Validación de los radio button *******************************************
+		 var seleccionado = false;
+		 for(var i=0; i<radios.length; i++) {    
+		    if(radios[i].checked) {
+			   seleccionado = true;
+			   break;
+		    }
+		 }
+		 
+		 //Validación de los check box *********************************************
+		 var seleccionado2 = false;
+		 for(var b=0; b<checkBox.length; b++) {    
+		    if(checkBox[b].checked) {
+			   seleccionado2 = true;
+			   break;
+		    }
+		 }
+				
+		 //VALIDACIONES *****************************************************************
+		 //Caja de Texto ****************************************************************
+         if(valorNombre == null || valorNombre.length == 0 || /^\s+$/.test(valorNombre)) 
+		 {
+			 alert("Debes escribir tu nombre completo");
+			 document.getElementById("txtnombre").focus();
+             return false;
+		 //Caja de Selección (Combo Box) ************************************************ 
+         } else if (carrera == null || carrera == 0){
+			 alert("Debes elegir una carrera");
+			 document.getElementById("combo_carreras").focus();
+             return false;
+		 //Radio Buttons ****************************************************************	 
+         } else if (!seleccionado){
+			 alert("Debes elegir una escuela de procedencia");
+			 document.getElementById("procedencia1").focus();
+             return false;
+         }//Check Box ******************************************************************  
+            else if (!seleccionado2){
+			 alert("Debes elegir por lo menos un día de la semana de clases");
+			 document.getElementById("DiadeClases1").focus();
+             return false;
+           }
+			 return true; 
+		 }
+  //-->
+</script>
+</head>
+
+<h2>Formulario para registro de aspirantes a CUValles</h2>
+
+<div id="contenedor">
+<div id="menu">Aqui va el menu de navegación</div>
+<div id="formulario" align="left">
+<form method="post" action="grabar_datos.php" id="formulario_registro" onsubmit="return ValidaFormulario()">
+<fieldset>
+<legend>Datos del aspirante a CUValles :</legend>
+<br />
+  Nombre del Aspirante:<input type="text" name="txtnombre" id="txtnombre" size="60">
+<br />
+<br />
+
+ Edad del Aspirante: (Solamente se permiten NUMEROS) <input type="text" name="txtedad" id="txtedad" size="22" maxlength="2">
+<br />
+<br />
+
+  Licenciatura a inscribirte:<!-- Caja de Selección o ComboBox -->
+<select name="combo_carreras" id="combo_carreras">
+  <option value="00">-- Selecciona una licenciatura --</option>
+  <option value="Admon">Lic. en Administración</option>
+  <option value="Psic">Lic. en Psicología</option>
+  <option value="TIC">Lic. en Tecnologías de la Información</option>
+  <option value="MECA">Ing. Mecatrónica</option>
+</select>
+ 
+<br />
+<br />
+ Escuela de procedencia: <br /><br />
+ <input type="radio" name="procedencia" value="Prepa Ameca" id="procedencia1">Preparatoria de Ameca
+<br />
+ <input type="radio" name="procedencia" value="Prepa Ahualulco" id="procedencia2">Preparatoria de Ahualulco
+<br />
+ <input type="radio" name="procedencia" value="CETIs 161" id="procedencia3">CETIs 161 de Tala
+<br />
+ <input type="radio" name="procedencia" value="CETIs 63" id="procedencia4">CETIs 63 de Ameca
+<br />
+ <input type="radio" name="procedencia" value="COBAEJ de Cuisillos" id="procedencia5">COBAEJ de Cuisillos
+<br />
+ <input type="radio" name="procedencia" value="OTRA" id="procedencia6">Otra escuela
+<br />
+<br />
+
+FECHA DE REGISTRO
+<br />
+Dia: <!-- Caja de Selección o ComboBox -->
+  <select name="dia" id="dia_del_mes">
+  <option value="00">-- Selecciona el Dia --</option>
+  <option value="01">01</option>
+  <option value="02">02</option>
+  <option value="03">03</option>
+  <option value="04">04</option>
+  <option value="05">05</option>
+  <option value="06">06</option>
+  <option value="07">07</option>
+  <option value="08">08</option>
+  <option value="09">09</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+</select>
+<br />
+<br />
+ 
+  Mes:<!-- Caja de Selección o ComboBox -->
+  <select name="mes" id="mes_elegido">
+  <option value="00">-- Selecciona el Mes --</option>
+  <option value="enero">Enero</option>
+  <option value="febrero">Febrero</option>
+  <option value="marzo">Marzo</option>
+  <option value="abril">Abril</option>
+  <option value="mayo">Mayo</option>
+  <option value="junio">Junio</option>
+  <option value="julio">Julio</option>
+  <option value="agosto">Agosto</option>
+  <option value="septiembre">Septiembre</option>
+  <option value="octubre">Octubre</option>
+  <option value="noviembre">Noviembre</option>
+  <option value="diciembre">Diciembre</option>
+</select>
+<br />
+<br />
+ Año:<!-- Caja de Selección o ComboBox -->
+  <select name="año" id="anio">
+  <option value="00">-- Selecciona el Año --</option>
+  <option value="2015">2015</option>
+  <option value="2016">2016</option>
+  <option value="2017">2017</option>
+  <option value="2018">2018</option>
+  <option value="2019">2019</option>
+  <option value="2020">2020</option>
+</select>
+<br />
+<br />
+Elige cuáles días de la semana te gustaría asistir al CUValles: <br /><br />
+<input type="checkbox" name="DiadeClases" value="Lunes" id="DiadeClases1">Lunes
+<br />
+<input type="checkbox" name="DiadeClases" value="Martes" id="DiadeClases2">Martes
+<br />
+<input type="checkbox" name="DiadeClases" value="Miercoles" id="DiadeClases3">Miercoles
+<br />
+<input type="checkbox" name="DiadeClases" value="Jueves" id="DiadeClases4">Jueves
+<br />
+<input type="checkbox" name="DiadeClases" value="Viernes" id="DiadeClases5">Viernes
+<br />
+<br />
+
+Sugerencias para mejorar este procedimiento de registro vía web:
+<br />
+<br />
+<textarea id="sugerencias" cols="65" rows="10">
+</textarea>
+<br>
+<br>
+<input type="submit" value="        Grabar Datos        " id="btn_grabar">
+
+<br>
+
+</fieldset>
+</form>
+</div>
+<div id="lateral">Aqui va el lateral</div>
+</div>
+</body>
+</html>
