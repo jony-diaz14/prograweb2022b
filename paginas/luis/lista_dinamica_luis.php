@@ -164,7 +164,7 @@ body { background-color:#999;}
                     <p>
                     
                     <label for="comboplatillos">Platillos del restaurante seleccionado:</label>
-                      <select name="comboplatillos" nombre_platillo="comboplatillos">
+                      <select name="comboplatillos" id="comboplatillos">
                        
                       </select>
                     </p>

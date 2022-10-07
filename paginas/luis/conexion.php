@@ -3,7 +3,7 @@
     $servername = "localhost";  // ------ Servidor donde está la BD
     $username = "root";         // ------ Usuario para entrar a la BD
     $password = "";      // ------ Password para entrar a la BD
-	$BasedeDatos = "restaurantes"; // ------ Nombre de tu base de datos
+	$BasedeDatos = "restaurantes2"; // ------ Nombre de tu base de datos
 	
     //En un bloque try - catch escribimos la línea de conexión ************
 	// Los bloques try - catch ya los viste en tus materias de programación
