@@ -15,10 +15,8 @@ $codigo = (int)$codigo;
 $nombre = $_POST["txtnombre"];
 $apeido = $_POST["txtapeido"];
 $telefono = $_POST["txtcel"];
-
 // $fechaNac = $_POS["txtfecha"];
-$fechaNac = $_POS["txtfecha"];
-
+$fechaNac = $_POST["txtfecha"];
 $genero = $_POST["combo_genero"];
 $direccion = $_POST["txtdireccion"];
 $correo = $_POST["txtcorreo"];
@@ -38,7 +36,7 @@ if (empty($rows)) // Si detecta VACIO la consulta de busqueda del ID de empleado
 
 	// existen 2 formas de mandar llamar la insercion de los datos
 	$INSERT1 = "INSERT INTO estudiantes(codigo, nombre, apeido, telefono, fecha_nac,genero, direccion,correo, id_carrera) 
-	VALUES ($codigo, '$nombre', '$apeido', '$telefono', '$sexo', '$carrera')";
+	VALUES ($codigo, '$nombre', '$apeido', '$telefono', '$fechaNac','$direccion','$correo','$carrera')";
 	// Ejecutamos la sentencia INSERT de SQL a partir de la conexión usando PDO 
 	// mediante la propiedad "EXEC" de la linea de conexión *******************
 
@@ -141,7 +139,7 @@ if (empty($rows)) // Si detecta VACIO la consulta de busqueda del ID de empleado
 			top: 10px;
 		}
 
-		#AddEmpleado {
+		#AddEstudiante {
 			position: absolute;
 			right: 50px;
 			border: 3px solid #009;
