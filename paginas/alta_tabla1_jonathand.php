@@ -118,34 +118,34 @@ if (empty($rows)) {
 			//Recuperamos lo elegido en el combo carrera
 			var carrera = document.getElementById("combo_carrera").selectedIndex;
 			//Recuperamos los numeros puestos en el cuadro de codigo
-			var valorCodigo = document.getElementById("txtcodigo").value;
+			var Codigo = document.getElementById("txtcodigo").value;
 			//Recuperamos el nombre
-			var valorNombre = document.getElementById("txtnombre").value;
+			var Nombre = document.getElementById("txtnombre").value;
 		 	//Recuperamos el apeido
-			var valorApeido = document.getElementById("txtapeido").value;
+			var Apeido = document.getElementById("txtapeido").value;
 			//Recuperamos el numero de telefono escrito en la caja de texto
-			var valorTelefono = document.getElementById("txtcel").value;
+			var Telefono = document.getElementById("txtcel").value;
 			//Recuperamos los datos de la fecha de nacimiento
-			var valorFechaNac = document.getElementsByName("fecha_alumno").values;
+			var FechaNac = document.getElementsById("fecha_alumno").value;
 			//Recuperamos lo elegido en el combo de los sexos
 			var genero = document.getElementById("combo_genero").selectedIndex;
             //Recuperamos lo escrito en la caja de la categoría del empleado:
-			var valorDireccion = document.getElementById("txtdireccion").value;
-			var valorCorreo = document.getElementById("txtcorreo").value;
+			var Direccion = document.getElementById("txtdireccion").value;
+			var Correo = document.getElementById("txtcorreo").value;
 			//VALIDACIONES *****************************************************************
 			//Caja de Texto ****************************************************************
-			if (valorCodigo == null || valorCodigo.length == 0 || !/^([0-9])*$/.test(valorCodigo)) {
+			if (Codigo == null || Codigo.length == 0 || !/^([0-9])*$/.test(Codigo)) {
 				alert("Debes escribir el codigo del alumno usando solo números enteros");
 				document.getElementById("txtcodigo").value = "";
 				document.getElementById("txtcodigo").focus();
 				document.getElementById("txtcodigo").style.background="#FC4F2C"
 				return false;
-			} else if (valorNombre == null || valorNombre.length == 0 || /^\s+$/.test(valorNombre)) {
+			} else if (Nombre == null || Nombre.length == 0 || /^\s+$/.test(Nombre)) {
 				alert("Tienes que escribir el nombre del alumno");
 				document.getElementById("txtnombre").focus();
 				document.getElementById("txtnombre").style.background = "#FC4F2C";
 				return false;
-			} else if (valorApeido == null || valorApeido.length == 0 || /^\s+$/.test(valorApeido)) {
+			} else if (Apeido == null || Apeido.length == 0 || /^\s+$/.test(Apeido)) {
 				alert("Tienes que escribir el apeido del alumno");
 				document.getElementById("txtapeido").focus();
 				document.getElementById("txtapeido").style.background = "#FC4F2C";
@@ -156,21 +156,25 @@ if (empty($rows)) {
 				document.getElementById("txtcel").focus();
 				document.getElementById("txtcel").style.background = "#FC4F2C";
 				return false;
-			} else if (valorDireccion == null || valorDireccion.length == 0 || /^\s+$/.test(valorDireccion)) {
+			} else if (Direccion == null || Direccion.length == 0 || /^\s+$/.test(Direccion)) {
 				alert("Debes escribir el salario del empleado utilizando solamente números");
 				document.getElementById("txtcel").value = "";
 				document.getElementById("txtcel").focus();
 				document.getElementById("txtcel").style.background = "#FC4F2C";
 				return false;
-			} else if (valorCorreo == null || valorCorreo.length == 0 || /^\s+$/.test(valorCorreo)) {
+			} else if (Correo == null || Correo.length == 0 || /^\s+$/.test(Correo)) {
 				alert("Debes escribir el salario del empleado utilizando solamente números");
 				document.getElementById("txtcel").value = "";
 				document.getElementById("txtcel").focus();
 				document.getElementById("txtcel").style.background = "#FC4F2C";
 				return false;
-			} else if (valorFechaNac == null || valorFechaNac.length == 0 || /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[1-9]|2[1-9])$/.test(valorFechaNac)) {
+			// } else if (FechaNac == null || FechaNac.length == 0 || /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[1-9]|2[1-9])$/.test(FechaNac)) {
+			// 	alert("Escribe la Fecha (Año/Mes/Dia)");
+			// 	document.getElementById("fecha_alumno").focus();
+			// 	return false;
+			} else if (FechaNac == null || FechaNac.length == 0 || /^\s+$/.test(FechaNac)) {
 				alert("Escribe la Fecha (Año/Mes/Dia)");
-				document.getElementById("txtfechaNac").focus();
+				document.getElementById("txtfecha").focus();
 				return false;
 				//Cajas de Selección (Combo Box) ****************************************************************
 			} else if (genero == null || genero == 0) {
@@ -236,8 +240,9 @@ if (empty($rows)) {
 							<input type="text" name="txtcel" id="txtcel" size="16">
 							<br />
 							<br />
-							Fecha de Nacimiento:
-							<input type="date" name="fecha_alumno" id="fecha_alumno" >
+							Fecha de Nacimiento(año-mes-dia):
+							<!-- <input type="date" name="fecha_alumno" id="fecha_alumno" > -->
+							<input type="text" name="txtfecha" id="txtfecha" size="20">
 							<br />
 							<br />
 							Genero:

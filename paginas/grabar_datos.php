@@ -14,13 +14,17 @@ $codigo = $_POST["txtcodigo"];
 $codigo = (int)$codigo;
 $nombre = $_POST["txtnombre"];
 $apeido = $_POST["txtapeido"];
-
 $telefono = $_POST["txtcel"];
 
+// $fechaNac = $_POS["txtfecha"];
+$fechaNac = $_POS["txtfecha"];
+
 $genero = $_POST["combo_genero"];
+$direccion = $_POST["txtdireccion"];
+$correo = $_POST["txtcorreo"];
 $carrera = $_POST["combo_carrera"];
 
-$sql = "SELECT * FROM estudiantes WHERE codigo=" . $numero;
+$sql = "SELECT * FROM estudiantes WHERE codigo=" . $codigo;
 $result = $conn->query($sql);
 $rows = $result->fetchAll();
 
