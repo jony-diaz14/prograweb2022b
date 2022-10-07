@@ -3,15 +3,24 @@
 require_once "conn_mysql_jonathan.php";
 
 //Recuperamos los valores de las cajas de texto y de los demás objetos de formulario
-$numero = $_POST["txtnumero"];
-$numero = (int)$numero;
-$nombre = strtoupper(trim($_POST["txtnombre"])); //Se convierte a MAYUSCULAS
-$salario = $_POST["txtsalario"];
-$categoria = trim($_POST["txtcategoria"]);
-$sexo = $_POST["combo_sexo"];
-$departamento = $_POST["combo_departamento"];
+// $numero = $_POST["txtnumero"];
+// $numero = (int)$numero;
+// $nombre = strtoupper(trim($_POST["txtnombre"])); //Se convierte a MAYUSCULAS
+// $salario = $_POST["txtsalario"];
+// $categoria = trim($_POST["txtcategoria"]);
+// $sexo = $_POST["combo_sexo"];
+// $departamento = $_POST["combo_departamento"];
+$codigo = $_POST["txtcodigo"];
+$codigo = (int)$codigo;
+$nombre = $_POST["txtnombre"];
+$apeido = $_POST["txtapeido"];
 
-$sql = "SELECT * FROM empleados WHERE numero=" . $numero;
+$telefono = $_POST["txtcel"];
+
+$genero = $_POST["combo_genero"];
+$carrera = $_POST["combo_carrera"];
+
+$sql = "SELECT * FROM estudiantes WHERE codigo=" . $numero;
 $result = $conn->query($sql);
 $rows = $result->fetchAll();
 
@@ -24,13 +33,13 @@ if (empty($rows)) // Si detecta VACIO la consulta de busqueda del ID de empleado
 	// $sqlINSERT2 = $sqlINSERT1 . "VALUES ($numero, '$nombre', $salario, '$categoria', '$sexo', '$departamento')";
 
 	// existen 2 formas de mandar llamar la insercion de los datos
-	$sqlINSERT1 = "INSERT INTO empleados(numero, nombre, salario, categoria, sexo, departamento) 
-	VALUES ($numero, '$nombre', $salario, '$categoria', '$sexo', '$departamento')";
+	$INSERT1 = "INSERT INTO estudiantes(codigo, nombre, apeido, telefono, fecha_nac,genero, direccion,correo, id_carrera) 
+	VALUES ($codigo, '$nombre', '$apeido', '$telefono', '$sexo', '$carrera')";
 	// Ejecutamos la sentencia INSERT de SQL a partir de la conexión usando PDO 
 	// mediante la propiedad "EXEC" de la linea de conexión *******************
 
-	$conn->exec($sqlINSERT1);
-	$mensaje = "EMPLEADO REGISTRADO SATISFACTORIAMENTE";
+	$conn->exec($INSERT1);
+	$mensaje = "ALUMNO REGISTRADO SATISFACTORIAMENTE";
 } else {
 
 	// En caso de que si exista ya capturado ese empleado en la base de datos

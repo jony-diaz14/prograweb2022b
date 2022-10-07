@@ -29,11 +29,13 @@ if (empty($rows)) {
 		#wrapper {
 			margin: auto;
 			width: 960px;
-			height: 550px;
+			height: 630px;
 			background-color: #CCC;
 		}
 
 		#caja1 {
+			font-weight: bold;
+			text-align: center;
 			width: 300px;
 			height: 50px;
 			margin-left: 10px;
@@ -44,6 +46,8 @@ if (empty($rows)) {
 		}
 
 		#caja2 {
+			font-weight: bold;
+			text-align: center;
 			width: 300px;
 			height: 50px;
 			margin-left: 10px;
@@ -54,6 +58,8 @@ if (empty($rows)) {
 		}
 
 		#caja3 {
+			font-weight: bold;
+			text-align: center;
 			width: 300px;
 			height: 50px;
 			margin-left: 10px;
@@ -65,7 +71,7 @@ if (empty($rows)) {
 
 		#caja4 {
 			width: 940px;
-			height: 450px;
+			height: 550PX;
 			margin-left: 10px;
 			margin-right: 10px;
 			margin-top: 40px;
@@ -88,7 +94,7 @@ if (empty($rows)) {
 
 		#texto1 {
 			width: 500px;
-			height: 400px;
+			height: 500PX;
 			margin-left: 5px;
 			margin-right: 10px;
 			margin-top: 10px;
@@ -102,22 +108,24 @@ if (empty($rows)) {
 		#AddEmpleado {
 			position: absolute;
 			right: 50px;
-			border: 3px solid #009;
+			border: 3px solid #5c5c5c;
 			padding: 10px;
 		}
 	</style>
 
 	<script language="javascript">
 		function ValidaFormulario() {
-			//Recuperamos lo elegido en el combo de los departamento
+			//Recuperamos lo elegido en el combo carrera
 			var carrera = document.getElementById("combo_carrera").selectedIndex;
-			//Recuperamos lo escrito en la caja del número de empleado:
+			//Recuperamos los numeros puestos en el cuadro de codigo
 			var valorCodigo = document.getElementById("txtcodigo").value;
-			//Recuperamos lo escrito en la caja del nombre del empleado:
+			//Recuperamos el nombre
 			var valorNombre = document.getElementById("txtnombre").value;
+		 	//Recuperamos el apeido
 			var valorApeido = document.getElementById("txtapeido").value;
-			//Recuperamos lo escrito en la caja del salario del empleado:
+			//Recuperamos el numero de telefono escrito en la caja de texto
 			var valorTelefono = document.getElementById("txtcel").value;
+			//Recuperamos los datos de la fecha de nacimiento
 			var valorFechaNac = document.getElementsByName("fecha_alumno").values;
 			//Recuperamos lo elegido en el combo de los sexos
 			var genero = document.getElementById("combo_genero").selectedIndex;
@@ -153,6 +161,7 @@ if (empty($rows)) {
 				document.getElementById("txtcel").value = "";
 				document.getElementById("txtcel").focus();
 				document.getElementById("txtcel").style.background = "#FC4F2C";
+				return false;
 			} else if (valorCorreo == null || valorCorreo.length == 0 || /^\s+$/.test(valorCorreo)) {
 				alert("Debes escribir el salario del empleado utilizando solamente números");
 				document.getElementById("txtcel").value = "";
@@ -193,14 +202,14 @@ if (empty($rows)) {
 				<p><?php echo $result; ?></p>
 
 				<fieldset style="width: 90%; font-weight: bold;">
-					<legend>REGISTRAR UN NUEVO EMPLEADO</legend>
+					<legend>REGISTRAR UN NUEVO ALUMNO</legend>
 
 
 
-					<form action="grabar_empleado.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
+					<form action="grabar_datos.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
 						<div>
 							<br />
-							<label for="carrera">Departamento:</label>
+							<label for="carrera">Carrera:</label>
 							<select name="combo_carrera" id="combo_carrera">
 								<option value="0">-- Selecciona una Carrera --</option>
 								<?php
@@ -223,7 +232,7 @@ if (empty($rows)) {
 							<input type="text" name="txtapeido" id="txtsalario" size="25">
 							<br />
 							<br />
-							Telefono del alumno(pon tu lada):
+							Telefono del alumno(con lada):
 							<input type="text" name="txtcel" id="txtcel" size="16">
 							<br />
 							<br />
