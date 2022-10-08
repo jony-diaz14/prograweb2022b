@@ -113,78 +113,89 @@ if (empty($rows)) {
 		}
 	</style>
 
-	<script language="javascript">
+<script language="javascript">
 		function ValidaFormulario() {
-			//Recuperamos lo elegido en el combo carrera
+			//Recuperamos lo elegido en el combo de los departamento
 			var carrera = document.getElementById("combo_carrera").selectedIndex;
-			//Recuperamos los numeros puestos en el cuadro de codigo
-			var Codigo = document.getElementById("txtcodigo").value;
-			//Recuperamos el nombre
-			var Nombre = document.getElementById("txtnombre").value;
-			//Recuperamos el apeido
-			var Apeido = document.getElementById("txtapeido").value;
-			//Recuperamos el numero de telefono escrito en la caja de texto
-			var Telefono = document.getElementById("txtcel").value;
-			//Recuperamos los datos de la fecha de nacimiento
-			var FechaNac = document.getElementsById("txtfecha").value;
+			//Recuperamos lo escrito en la caja del número de empleado:
+			var codigo = document.getElementById("txtcodigo").value;
+			//Recuperamos lo escrito en la caja del nombre del empleado:
+			var nombre = document.getElementById("txtnombre").value;
+			//Recuperamos lo escrito en la caja del salario del empleado:
+			var apeido = document.getElementById("txtapeido").value;
+			//Recuperamos lo escrito en la caja de la categoría del empleado:
+			var celular = document.getElementById("txtcel").value;
+			//Fecha de nacimiento
+			var fecha = document.getElementById("txtfecha").value;
 			//Recuperamos lo elegido en el combo de los sexos
 			var genero = document.getElementById("combo_genero").selectedIndex;
-			//Recuperamos lo escrito en la caja de la categoría del empleado:
-			var Direccion = document.getElementById("txtdireccion").value;
-			//Recuperamos el correo del estudiante
-			var Correo = document.getElementById("txtcorreo").value;
+			//Direccion 
+			var direccion = document.getElementById("txtdireccion").value;
+			//Correo
+			var correo = document.getElementById("txtcorreo").value;
+
 			//VALIDACIONES *****************************************************************
 			//Caja de Texto ****************************************************************
-			// if (carrera == null || carrera == 0) {
-			// 	alert("Tienes que elegir una carrera");
-			// 	document.getElementById("combo_carrera").focus();
-			// 	return false;
-			// } else
-			if (Codigo == null || Codigo.length == 0 || !/^([0-9])*$/.test(Codigo)) {
-				alert("Debes escribir el codigo del alumno usando solo números enteros");
+			if (carrera == null || carrera == 0) {
+				alert("Tienes que elegir la carrea");
+				document.getElementById("combo_carrera").focus();
+				document.getElementById("combo_carrera").style.background = "#199C9920";
+				return false;
+			}else if (codigo == null || codigo.length == 0 || !/^([0-9])*$/.test(codigo)) {
+				alert("Tienes que escribir el codigo del alumno usando solo números enteros");
 				document.getElementById("txtcodigo").value = "";
 				document.getElementById("txtcodigo").focus();
-				document.getElementById("txtcodigo").style.background = "#FC4F2C"
+				document.getElementById("txtcodigo").style.background = "#199C9920";
 				return false;
-			// } else if (Nombre == null || Nombre.length == 0 || /^\s+$/.test(Nombre)) {
-			// 	alert("Tienes que escribir el nombre del alumno");
-			// 	document.getElementById("txtnombre").focus();
-			// 	document.getElementById("txtnombre").style.background = "#FC4F2C";
-			// 	return false;
-			// } else if (Apeido == null || Apeido.length == 0 || /^\s+$/.test(Apeido)) {
-			// 	alert("Tienes que escribir el apeido del alumno");
-			// 	document.getElementById("txtapeido").focus();
-			// 	document.getElementById("txtapeido").style.background = "#FC4F2C";
-			// 	return false;
-			// } else if (Telefono == null || Telefono.length == 0 || /^\s+$/.test(Telefono)) {
-			// 	alert("Debes escribir el salario del empleado utilizando solamente números");
-			// 	document.getElementById("txtcel").focus();
-			// 	document.getElementById("txtcel").style.background = "#FC4F2C";
-			// 	return false;
-			// } else if (FechaNac == null || FechaNac.length == 0 || /^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/.test(FechaNac)) {
-			// 	alert("Escribe la Fecha (Año/Mes/Dia)");
-			// 	document.getElementById("txtfecha").focus();
-			// 	document.getElementById("txtcel").style.background = "#FC4F2C";
-			// 	return false;
-			// } else if (genero == null || genero == 0) {
-			// 	alert("tienes que elegir un genero");
-			// 	document.getElementById("combo_genero").focus();
-			// 	return false;
-			// } else if (Direccion == null || Direccion.length == 0 || /^\s+$/.test(Direccion)) {
-			// 	alert("Debes escribir el salario del empleado utilizando solamente números");
-			// 	document.getElementById("txtdireccion").focus();
-			// 	document.getElementById("txtdireccion").style.background = "#FC4F2C";
-			// 	return false;
-			// } else if (Correo == null || Correo.length == 0 || /^\s+$/.test(Correo)) {
-			// 	alert("Debes escribir el salario del empleado utilizando solamente números");
-			// 	document.getElementById("txtcorreo").focus();
-			// 	document.getElementById("txtcorreo").style.background = "#FC4F2C";
-			// 	return false;
-			} //Cuando ya están contestadas todas las cajas de texto y seleccionados los combobox enviamos el form
+			} else if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
+				alert("Escribe el nombre del alumno");
+				document.getElementById("txtnombre").value = "";
+				document.getElementById("txtnombre").focus();
+				document.getElementById("txtnombre").style.background = "#199C9920";
+				return false;
+			} else if (apeido == null || apeido.length == 0 || /^\s+$/.test(apeido)) {
+				alert("Escribe el Apeido del alumno");
+				document.getElementById("txtapeido").value = "";
+				document.getElementById("txtapeido").focus();
+				document.getElementById("txtapeido").style.background = "#199C9920";
+				return false;
+			} else if (celular == null || celular.length == 0 || /^\s+$/.test(celular)) {
+				alert("Escribe el numero de celular del alumno");
+				document.getElementById("txtcel").value = "";
+				document.getElementById("txtcel").focus();
+				document.getElementById("txtcel").style.background = "#199C9920";
+				return false;
+			} else if (fecha == null || fecha.length == 0 || /^\d{4}([\-/.])(0?[1-9]|1[1-2])([\-/.])\1(3[01]|[12][0-9]|0?[1-9])$/.test(fecha)) {
+				alert("Escribe la Fecha (Año/Mes/Dia)");
+				document.getElementById("txtfecha").value = "";
+				document.getElementById("txtfecha").focus();
+				document.getElementById("txtfecha").style.background = "#199C9920";
+				return false;
+			} else if (genero == null || genero == 0) {
+				alert("Elige un genero");
+				document.getElementById("combo_genero").focus();
+				document.getElementById("combo_genero").style.background = "#199C9920";
+				return false;
+			} else if (direccion == null || direccion.length == 0 || /^\s+$/.test(direccion)) {
+				alert("Escribe la direccion");
+				document.getElementById("txtdireccion").value = "";
+				document.getElementById("txtdireccion").focus();
+				document.getElementById("txtdireccion").style.background = "#199C9920";
+				return false;
+			} else if (correo == null || correo.length == 0 || /^\s+$/.test(correo)) {
+				alert("Escribe el correo");
+				document.getElementById("txtcorreo").value = "";
+				document.getElementById("txtcorreo").focus();
+				document.getElementById("txtcorreo").style.background = "#199C9920";
+				return false;
+			}
+			
+			
+			//Cuando ya están contestadas todas las cajas de texto y seleccionados los combobox enviamos el form
 			return true;
 		}
+		//
 	</script>
-
 </head>
 
 <body>
@@ -230,7 +241,7 @@ if (empty($rows)) {
 							<input type="text" name="txtapeido" id="txtapeido" size="25">
 							<br />
 							<br />
-							Telefono del alumno(con lada):
+							Numero de Celular:
 							<input type="text" name="txtcel" id="txtcel" size="16">
 							<br />
 							<br />
@@ -256,7 +267,7 @@ if (empty($rows)) {
 							<input type="text" name="txtcorreo" id="txtcorreo" size="40">
 							<br />
 							<br />
-							<input type="submit" name="AddEstudiante" id="AddEstudiante" value="  Registrar este empleado " />
+							<input type="submit" name="AddEstudiante" id="AddEstudiante" value="  Registrar este Alumno " />
 							<br />
 
 						</div>
