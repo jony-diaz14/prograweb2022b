@@ -56,11 +56,11 @@ if (empty($rows))
 	$nombre = "Ese nombre ya existe";
 	$apeido = "Alguien ya tiene ese apeido";
 	$celular = "Ya esta";
-	$fechaNac = "";
-	$genero = "";
-	$direccion = "";
-	$correo = "";
-	$carrera = "Ya esta";
+	$fechaNac = "Otra vez esa";
+	$genero2 = "terc@ con lo mismo";
+	$direccion = "ya basta!";
+	$correo = "la gente no entiende que ya esta este";
+	$nombre_carrera = "Ya esta";
 
 }
 ?>
