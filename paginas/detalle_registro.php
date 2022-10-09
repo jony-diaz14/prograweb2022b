@@ -39,6 +39,7 @@ $rows = $result->fetchAll();
 <head>
     <meta charset="utf-8">
     <title>Reporte de PHP conectado a MySQL</title>
+    <link href="../css/reporte_general.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>

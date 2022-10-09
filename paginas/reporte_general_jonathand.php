@@ -20,9 +20,12 @@ $rows = $result->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Reporte de PHP conectado a MySQL</title>
+    <link href="../css/reporte_general.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
+<div id="">
+
     <h2>Reporte de la tabla de MySQL en tabla de HTML</h2>
     <div align="center">
         <table border="1" width="90%">
@@ -70,7 +73,11 @@ $rows = $result->fetchAll();
     //Cerramos la oonexion a la base de datos, limpiamos memoria
     $conn = null;
     ?>
-
+    <br />
+	<br />
+	<a href="alta_tabla1_jonathand.php">REGISTRAR ESTUDIANTE</a>
+	<br />
+</div>
 </body>
 
 </html>
