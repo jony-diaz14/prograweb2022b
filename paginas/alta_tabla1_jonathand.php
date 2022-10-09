@@ -20,98 +20,11 @@ if (empty($rows)) {
 <head>
 	<meta charset="utf-8">
 	<title>Regitro de Estudiantes desde PHP hacia MySQL</title>
+	<link href="../css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
 
-	<style type="text/css" media="screen">
-		body {
-			background-color: #999;
-		}
-
-		#wrapper {
-			margin: auto;
-			width: 960px;
-			height: 630px;
-			background-color: #CCC;
-		}
-
-		#caja1 {
-			font-weight: bold;
-			text-align: center;
-			width: 300px;
-			height: 50px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #FFC;
-			float: left;
-		}
-
-		#caja2 {
-			font-weight: bold;
-			text-align: center;
-			width: 300px;
-			height: 50px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #FFC;
-			float: left;
-		}
-
-		#caja3 {
-			font-weight: bold;
-			text-align: center;
-			width: 300px;
-			height: 50px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #FFC;
-			float: left;
-		}
-
-		#caja4 {
-			width: 940px;
-			height: 550PX;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 40px;
-			background-color: #333;
-			clear: both;
-			/*
-		position:absolute; 
-		top:200px;
-		 */
-
-			position: relative;
-			top: 10px;
-		}
-
-		#imagen1 {
-			position: relative;
-			top: 10px;
-			right: -10px;
-		}
-
-		#texto1 {
-			width: 500px;
-			height: 510PX;
-			margin-left: 5px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #CCC;
-			padding: 5px;
-			float: right;
-			right: -10px;
-			top: 10px;
-		}
-
-		#AddEstudiante {
-			position: absolute;
-			right: 50px;
-			border: 3px solid #5c5c5c;
-			padding: 10px;
-		}
-	</style>
+	<!-- <style type="text/css" media="screen">
+		
+	</style> -->
 
 <script language="javascript">
 		function ValidaFormulario() {
@@ -165,7 +78,7 @@ if (empty($rows)) {
 				document.getElementById("txtcel").focus();
 				document.getElementById("txtcel").style.background = "#199C9920";
 				return false;
-			} else if (fecha == null || fecha.length == 0 || /^\d{4}([\-/.])(0?[1-9]|1[1-2])([\-/.])\1(3[01]|[12][0-9]|0?[1-9])$/.test(fecha)) {
+			} else if (fecha == null || fecha.length == 0 || /^\d{4}([\-/.])(0?[1-9]|1[1-2])([\-/.])1(3[01]|[12][0-9]|0?[1-9])$/.test(fecha)) {
 				alert("Escribe la Fecha (Año/Mes/Dia)");
 				document.getElementById("txtfecha").value = "";
 				document.getElementById("txtfecha").focus();
