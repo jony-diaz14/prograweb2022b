@@ -52,7 +52,7 @@ if (empty($rows)) {
 			if (carrera == null || carrera == 0) {
 				alert("Tienes que elegir la carrea");
 				document.getElementById("combo_carrera").focus();
-				document.getElementById("combo_carrera").style.background = "#199C9920";
+				document.getElementById("combo_carrera").style.background = "#bfedbe20";
 				return false;
 			}else if (codigo == null || codigo.length == 0 || !/^([0-9])*$/.test(codigo)) {
 				alert("Tienes que escribir el codigo del alumno usando solo números enteros");
@@ -117,7 +117,7 @@ if (empty($rows)) {
 
 		<div id="caja1">Licenciatura en Tecnologías de la Información</div>
 		<div id="caja2">Programación web</div>
-		<div id="caja3">Formulario para alta de empleados en la base de datos desde una página web</div>
+		<div id="caja3">Formulario para grabar estudiantes en la base de datos desde una página web</div>
 
 		<div id="caja4">
 			<div id="texto1"><br>
@@ -182,11 +182,10 @@ if (empty($rows)) {
 							<br />
 							<input type="submit" name="AddEstudiante" id="AddEstudiante" value="  Registrar este Alumno " />
 							<br />
-							<!-- <a href="../paginas/reporte_general_jonathand.php">Reporte General</a> -->
+							<a href="../paginas/reporte_general_jonathand.php" id="">Reporte General</a>
 						</div>
 					</form>
-					<br />
-					<button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button>
+					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->
 				</fieldset>
 			</div>
 		</div>

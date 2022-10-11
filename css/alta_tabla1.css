@@ -91,20 +91,19 @@ top:200px;
     border: 3px solid #5c5c5c;
     padding: 10px;
 }
-
-button {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    position: absolute;
-    border: 3px solid #5c5c5c;
-    padding: 10px;
-}
-
-a {
+/* a {
     border-radius: 5px;
     padding: 10px 7px;
     text-decoration: none;
     color: #fff;
     background-color: #333;
     margin: 5px;
+} */
+a {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    position: absolute;
+    right: 50px;
+    border: 3px solid #5c5c5c;
+    padding: 10px;
 }
