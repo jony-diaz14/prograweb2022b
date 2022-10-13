@@ -52,54 +52,54 @@ if (empty($rows)) {
 			if (carrera == null || carrera == 0) {
 				alert("Tienes que elegir la carrea");
 				document.getElementById("combo_carrera").focus();
-				document.getElementById("combo_carrera").style.background = "#bfedbe20";
+				document.getElementById("combo_carrera").style.background = "#bd373790";
 				return false;
 			}else if (codigo == null || codigo.length == 0 || !/^([0-9])*$/.test(codigo)) {
 				alert("Tienes que escribir el codigo del alumno usando solo números enteros");
 				document.getElementById("txtcodigo").value = "";
 				document.getElementById("txtcodigo").focus();
-				document.getElementById("txtcodigo").style.background = "#199C9920";
+				document.getElementById("txtcodigo").style.background = "#bd373790";
 				return false;
 			} else if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
 				alert("Escribe el nombre del alumno");
 				document.getElementById("txtnombre").value = "";
 				document.getElementById("txtnombre").focus();
-				document.getElementById("txtnombre").style.background = "#199C9920";
+				document.getElementById("txtnombre").style.background = "#bd373790";
 				return false;
 			} else if (apeido == null || apeido.length == 0 || /^\s+$/.test(apeido)) {
 				alert("Escribe el Apeido del alumno");
 				document.getElementById("txtapeido").value = "";
 				document.getElementById("txtapeido").focus();
-				document.getElementById("txtapeido").style.background = "#199C9920";
+				document.getElementById("txtapeido").style.background = "#bd373790";
 				return false;
 			} else if (celular == null || celular.length == 0 || /^\s+$/.test(celular)) {
 				alert("Escribe el numero de celular del alumno");
 				document.getElementById("txtcel").value = "";
 				document.getElementById("txtcel").focus();
-				document.getElementById("txtcel").style.background = "#199C9920";
+				document.getElementById("txtcel").style.background = "#bd373790";
 				return false;
 			} else if (fecha == null || fecha.length == 0 || /^\d{4}([\-/.])(0?[1-9]|1[1-2])([\-/.])1(3[01]|[12][0-9]|0?[1-9])$/.test(fecha)) {
 				alert("Escribe la Fecha (Año/Mes/Dia)");
 				document.getElementById("txtfecha").value = "";
 				document.getElementById("txtfecha").focus();
-				document.getElementById("txtfecha").style.background = "#199C9920";
+				document.getElementById("txtfecha").style.background = "#bd373790";
 				return false;
 			} else if (genero == null || genero == 0) {
 				alert("Elige un genero");
 				document.getElementById("combo_genero").focus();
-				document.getElementById("combo_genero").style.background = "#199C9920";
+				document.getElementById("combo_genero").style.background = "#bd373790";
 				return false;
 			} else if (direccion == null || direccion.length == 0 || /^\s+$/.test(direccion)) {
 				alert("Escribe la direccion");
 				document.getElementById("txtdireccion").value = "";
 				document.getElementById("txtdireccion").focus();
-				document.getElementById("txtdireccion").style.background = "#199C9920";
+				document.getElementById("txtdireccion").style.background = "#bd373790";
 				return false;
 			} else if (correo == null || correo.length == 0 || /^\s+$/.test(correo)) {
 				alert("Escribe el correo");
 				document.getElementById("txtcorreo").value = "";
 				document.getElementById("txtcorreo").focus();
-				document.getElementById("txtcorreo").style.background = "#199C9920";
+				document.getElementById("txtcorreo").style.background = "#bd373790";
 				return false;
 			}
 			

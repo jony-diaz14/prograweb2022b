@@ -29,8 +29,7 @@ if (empty($rows))
 
 	$conn->exec($INSERT1);
 	$mensaje = "ALUMNO REGISTRADO SATISFACTORIAMENTE";
-	$mensaje = "EMPLEADO REGISTRADO SATISFACTORIAMENTE";
-
+	
 	// Realizamos las operaciones necesarias para NO MOSTRAR el ID del departamento sino
 	// su nombre descriptivo así como el texto descriptivo del SEXO en lugar de 1 letra
 	$sql2 = "SELECT * FROM carrera WHERE id_carrera='" . $carrera . "'";
