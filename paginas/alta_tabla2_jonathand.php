@@ -101,7 +101,7 @@ if (empty($rows)) {
 				document.getElementById("txtcorreo").focus();
 				document.getElementById("txtcorreo").style.background = "#bd373790";
 				return false;
-			}
+			}//wenoo
 			
 			//Cuando ya están contestadas todas las cajas de texto y seleccionados los combobox enviamos el form
 			return true;
