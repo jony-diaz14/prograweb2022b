@@ -2,7 +2,6 @@
 // Insertamos el código PHP donde nos conectamos a la base de datos *******************************
 require_once "conn_mysql_jonathan.php";
 $result = "";
-
 // Escribimos la consulta para recuperar los departamentos de la tabla departamentos **************
 $sql = 'SELECT id_carrera,nombre_carrera FROM carrera';
 // Almacenamos los resultados de la consulta en una variable llamada $smtp a partir de la conexión
@@ -101,7 +100,7 @@ if (empty($rows)) {
 				document.getElementById("txtcorreo").focus();
 				document.getElementById("txtcorreo").style.background = "#bd373790";
 				return false;
-			}//wenoo
+			}
 			
 			//Cuando ya están contestadas todas las cajas de texto y seleccionados los combobox enviamos el form
 			return true;
@@ -157,9 +156,9 @@ if (empty($rows)) {
 							<input type="text" name="txtcel" id="txtcel" size="16">
 							<br />
 							<br />
-							Fecha de Nacimiento(año/mes/dia):
+							Fecha de Nacimiento:
 							<!-- <input type="date" name="fecha_alumno" id="fecha_alumno" > -->
-							<input type="text" name="txtfecha" id="txtfecha" size="20">
+							<input type="date" name="txtfecha" id="txtfecha" value="2000-01-01" />
 							<br />
 							<br />
 							Genero:
@@ -176,12 +175,14 @@ if (empty($rows)) {
 							<br />
 							<br />
 							Correo del Alumno:
-							<input type="mail" name="txtcorreo" id="txtcorreo" size="40">
+							<input type="mail" name="txtcorreo" id="txtcorreo" size="40" placeholder="example@gmail.com">
 							<br />
 							<br />
 							<input type="submit" name="AddEstudiante" id="AddEstudiante" value="  Registrar este Alumno " />
 							<br />
-							<a href="../paginas/reporte_general_jonathand.php" id="">Reporte General</a>
+							<a href="reporte_general_jonathand2.php" id="">Reporte General Alumnos</a>
+							<br />
+							<a href="reporte_general_jonathand1.php" id="">Reporte General Carrera</a>
 						</div>
 					</form>
 					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->

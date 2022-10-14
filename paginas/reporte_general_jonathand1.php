@@ -1,6 +1,8 @@
 <?php
+//ESTE REPORTE ES PARA LA TABLA CATALOGO-CARRERA
+
 //Insertamos el código PHP donde nos conectamos a la base de datos 
-require_once "conn_mysql2.php";
+require_once "conn_mysql_jonathan.php";
 $result;
 // Escribimos la consulta para recuperar los registros de la tabla de MySQL
 $sql = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera FROM estudiantes E ';
