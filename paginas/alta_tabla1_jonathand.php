@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Regitro de Estudiantes desde PHP hacia MySQL</title>
+	<title>Regitro de Carreras desde PHP hacia MySQL</title>
 	<link href="../css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
 
 	<!-- <style type="text/css" media="screen">
@@ -72,9 +72,6 @@
 
 				<fieldset style="width: 90%; font-weight: bold;">
 					<legend>REGISTRAR UNA NUEVA CARRERA</legend>
-
-
-
 					<form action="grabar_datos.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
 						<div>
 							<br />
@@ -90,13 +87,30 @@
 							<input type="text" name="txtcordi" id="txtcordi" size="25">
 							<br />
 							<br />
-							Numero de Celular:
-							<input type="text" name="txtcel" id="txtcel" size="16">
+							<label for="carrera">Nombre de la Universidad:</label>
+							<select name="combo_uni" id="combo_uni">
+							<option value="0">-- Selecciona una Universidad --</option>
+							<option value="1">CUVALLES</option>
+							<option value="2">CUCSUR</option>
+							<option value="3">CUNORTE</option>
+							<option value="4">CUCOSTA</option>
+							<option value="5">CUTONALA</option>
+							<option value="6">CUALTOS</option>
+							<option value="7">CUAAD</option>
+							<option value="8">UCBA</option>
+							<option value="9">CUCS</option>
+							<option value="10">CUCSH</option>
+							<option value="10">CUCEI</option>
+							<option value="10">CUCEA</option>
+
+							</select>
 							<br />
 							<br />
-							<input type="submit" name="AddCarrera" id="AddEstudiante" value="  Registrar esta Carrera " />
+							<input type="submit" name="AddCarrera" id="AddCarrera" value="  Registrar esta Carrera " />
 							<br />
-							<a href="../paginas/reporte_general_jonathand.php" id="">Reporte General de Carreras</a>
+							<a href="../paginas/reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+							<br />
+							<a href="../paginas/reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
 						</div>
 					</form>
 					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->

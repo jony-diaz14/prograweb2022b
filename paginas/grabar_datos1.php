@@ -1,4 +1,5 @@
 <?php
+//ESTA PAGINA GRABA LOS DATOS DE LA TABLA CATALOGO-CARRERA
 // Insertamos el código PHP donde nos conectamos a la base de datos 
 require_once "conn_mysql_jonathan.php";
 
@@ -8,6 +9,7 @@ $codigo = (int)$codigo;
 $nombre = $_POST["txtnombre"];
 $apeido = $_POST["txtapeido"];
 $celular = $_POST["txtcel"];
+$celular = (int)$celular;
 $fechaNac = $_POST["txtfecha"];
 $genero = $_POST["combo_genero"];
 $direccion = $_POST["txtdireccion"];
@@ -23,7 +25,7 @@ if (empty($rows))
 	// Escribimos la consulta para INSERTAR LOS DATOS EN LA TABLA de Estudiantes (PDO)
 	// Podemos escribir la insercion de datos en una sola, o podemos concatenarla y asi armar dos $INSERT
 	$INSERT1 = "INSERT INTO estudiantes(codigo, nombre_estudiante, apeido, telefono, fecha_nac, genero, direccion,correo, id_carrera) 
-	VALUES ($codigo, '$nombre', '$apeido', '$celular', '$fechaNac', '$genero','$direccion','$correo',$carrera)";
+	VALUES ($codigo, '$nombre', '$apeido', $celular, '$fechaNac', '$genero','$direccion','$correo',$carrera)";
 	// Ejecutamos la sentencia INSERT de SQL a partir de la conexión usando PDO 
 	// mediante la propiedad "EXEC" de la linea de conexión
 
@@ -68,7 +70,7 @@ if (empty($rows))
 
 <head>
 	<meta charset="utf-8">
-	<title>Regitro de empleados desde PHP hacia MySQL</title>
+	<title>Regitro de Estudaintes desde PHP hacia MySQL</title>
 	<link href="../css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
 
 </head>
@@ -79,7 +81,7 @@ if (empty($rows))
 
 		<div id="caja1">Licenciatura en Tecnologías de la Información</div>
 		<div id="caja2">Programación web</div>
-		<div id="caja3">Formulario para alta de empleados en la base de datos desde una página web</div>
+		<div id="caja3">Formulario para alta de estudiantes en la base de datos desde una página web</div>
 
 		<div id="caja4">
 			<div id="texto1"><br>
@@ -116,7 +118,7 @@ if (empty($rows))
 						<b>Correo del alumno:</b> <?php echo ($correo); ?>
 						<br />
 						<br />
-						<a href="alta_tabla1_jonathand.php">REGISTRAR OTRO ESTUDIANTE</a>
+						<a href="alta_tabla2_jonathand.php">REGISTRAR OTRO ESTUDIANTE</a>
 						<br />
 						<br />
 						<a href="reporte_general_jonathand.php">REPORTE DE LOS ESTUDIANTES</a>
