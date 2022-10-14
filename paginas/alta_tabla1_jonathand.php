@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Regitro de Carreras desde PHP hacia MySQL</title>
-	<link href="/css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
 
 	<!-- <style type="text/css" media="screen">
 		
@@ -68,8 +68,6 @@
 
 		<div id="caja4">
 			<div id="texto1"><br>
-				<p><?php echo $result; ?></p>
-
 				<fieldset style="width: 90%; font-weight: bold;">
 					<legend>REGISTRAR UNA NUEVA CARRERA</legend>
 					<form action="grabar_datos.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
