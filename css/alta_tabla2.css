@@ -83,6 +83,14 @@ top:200px;
     top: 10px;
 }
 
+#AddEstudiante {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    position: absolute;
+    right: 50px;
+    border: 3px solid #5c5c5c;
+    padding: 10px;
+}
 #AddCarrera {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -91,3 +99,11 @@ top:200px;
     border: 3px solid #5c5c5c;
     padding: 10px;
 }
+a {
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+} 

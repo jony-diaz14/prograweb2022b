@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Regitro de Carreras desde PHP hacia MySQL</title>
-	<link href="../css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="/css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
 
 	<!-- <style type="text/css" media="screen">
 		
@@ -110,7 +110,7 @@
 							<br />
 							<a href="../paginas/reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
 							<br />
-							<a href="../paginas/reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<!-- <a href="../paginas/reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a> -->
 						</div>
 					</form>
 					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->
