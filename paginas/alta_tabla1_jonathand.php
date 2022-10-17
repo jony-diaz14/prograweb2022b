@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Regitro de Carreras desde PHP hacia MySQL</title>
-	<link href="../css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../css/alta_tablac.css" rel="stylesheet" type="text/css" media="screen">
 
 	<!-- <style type="text/css" media="screen">
 		
@@ -31,26 +31,23 @@
 				document.getElementById("txtcarrera").style.background = "#bd373790";
 				return false;
 			} else if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
-				alert("Escribe el nombre del alumno");
+				alert("Escribe el nombre de la carrera");
 				document.getElementById("txtnombre").value = "";
 				document.getElementById("txtnombre").focus();
 				document.getElementById("txtnombre").style.background = "#bd373790";
 				return false;
 			} else if (coordi == null || coordi.length == 0 || /^\s+$/.test(coordi)) {
-				alert("Escribe el Apeido del alumno");
+				alert("Escribe el nombre del coordinador");
 				document.getElementById("txtcordi").value = "";
 				document.getElementById("txtcordi").focus();
 				document.getElementById("txtcordi").style.background = "#bd373790";
 				return false;
-			} else if (uni == null || uni.length == 0) {//Puede ser un combo box
-				alert("Escribe el numero de celular del alumno");
-				document.getElementById("combo_uni").value = "";
+			} else if (uni == null || uni == 0) {//Puede ser un combo box
+				alert("Escoge la universidad");
 				document.getElementById("combo_uni").focus();
 				document.getElementById("combo_uni").style.background = "#bd373790";
 				return false;
 			}
-			
-			
 			//Cuando ya están contestadas todas las cajas de texto y seleccionados los combobox enviamos el form
 			return true;
 		}
@@ -68,9 +65,9 @@
 
 		<div id="caja4">
 			<div id="texto1"><br>
-				<fieldset style="width: 90%; font-weight: bold;">
+				<fieldset style="width: 92%; height: 300px; font-weight: bold;">
 					<legend>REGISTRAR UNA NUEVA CARRERA</legend>
-					<form action="grabar_datos.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
+					<form action="grabar_datos1.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
 						<div>
 							<br />
 							Codigo de la carrera:
@@ -88,31 +85,34 @@
 							<label for="carrera">Nombre de la Universidad:</label>
 							<select name="combo_uni" id="combo_uni">
 							<option value="0">-- Selecciona una Universidad --</option>
-							<option value="1">CUVALLES</option>
-							<option value="2">CUCSUR</option>
-							<option value="3">CUNORTE</option>
-							<option value="4">CUCOSTA</option>
-							<option value="5">CUTONALA</option>
-							<option value="6">CUALTOS</option>
-							<option value="7">CUAAD</option>
-							<option value="8">UCBA</option>
-							<option value="9">CUCS</option>
-							<option value="10">CUCSH</option>
-							<option value="10">CUCEI</option>
-							<option value="10">CUCEA</option>
+							<option value="CUVALLES">CUVALLES</option>
+							<option value="CUCSUR">CUCSUR</option>
+							<option value="CUNORTE">CUNORTE</option>
+							<option value="CUCOSTA">CUCOSTA</option>
+							<option value="CUTONALA">CUTONALA</option>
+							<option value="CUALTOS">CUALTOS</option>
+							<option value="CUAAD">CUAAD</option>
+							<option value="UCBA">UCBA</option>
+							<option value="CUCS">CUCS</option>
+							<option value="CUCSH">CUCSH</option>
+							<option value="CUCEI">CUCEI</option>
+							<option value="CUCEA">CUCEA</option>
 
 							</select>
 							<br />
 							<br />
 							<input type="submit" name="AddCarrera" id="AddCarrera" value="  Registrar esta Carrera " />
 							<br />
-							<a href="../paginas/reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+							<a id="carrera" href="../paginas/reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
 							<br />
-							<!-- <a href="../paginas/reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a> -->
+							<a id="estudiante" href="../paginas/reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<br />
+							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 						</div>
 					</form>
 					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->
 				</fieldset>
+
 			</div>
 		</div>
 	</div>

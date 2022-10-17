@@ -19,7 +19,7 @@ if (empty($rows)) {
 <head>
 	<meta charset="utf-8">
 	<title>Regitro de Estudiantes desde PHP hacia MySQL</title>
-	<link href="../css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../css/alta_tablae.css" rel="stylesheet" type="text/css" media="screen">
 
 	<!-- <style type="text/css" media="screen">
 		
