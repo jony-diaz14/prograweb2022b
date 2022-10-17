@@ -90,7 +90,7 @@ if (empty($rows))
 						<a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR OTRA CARRERA</a>
 						<br />
 						<br />
-						<a id="carrera2" href="reporte_general_jonathand1.php">REPORTE DE LAS CARRERAS</a>
+						<a id="carrer2" href="reporte_general_jonathand1.php">REPORTE DE LAS CARRERAS</a>
 						<br />
 						<br />
 						<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
