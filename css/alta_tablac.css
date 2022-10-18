@@ -100,17 +100,34 @@ top:200px;
     color: #fff;
     background-color: #333;
     margin: 5px;
-    margin-right: 100px;
-    float: left;
-    top: 50px;
+    float: right;
 } 
 
 #estudiante {
-    float: left;
     border-radius: 5px;
     padding: 10px 7px;
     text-decoration: none;
     color: #fff;
     background-color: #333;
     margin: 5px;
+    float: right;
+} 
+#carrera2 {
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+    float: left;
+} 
+
+#estudiante2 {
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+    float: left;
 } 
