@@ -108,6 +108,8 @@
 							<a id="estudiante" href="../paginas/reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
 							<br />
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
+							<br />
+							<a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
 						</div>
 					</form>
 					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->

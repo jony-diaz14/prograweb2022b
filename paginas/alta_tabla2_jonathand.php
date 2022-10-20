@@ -25,7 +25,7 @@ if (empty($rows)) {
 		
 	</style> -->
 
-<script language="javascript">
+	<script language="javascript">
 		function ValidaFormulario() {
 			//Recuperamos lo elegido en el combo de los departamento
 			var carrera = document.getElementById("combo_carrera").selectedIndex;
@@ -53,7 +53,7 @@ if (empty($rows)) {
 				document.getElementById("combo_carrera").focus();
 				document.getElementById("combo_carrera").style.background = "#bd373790";
 				return false;
-			}else if (codigo == null || codigo.length == 0 || !/^([0-9])*$/.test(codigo)) {
+			} else if (codigo == null || codigo.length == 0 || !/^([0-9])*$/.test(codigo)) {
 				alert("Tienes que escribir el codigo del alumno usando solo números enteros");
 				document.getElementById("txtcodigo").value = "";
 				document.getElementById("txtcodigo").focus();
@@ -71,7 +71,7 @@ if (empty($rows)) {
 				document.getElementById("txtapeido").focus();
 				document.getElementById("txtapeido").style.background = "#bd373790";
 				return false;
-			} else if (celular == null || celular.length == 0 ||  !/^([0-9])*$/.test(celular)) {
+			} else if (celular == null || celular.length == 0 || !/^([0-9])*$/.test(celular)) {
 				alert("Escribe el numero de celular del alumno");
 				document.getElementById("txtcel").value = "";
 				document.getElementById("txtcel").focus();
@@ -94,14 +94,14 @@ if (empty($rows)) {
 				document.getElementById("txtdireccion").focus();
 				document.getElementById("txtdireccion").style.background = "#bd373790";
 				return false;
-			}  else if (!(/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(correo)) || correo.length > 30) {
-    			alert("Ingresa bien el correo, ejemplo: example@gmail.com");
-   				document.getElementById("txtcorreo").value = "";
+			} else if (!(/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(correo)) || correo.length > 30) {
+				alert("Ingresa bien el correo, ejemplo: example@gmail.com");
+				document.getElementById("txtcorreo").value = "";
 				document.getElementById("txtcorreo").focus();
 				document.getElementById("txtcorreo").style.background = "#bd373790";
 				return false;
 			}
-			
+
 			//Cuando ya están contestadas todas las cajas de texto y seleccionados los combobox enviamos el form
 			return true;
 		}
@@ -116,8 +116,16 @@ if (empty($rows)) {
 		<div id="caja1">Licenciatura en Tecnologías de la Información</div>
 		<div id="caja2">Programación web</div>
 		<div id="caja3">Formulario para grabar estudiantes en la base de datos desde una página web</div>
-
 		<div id="caja4">
+		<div id="texto2"> <br />
+							<a id="carrera" href="reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+							<br />
+							<a id="estudiante" href="reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<br />
+							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
+							<br />
+							<a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
+		</div>
 			<div id="texto1"><br>
 				<p><?php echo $result; ?></p>
 
@@ -179,10 +187,7 @@ if (empty($rows)) {
 							<br />
 							<br />
 							<input type="submit" name="AddEstudiante" id="AddEstudiante" value="  Registrar este Alumno " />
-							<br />
-							<a href="reporte_general_jonathand2.php" id="">Reporte General Alumnos</a>
-							<br />
-							<a href="reporte_general_jonathand1.php" id="">Reporte General Carrera</a>
+							
 						</div>
 					</form>
 					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->

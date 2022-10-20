@@ -14,7 +14,8 @@ $rows = $result->fetchAll();
 // Los valores que tendrá la variable $rows se organizan en un arreglo asociativo
 // (Variable con varias valores)
 // y se usará un ciclo foreach para recuper los valores uno a uno de ese arreglo
-// El resultado se mostrará en una tabla HTML 
+// El resultado se mostrará en una tabla HTML
+// "SELECT *, nombre_programa FROM programa P INNER JOIN televisora T ON P.id_televisora=T.id_televisora";
 ?>
 <!doctype html>
 <html>
@@ -55,7 +56,7 @@ $rows = $result->fetchAll();
                     <tr>
                         <td><?php echo $row['codigo']; ?></td>
                         <td>
-                            <a href="detalle_registro.php?id=<?php echo $row['codigo']; ?>">
+                            <a href="detalle_registro_carrera.php?id=<?php echo $row['codigo']; ?>">
                                 <?php echo $row['nombre_estudiante']; ?>
                             </a>
                     </td>

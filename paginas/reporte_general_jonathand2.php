@@ -54,13 +54,22 @@ $rows = $result->fetchAll();
                     <tr>
                         <td><?php echo $row['codigo']; ?></td>
                         <td>
-                            <a href="detalle_registro.php?id=<?php echo $row['codigo']; ?>">
+                            <a href="detalle_registro_estudiantes.php?id=<?php echo $row['codigo']; ?>">
                                 <?php echo $row['nombre_estudiante']; ?>
                             </a>
                     </td>
                         <td><?php echo $row['apeido']; ?></td>
                         <td><?php echo $row['telefono']; ?></td>
-                        <td><?php echo $row['genero']; ?></td>
+                        <!-- <td><?php echo $row['genero']; ?></td> -->
+                        <?php
+                        $genero = $row['genero'];
+                        if ($genero == "M") {
+                            $sexo2 = "Masculino";
+                        } else {
+                            $sexo2 = "Femenino";
+                        }
+                        ?>
+                        <td><?php echo ($sexo2); ?></td>
                         <td><?php echo $row['fecha_nac']; ?></td>
                         <td><?php echo $row['direccion']; ?></td>
                         <td><?php echo $row['correo']; ?></td>

@@ -7,7 +7,7 @@ body {
 #wrapper {
     margin: auto;
     width: 960px;
-    height: 630px;
+    height: 700px;
     background-color: #808000;
 }
 
@@ -49,7 +49,7 @@ body {
 
 #caja4 {
     width: 940px;
-    height: 550PX;
+    height: 580PX;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;
@@ -59,7 +59,6 @@ body {
 position:absolute; 
 top:200px;
  */
-
     position: relative;
     top: 10px;
 }
@@ -82,14 +81,28 @@ top:200px;
     right: -10px;
     top: 10px;
 }
+#texto2 {
+    /* background-color: #107a28; */
+    width: auto;
+    height: 300px;
+    position: relative;
+    float: left;
+    left: 70px;
+    top: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    
+}
 
 #AddEstudiante {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    position: absolute;
     right: 50px;
     border: 3px solid #5c5c5c;
     padding: 10px;
+    position: relative;
+    left: 20px;
 }
 #AddCarrera {
     font-family: 'Times New Roman', Times, serif;
@@ -99,11 +112,41 @@ top:200px;
     border: 3px solid #5c5c5c;
     padding: 10px;
 }
-a {
+#carrera2 {
     border-radius: 5px;
     padding: 10px 7px;
     text-decoration: none;
     color: #fff;
     background-color: #333;
     margin: 5px;
+    float: left;
+} 
+
+#estudiante2 {
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+    float: left;
+} 
+#carrera {
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+    float: right;
+} 
+
+#estudiante {
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+    float: right;
 } 

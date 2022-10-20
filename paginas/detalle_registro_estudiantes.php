@@ -101,7 +101,7 @@ $rows = $result->fetchAll();
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td><a href="reporte_general_jonathand.php">
+                    <td><a href="reporte_general_jonathand2.php">
                             <<< --- Regresar al reporte completo </a>
                     </td>
                     <td>&nbsp;</td>
