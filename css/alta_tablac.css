@@ -70,7 +70,7 @@ top:200px;
     right: -10px;
 }
 
-#texto1 {
+/* #texto1 {
     width: 600px;
     height: 520PX;
     margin-left: 5px;
@@ -82,7 +82,39 @@ top:200px;
     right: -10px;
     top: 10px;
 }
-
+#texto2 {
+    width: 250px;
+    height: 400px;
+    background-color: #107a28;
+    position: relative;
+    float: left;
+    
+} */
+#texto1 {
+    width: 500px;
+    height: 520PX;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #008083;
+    padding: 5px;
+    float: right;
+    right: -10px;
+    top: 10px;
+}
+#texto2 {
+    /* background-color: #107a28; */
+    width: auto;
+    height: 300px;
+    position: relative;
+    float: left;
+    left: 70px;
+    top: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    
+}
 #AddCarrera {
     margin-top: 15px;
     float: right;
@@ -92,25 +124,7 @@ top:200px;
     border: 3px solid #5c5c5c;
     padding: 10px;
 }
-#carrera2 {
-    border-radius: 5px;
-    padding: 10px 7px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #333;
-    margin: 5px;
-    float: left;
-} 
 
-#estudiante2 {
-    border-radius: 5px;
-    padding: 10px 7px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #333;
-    margin: 5px;
-    float: left;
-} 
 #carrera {
     border-radius: 5px;
     padding: 10px 7px;

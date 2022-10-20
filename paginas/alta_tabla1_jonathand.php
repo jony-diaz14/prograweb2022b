@@ -64,6 +64,14 @@
 		<div id="caja3">Formulario para grabar Carreras en la base de datos desde una página web</div>
 
 		<div id="caja4">
+		<div id="texto2"> 
+							<a id="carrera" href="reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+							<br />
+							<a id="estudiante" href="reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<br />
+							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
+							<br />
+		</div>
 			<div id="texto1"><br>
 				<fieldset style="width: 92%; height: 300px; font-weight: bold;">
 					<legend>REGISTRAR UNA NUEVA CARRERA</legend>
@@ -103,13 +111,6 @@
 							<br />
 							<input type="submit" name="AddCarrera" id="AddCarrera" value="  Registrar esta Carrera " />
 							<br />
-							<a id="carrera" href="../paginas/reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
-							<br />
-							<a id="estudiante" href="../paginas/reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
-							<br />
-							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
-							<br />
-							<a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
 						</div>
 					</form>
 					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->

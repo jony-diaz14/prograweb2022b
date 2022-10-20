@@ -68,6 +68,15 @@ if (empty($rows))
 		<div id="caja3">Formulario para alta de carrera en la base de datos desde una página web</div>
 
 		<div id="caja4">
+		<div id="texto2"> <br />
+							<a id="carrera" href="reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+							<br />
+							<a id="estudiante" href="reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<br />
+							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
+							<br />
+							<a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
+		</div>
 			<div id="texto1"><br>
 				<p></p>
 
@@ -89,16 +98,7 @@ if (empty($rows))
 						<br />
 						
 					</div>
-				</fieldset><a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR OTRA CARRERA</a>
-						<br />
-						<br />
-						<a id="carrera2" href="reporte_general_jonathand1.php">REPORTE DE LAS CARRERAS</a>
-						<br />
-						<br />
-						<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
-						<br />
-						<br />
-						<a id="estudiante2" href="reporte_general_jonathand2.php">REPORTE DE ESTUDIANTES</a>
+				</fieldset>
 			</div>
 		</div>
 	</div>
