@@ -87,3 +87,23 @@ a{
     right: -10px;
     top: 10px;
 }
+
+#carrera {
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+    float: right;
+} 
+
+#estudiante {
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+    float: right;
+} 

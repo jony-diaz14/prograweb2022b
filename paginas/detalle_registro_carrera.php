@@ -1,6 +1,6 @@
 <?php
 // Insertamos el código PHP donde nos conectamos a la base de datos
-require_once "conn_mysql2.php";
+require_once "conn_mysql_jonathan.php";
 $result;
 // Recuperamos los valores de los objetos de QUERYSTRING que viene desde la URL mediante GET y lo almacenamos en una variable
 $idestudiante = $_GET["id"];

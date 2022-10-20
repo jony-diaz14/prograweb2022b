@@ -1,6 +1,6 @@
 <?php
 // Insertamos el código PHP donde nos conectamos a la base de datos
-require_once "conn_mysql2.php";
+require_once "conn_mysql_jonathan.php";
 $result;
 // Recuperamos los valores de los objetos de QUERYSTRING que viene desde la URL mediante GET y lo almacenamos en una variable
 $idestudiante = $_GET["id"];
@@ -22,7 +22,7 @@ if (!is_int($idestudiante)) {
 }
 
 // Escribimos la consulta para recuperar el UNICO REGISTRO de MySQL mediante el ID obtenido por _GET
-$sql = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera FROM estudiantes E ';
+$sql = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera, C.nom_uni FROM estudiantes E ';
 $sql3 = $sql . 'INNER JOIN carrera C ON E.id_carrera = C.id_carrera WHERE E.codigo=' . $idestudiante;
 
 
@@ -43,7 +43,7 @@ $rows = $result->fetchAll();
 </head>
 
 <body>
-    <h2>Reporte de detalle del empleado seleccionado</h2>
+    <h2>Reporte de detalle del estudiante seleccionado</h2>
     <div align="center">
         <table border="1" width="90%">
             <thead>
@@ -57,11 +57,10 @@ $rows = $result->fetchAll();
                     <th>Direccion</th>
                     <th>Correo</th>
                     <th>Nombre de la Carrera</th>
-
+                    <th>Nombre de la Universidad</th>
                 </tr>
             </thead>
             <tbody>
-
                 <?php
                 foreach ($rows as $row) {
                     //Imprimimos en la página EL UNICO REGISTRO de MySQL en un renglon de HTML
@@ -85,6 +84,7 @@ $rows = $result->fetchAll();
                         <td><?php echo $row['direccion']; ?></td>
                         <td><?php echo $row['correo']; ?></td>
                         <td><?php echo $row['nombre_carrera']; ?></td>
+                        <td><?php echo $row['nom_uni']; ?></td>
 
                     </tr>
                 <?php } ?>

@@ -69,9 +69,9 @@ if (empty($rows))
 
 		<div id="caja4">
 		<div id="texto2"> <br />
-							<a id="carrera" href="reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+							<a id="carrera" href="reporte_general_jonathand1.php" >Reporte General de Carreras</a>
 							<br />
-							<a id="estudiante" href="reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<a id="estudiante" href="reporte_general_jonathand2.php" >Reporte General de Estudiantes</a>
 							<br />
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<br />

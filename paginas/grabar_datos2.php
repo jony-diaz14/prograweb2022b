@@ -70,7 +70,7 @@ if (empty($rows))
 <head>
 	<meta charset="utf-8">
 	<title>Regitro de empleados desde PHP hacia MySQL</title>
-	<link href="../css/alta_tabla1.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../css/alta_tablae.css" rel="stylesheet" type="text/css" media="screen">
 
 </head>
 
@@ -80,9 +80,18 @@ if (empty($rows))
 
 		<div id="caja1">Licenciatura en Tecnologías de la Información</div>
 		<div id="caja2">Programación web</div>
-		<div id="caja3">Formulario para alta de empleados en la base de datos desde una página web</div>
+		<div id="caja3">Formulario para alta de estudiantes en la base de datos desde una página web</div>
 
 		<div id="caja4">
+		<div id="texto2"> <br />
+							<a id="carrera" href="reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+							<br />
+							<a id="estudiante" href="reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<br />
+							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
+							<br />
+							<a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
+		</div>
 			<div id="texto1"><br>
 				<p></p>
 

@@ -25,72 +25,71 @@ $rows = $result->fetchAll();
 </head>
 
 <body>
-<div id="">
+    <div>
 
-    <h2>Reporte de la tabla de MySQL en tabla de HTML</h2>
-    <div align="center">
-        <table border="1" width="90%">
-            <thead>
-                <tr>
-                    <!-- estos son los titulos de la primera fila de la tabla HTML -->
-                    <th>Codigo</th>
-                    <th>Nombre</th>
-                    <th>apeido</th>
-                    <th>telefono</th>
-                    <th>genero</th>
-                    <th>fecha de nacimiento</th>
-                    <th>direccion</th>
-                    <th>correo</th>
-                    <th>nombre de la carrera</th>
-                </tr>
-            </thead>
-            <tbody>
-
-                <?php
-                foreach ($rows as $row) {
-                    //Imprimimos en la página un renglon de tabla HTML por cada registro de tabla de MySQL
-                    //Tenemos que tener mucho cuidado de llamar las tablas con exactamente el mismo nombre de la Base de Datos
-                ?>
+        <h2>Reporte de la tabla de MySQL en tabla de HTML</h2>
+        <div align="center">
+            <table border="1" width="90%">
+                <thead>
                     <tr>
-                        <td><?php echo $row['codigo']; ?></td>
-                        <td>
-                            <a href="detalle_registro_estudiantes.php?id=<?php echo $row['codigo']; ?>">
-                                <?php echo $row['nombre_estudiante']; ?>
-                            </a>
-                    </td>
-                        <td><?php echo $row['apeido']; ?></td>
-                        <td><?php echo $row['telefono']; ?></td>
-                        <!-- <td><?php echo $row['genero']; ?></td> -->
-                        <?php
-                        $genero = $row['genero'];
-                        if ($genero == "M") {
-                            $sexo2 = "Masculino";
-                        } else {
-                            $sexo2 = "Femenino";
-                        }
-                        ?>
-                        <td><?php echo ($sexo2); ?></td>
-                        <td><?php echo $row['fecha_nac']; ?></td>
-                        <td><?php echo $row['direccion']; ?></td>
-                        <td><?php echo $row['correo']; ?></td>
-                        <td><?php echo $row['nombre_carrera']; ?></td>
+                        <!-- estos son los titulos de la primera fila de la tabla HTML -->
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>apeido</th>
+                        <th>telefono</th>
+                        <th>genero</th>
+                        <th>fecha de nacimiento</th>
+                        <th>direccion</th>
+                        <th>correo</th>
+                        <th>nombre de la carrera</th>
                     </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+
+                    <?php
+                    foreach ($rows as $row) {
+                        //Imprimimos en la página un renglon de tabla HTML por cada registro de tabla de MySQL
+                        //Tenemos que tener mucho cuidado de llamar las tablas con exactamente el mismo nombre de la Base de Datos
+                    ?>
+                        <tr>
+                            <td><?php echo $row['codigo']; ?></td>
+                            <td>
+                                <a href="detalle_registro_estudiantes.php?id=<?php echo $row['codigo']; ?>">
+                                    <?php echo $row['nombre_estudiante']; ?>
+                                </a>
+                            </td>
+                            <td><?php echo $row['apeido']; ?></td>
+                            <td><?php echo $row['telefono']; ?></td>
+                            <!-- <td><?php echo $row['genero']; ?></td> -->
+                            <?php
+                            $genero = $row['genero'];
+                            if ($genero == "M") {
+                                $sexo2 = "Masculino";
+                            } else {
+                                $sexo2 = "Femenino";
+                            }
+                            ?>
+                            <td><?php echo ($sexo2); ?></td>
+                            <td><?php echo $row['fecha_nac']; ?></td>
+                            <td><?php echo $row['direccion']; ?></td>
+                            <td><?php echo $row['correo']; ?></td>
+                            <td><?php echo $row['nombre_carrera']; ?></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+        <?php
+        //Cerramos la oonexion a la base de datos, limpiamos memoria
+        $conn = null;
+        ?>
+        <br />
+        <a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERA</a>
+        <br />
+        <a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
+        <br />
+        <a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
     </div>
-    <?php
-    //Cerramos la oonexion a la base de datos, limpiamos memoria
-    $conn = null;
-    ?>
-    <br />
-	<br />
-	<a href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
-	<br />
-	<br />
-	<a href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
-	<br />
-</div>
 </body>
 
 </html>
