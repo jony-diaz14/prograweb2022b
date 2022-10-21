@@ -1,6 +1,6 @@
 <?php
 //Insertamos el código PHP donde nos conectamos a la base de datos *********************
-require_once "conn_mysql.php";
+require_once "conexion.php";
 $result;
 // Escribimos la consulta para recuperar los registros de la tabla de MySQL
 //$sql = 'SELECT * FROM empleados';
