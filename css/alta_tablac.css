@@ -7,7 +7,7 @@ body {
 #wrapper {
     margin: auto;
     width: 960px;
-    height: 630px;
+    height: 700px;
     background-color: #808000;
 }
 
@@ -49,7 +49,7 @@ body {
 
 #caja4 {
     width: 940px;
-    height: 550PX;
+    height: 580PX;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;
@@ -59,7 +59,6 @@ body {
 position:absolute; 
 top:200px;
  */
-
     position: relative;
     top: 10px;
 }
@@ -70,29 +69,9 @@ top:200px;
     right: -10px;
 }
 
-/* #texto1 {
-    width: 600px;
-    height: 520PX;
-    margin-left: 5px;
-    margin-right: 10px;
-    margin-top: 10px;
-    background-color: #008083;
-    padding: 5px;
-    float: right;
-    right: -10px;
-    top: 10px;
-}
-#texto2 {
-    width: 250px;
-    height: 400px;
-    background-color: #107a28;
-    position: relative;
-    float: left;
-    
-} */
 #texto1 {
     width: 500px;
-    height: 520PX;
+    height: 550PX;
     margin-left: 5px;
     margin-right: 10px;
     margin-top: 10px;
@@ -115,16 +94,24 @@ top:200px;
     margin-top: 10px;
     
 }
-#AddCarrera {
-    margin-top: 15px;
-    float: right;
+
+#AddEstudiante {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     right: 50px;
     border: 3px solid #5c5c5c;
     padding: 10px;
+    position: relative;
+    left: 20px;
 }
-
+#AddCarrera {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    position: absolute;
+    right: 50px;
+    border: 3px solid #5c5c5c;
+    padding: 10px;
+}
 #carrera {
     border-radius: 5px;
     padding: 10px 7px;
@@ -144,4 +131,3 @@ top:200px;
     margin: 5px;
     float: right;
 } 
-

@@ -4,6 +4,7 @@ require_once "conn_mysql_jonathan.php";
 $result = "";
 // Escribimos la consulta para recuperar los departamentos de la tabla departamentos **************
 $sql = 'SELECT id_carrera,nombre_carrera FROM carrera';
+// DELETE FROM carrera WHERE id_carrera = 1234;
 // Almacenamos los resultados de la consulta en una variable llamada $smtp a partir de la conexión
 $stmt = $conn->query($sql);
 // Recuperamos los valores de los registros de la tabla que ya están en la variable $stmt
@@ -20,6 +21,7 @@ if (empty($rows)) {
 	<meta charset="utf-8">
 	<title>Regitro de Estudiantes desde PHP hacia MySQL</title>
 	<link href="../css/alta_tablae.css" rel="stylesheet" type="text/css" media="screen">
+	<link rel="icon" href="/imagenes/estudiante2.png" type="image/x-icon">
 
 	<!-- <style type="text/css" media="screen">
 		
@@ -118,9 +120,9 @@ if (empty($rows)) {
 		<div id="caja3">Formulario para grabar estudiantes en la base de datos desde una página web</div>
 		<div id="caja4">
 		<div id="texto2"> <br />
-							<a id="carrera" href="reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+							<a id="carrera" href="reporte_general_jonathand1.php">REPORTE GENERAL DE CARRERAS</a>
 							<br />
-							<a id="estudiante" href="reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<a id="estudiante" href="reporte_general_jonathand2.php">REPORTE GENERAL DE ESTUDIANTES</a>
 							<br />
 							<a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
 		</div>

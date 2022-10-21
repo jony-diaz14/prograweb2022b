@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Regitro de Carreras desde PHP hacia MySQL</title>
-	<link href="../css/alta_tablac.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../css/alta_tablaC.css" rel="stylesheet" type="text/css" media="screen">
 
 	<!-- <style type="text/css" media="screen">
 		
@@ -64,10 +64,10 @@
 		<div id="caja3">Formulario para grabar Carreras en la base de datos desde una página web</div>
 
 		<div id="caja4">
-		<div id="texto2"> 
-							<a id="carrera" href="reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+		<div id="texto2">
+							<a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERAS</a>
 							<br />
-							<a id="estudiante" href="reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<a id="estudiante" href="reporte_general_jonathand2.php">REPORTE GENERAL DE ESTUDIANTES</a>
 							<br />
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<br />

@@ -80,14 +80,12 @@ $rows = $result->fetchAll();
             </table>
         </div>
         <?php
-        //Cerramos la oonexion a la base de datos, limpiamos memoria
+        //Cerramos la coonexion a la base de datos, limpiamos memoria
         $conn = null;
         ?>
         <br />
         <a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERA</a>
-        <br />
         <a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
-        <br />
         <a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
     </div>
 </body>

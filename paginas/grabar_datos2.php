@@ -69,8 +69,9 @@ if (empty($rows))
 
 <head>
 	<meta charset="utf-8">
-	<title>Regitro de empleados desde PHP hacia MySQL</title>
+	<title>Regitro de estudiantes desde PHP hacia MySQL</title>
 	<link href="../css/alta_tablae.css" rel="stylesheet" type="text/css" media="screen">
+	<link rel="icon" href="/imagenes/registro1.png" type="image/x-icon">
 
 </head>
 
@@ -84,9 +85,9 @@ if (empty($rows))
 
 		<div id="caja4">
 		<div id="texto2"> <br />
-							<a id="carrera" href="reporte_general_jonathand1.php" id="">Reporte General de Carreras</a>
+							<a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERAS</a>
 							<br />
-							<a id="estudiante" href="reporte_general_jonathand2.php" id="">Reporte General de Estudiantes</a>
+							<a id="estudiante" href="reporte_general_jonathand2.php" >REPORTE GENERAL DE ESTUDIANTES</a>
 							<br />
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<br />
@@ -125,11 +126,6 @@ if (empty($rows))
 						<br />
 						<b>Correo del alumno:</b> <?php echo ($correo); ?>
 						<br />
-						<br />
-						<a href="alta_tabla1_jonathand.php">REGISTRAR OTRO ESTUDIANTE</a>
-						<br />
-						<br />
-						<a href="reporte_general_jonathand.php">REPORTE DE LOS ESTUDIANTES</a>
 					</div>
 				</fieldset>
 			</div>

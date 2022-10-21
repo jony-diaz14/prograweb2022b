@@ -40,6 +40,7 @@ $rows = $result->fetchAll();
     <meta charset="utf-8">
     <title>Reporte de PHP conectado a MySQL</title>
     <link href="../css/reporte_general.css" rel="stylesheet" type="text/css" media="screen">
+    <link rel="icon" href="/imagenes/registro1.png" type="image/x-icon">
 </head>
 
 <body>

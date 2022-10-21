@@ -56,6 +56,7 @@ if (empty($rows))
 	<meta charset="utf-8">
 	<title>Regitro de Carrera desde PHP hacia MySQL</title>
 	<link href="../css/alta_tablac.css" rel="stylesheet" type="text/css" media="screen">
+	<link rel="icon" href="/imagenes/registro1.png" type="image/x-icon">
 
 </head>
 
