@@ -7,19 +7,6 @@ $idestudiante = $_GET["id"];
 // Conversión de CARACTER a ENTERO mediante el forzado de (int)
 // *los valores por GET son tipo STRING*
 $idestudiante = (int)$idestudiante; 
-//Verificamos que SI VENGA el codigo del estudiante
-// if ($idestudiante == "") {
-//     header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar 
-//     exit;
-// }
-// if (is_null($idestudiante)) {
-//     header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar 
-//     exit;
-// }
-// if (!is_int($idestudiante)) {
-//     header("Location: estudiante_no_encontrado.php"); //Este archivo lo tienes que generar 
-//     exit;
-// }
 
 // Escribimos la consulta para recuperar el UNICO REGISTRO de MySQL mediante el ID obtenido por _GET
 $sql = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera, C.nom_uni FROM estudiantes E ';
@@ -27,7 +14,6 @@ $sql3 = $sql . 'INNER JOIN carrera C ON E.id_carrera = C.id_carrera WHERE E.codi
 
 // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
 $result = $conn->query($sql3);
-
 // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
 $rows = $result->fetchAll();
 // El resultado se mostrará en la página, en el BODY ***************************************************

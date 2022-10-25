@@ -9,7 +9,7 @@ $sql2 = $sql . 'INNER JOIN carrera C ON E.id_carrera = C.id_carrera';
 // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
 $result = $conn->query($sql2);
 // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
-$rows = $result->fetchAll();
+$rows = $result->fetchAll(); //
 // Los valores que tendrá la variable $rows se organizan en un arreglo asociativo
 // (Variable con varias valores)
 // y se usará un ciclo foreach para recuper los valores uno a uno de ese arreglo

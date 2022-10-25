@@ -1,13 +1,11 @@
 <?php
 //ESTE REPORTE ES PARA LA TABLA CATALOGO-CARRERA
-
+// ***********************************************
 //Insertamos el código PHP donde nos conectamos a la base de datos 
 require_once "conn_mysql_jonathan.php";
 $result;
 // Escribimos la consulta para recuperar los registros de la tabla de MySQL
 $sql = 'SELECT * FROM carrera';
-// $sql = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera FROM estudiantes E ';
-// $sql2 = $sql . 'INNER JOIN carrera C ON E.id_carrera = C.id_carrera';
 // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
 $result = $conn->query($sql);
 // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
@@ -16,7 +14,6 @@ $rows = $result->fetchAll();
 // (Variable con varias valores)
 // y se usará un ciclo foreach para recuper los valores uno a uno de ese arreglo
 // El resultado se mostrará en una tabla HTML
-// "SELECT *, nombre_programa FROM programa P INNER JOIN televisora T ON P.id_televisora=T.id_televisora";
 ?>
 <!doctype html>
 <html>
@@ -29,7 +26,7 @@ $rows = $result->fetchAll();
 </head>
 
 <body>
-<div id="">
+<div>
 
     <h2>Reporte de la tabla de MySQL en tabla de HTML</h2>
     <div align="center">

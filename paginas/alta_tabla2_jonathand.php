@@ -2,6 +2,7 @@
 // Insertamos el código PHP donde nos conectamos a la base de datos *******************************
 require_once "conn_mysql_jonathan.php";
 $result = "";
+//
 // Escribimos la consulta para recuperar los departamentos de la tabla departamentos **************
 $sql = 'SELECT id_carrera,nombre_carrera FROM carrera';
 // DELETE FROM carrera WHERE id_carrera = 1234;

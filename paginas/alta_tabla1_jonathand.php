@@ -21,7 +21,7 @@
 			var coordi = document.getElementById("txtcordi").value;
 			//Recuperamos lo escrito en la caja de la categoría del empleado:
 			var uni = document.getElementById("combo_uni").selectedIndex;
-
+			//
 
 			//VALIDACIONES *****************************************************************
 			//Caja de Texto ****************************************************************

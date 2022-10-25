@@ -1,6 +1,7 @@
 <?php
 //ESTA ES U8NA PAGINA DE REPORTE PARA BORRAR ESTUDIANTES
-//Insertamos el código PHP donde nos conectamos a la base de datos *******************************
+// *******************************************************
+//Insertamos el código PHP donde nos conectamos a la base de datos 
 require_once "conn_mysql_jonathan.php";
 $result;
 // Escribimos la consulta para recuperar los registros de la tabla de MySQL
@@ -25,7 +26,7 @@ $rows = $result->fetchAll();
     <meta charset="utf-8">
     <title>Borrar Registro de Estudiantes</title>
     <link href="../css/reporte_borrar.css" rel="stylesheet" type="text/css" media="screen">
-    <link rel="icon" href="/imagenes/registro1.png" type="image/x-icon">
+    <link rel="icon" href="/imagenes/eliminar_r.png" type="image/x-icon">
 
     <!-- <style type="text/css" media="screen">
 		
@@ -48,7 +49,7 @@ $rows = $result->fetchAll();
 
         <div id="caja1">Licenciatura en Tecnologías de la Información</div>
         <div id="caja2">Programación web</div>
-        <div id="caja3">Reporte de para borrar registros de la tabla estudiantes(PHP con PDP y MySQL)</div>
+        <div id="caja3">Reporte para borrar registros de la tabla estudiantes(PHP con PDP y MySQL)</div>
 
         <div id="caja4">
             <div id="texto1"><br>
@@ -103,7 +104,7 @@ $rows = $result->fetchAll();
                             <th>&nbsp;</th>
                             <th><a href="reporte_general_jonathand1.php">Reporte general de carreras</a></th>
                             <th>&nbsp;</th>
-                            <th>&nbsp;</th>
+                            <th><a href="alta_tabla1_jonathand.php">Agregar Carrera</a></th>
                             <th>&nbsp;</th>
                             <th>&nbsp;</th>
                             <th>&nbsp;</th>

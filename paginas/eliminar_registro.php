@@ -32,7 +32,7 @@ $conn->exec($sqlBorrar);
     <meta charset="utf-8">
     <title>Regitro de registros a eliminar</title>
     <link href="../css/reporte_borrar_registro.css" rel="stylesheet" type="text/css" media="screen">
-    <link rel="icon" href="/imagenes/registro1.png" type="image/x-icon">
+    <link rel="icon" href="/imagenes/eliminar_r.png" type="image/x-icon">
 
     <!-- <style type="text/css" media="screen">
     </style> -->
