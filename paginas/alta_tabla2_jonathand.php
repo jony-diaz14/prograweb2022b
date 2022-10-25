@@ -125,6 +125,9 @@ if (empty($rows)) {
 							<a id="estudiante" href="reporte_general_jonathand2.php">REPORTE GENERAL DE ESTUDIANTES</a>
 							<br />
 							<a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
+							<br />
+							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
+
 		</div>
 			<div id="texto1"><br>
 				<p><?php echo $result; ?></p>
@@ -134,7 +137,7 @@ if (empty($rows)) {
 
 
 
-					<form action="grabar_datos_relacionados.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
+					<form action="grabar_datos2.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
 						<div>
 							<br />
 							<label for="carrera">Carrera:</label>

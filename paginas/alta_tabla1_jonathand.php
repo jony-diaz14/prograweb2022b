@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Regitro de Carreras desde PHP hacia MySQL</title>
 	<link href="../css/alta_tablaC.css" rel="stylesheet" type="text/css" media="screen">
+	<link rel="icon" href="/imagenes/estudiante2.png" type="image/x-icon">
 
 	<!-- <style type="text/css" media="screen">
 		
@@ -71,6 +72,7 @@
 							<br />
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<br />
+							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
 		</div>
 			<div id="texto1"><br>
 				<fieldset style="width: 92%; height: 300px; font-weight: bold;">

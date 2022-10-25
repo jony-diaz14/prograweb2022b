@@ -70,13 +70,15 @@ if (empty($rows))
 
 		<div id="caja4">
 		<div id="texto2"> <br />
-							<a id="carrera" href="reporte_general_jonathand1.php" >Reporte General de Carreras</a>
+							<a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERAS</a>
 							<br />
-							<a id="estudiante" href="reporte_general_jonathand2.php" >Reporte General de Estudiantes</a>
+							<a id="estudiante" href="reporte_general_jonathand2.php" >REPORTE GENERAL ESTUDIANTES</a>
 							<br />
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<br />
 							<a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
+							<br />
+							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
 		</div>
 			<div id="texto1"><br>
 				<p></p>
@@ -85,16 +87,16 @@ if (empty($rows))
 					<legend><?php echo $mensaje; ?></legend>
 					<div>
 						<br />
-						<b>Carrera:</b> <?php echo ($id); ?>
+						<b>Codigo de la Carrera:</b> <?php echo ($id); ?>
 						<br />
 						<br />
-						<b>Codigo:</b> <?php echo ($nombre); ?>
+						<b>Nombre de la carrera:</b> <?php echo ($nombre); ?>
 						<br />
 						<br />
-						<b>Nombre del alumno:</b> <?php echo ($coordi); ?>
+						<b>Nombre del coordinador:</b> <?php echo ($coordi); ?>
 						<br />
 						<br />
-						<b>Apeido del alumno:</b> <?php echo ($uni); ?>
+						<b>Nombre de la universidad:</b> <?php echo ($uni); ?>
 						<br />
 						<br />
 						
@@ -104,7 +106,7 @@ if (empty($rows))
 		</div>
 	</div>
 	<?php
-	//Cerramos la conexion a la base de datos *************************************
+	//Cerramos la conexion a la base de datos
 	$conn = null;
 	?>
 </body>

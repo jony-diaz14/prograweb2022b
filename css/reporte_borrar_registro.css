@@ -1,60 +1,55 @@
 @charset "utf-8";
 
 body {
-    background-color: #107a2975;
-}
-
-table{
-    background-color: #f3f7f7d2;
-}
-a{
-    text-decoration: none;
+    background-color: #107a28;
 }
 
 #wrapper {
     margin: auto;
     width: 960px;
-    height: 500px;
+    height: 350px;
     background-color: #808000;
 }
 
 #caja1 {
-    font-weight: bold;
     width: 300px;
-    height: 50px;
+    height: 60px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    background-color: #80ff40;
+    background-color: #FFC;
     float: left;
+    text-align: center;
+    font-weight: bold;
 }
 
 #caja2 {
-    font-weight: bold;
     width: 300px;
-    height: 50px;
+    height: 60px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    background-color: #80ff40;
-    text-align: center;
+    background-color: #FFC;
     float: left;
+    text-align: center;
+    font-weight: bold;
 }
 
 #caja3 {
     width: 300px;
-    font-weight: bold;
-    height: 50px;
+    height: 60px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    background-color: #80ff40;
+    background-color: #FFC;
     float: left;
+    text-align: center;
+    font-weight: bold;
 }
 
 #caja4 {
     width: 940px;
-    height: 350px;
+    height: 200px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;
@@ -63,7 +58,8 @@ a{
     /*
  position:absolute; 
  top:200px;
- */
+*/
+
     position: relative;
     top: 10px;
 }
@@ -75,38 +71,13 @@ a{
 }
 
 #texto1 {
-    font-weight: bold;
-    width: 500px;
-    height: 290px;
+    width: 900px;
     margin-left: 5px;
     margin-right: 10px;
     margin-top: 10px;
-    background-color: #008083;
+    background-color: #CCC;
     padding: 5px;
     float: right;
     right: -10px;
     top: 10px;
-}
-
-#carrera {
-    border-radius: 5px;
-    padding: 10px 7px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #333;
-    margin: 5px;
-    float: right;
-} 
-
-#estudiante {
-    border-radius: 5px;
-    padding: 10px 7px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #333;
-    margin: 5px;
-    float: right;
-}
-#estudiante:link{
-    background-color: #333;
 }

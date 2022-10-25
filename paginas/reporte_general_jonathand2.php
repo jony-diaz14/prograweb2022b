@@ -61,7 +61,6 @@ $rows = $result->fetchAll();
                             </td>
                             <td><?php echo $row['apeido']; ?></td>
                             <td><?php echo $row['telefono']; ?></td>
-                            <!-- <td><?php echo $row['genero']; ?></td> -->
                             <?php
                             $genero = $row['genero'];
                             if ($genero == "M") {
@@ -88,6 +87,7 @@ $rows = $result->fetchAll();
         <a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERA</a>
         <a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
         <a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
+        <a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
     </div>
 </body>
 

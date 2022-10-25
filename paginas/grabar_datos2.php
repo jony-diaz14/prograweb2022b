@@ -31,8 +31,8 @@ if (empty($rows))
 	$conn->exec($INSERT1);
 	$mensaje = "ALUMNO REGISTRADO SATISFACTORIAMENTE";
 	
-	// Realizamos las operaciones necesarias para NO MOSTRAR el ID del departamento sino
-	// su nombre descriptivo así como el texto descriptivo del SEXO en lugar de 1 letra
+	// Realizamos las operaciones necesarias para NO MOSTRAR el ID de la carrera sino
+	// su nombre descriptivo así como el texto descriptivo del SEXO en lugar de F o M, se muestra completo
 	$sql2 = "SELECT * FROM carrera WHERE id_carrera='" . $carrera . "'";
 	$result2 = $conn->query($sql2);
 	$rows2 = $result2->fetchAll();
@@ -51,16 +51,15 @@ if (empty($rows))
 
 	// En caso de que si exista ya capturado ese empleado en la base de datos
 	$mensaje = "Ese ID de empleado ya existe en la base de datos";
-
+	$nombre_carrera = "Ya esta";
 	$codigo = "El codigo ya esta registrado";
 	$nombre = "Ese nombre ya existe";
 	$apeido = "Alguien ya tiene ese apeido";
 	$celular = "Ya esta";
 	$fechaNac = "Otra vez esa";
-	$genero2 = "terc@ con lo mismo";
-	$direccion = "ya basta!";
-	$correo = "la gente no entiende que ya esta este";
-	$nombre_carrera = "Ya esta";
+	$genero2 = "ya sta";
+	$direccion = "";
+	$correo = "";
 
 }
 ?>
@@ -89,9 +88,11 @@ if (empty($rows))
 							<br />
 							<a id="estudiante" href="reporte_general_jonathand2.php" >REPORTE GENERAL DE ESTUDIANTES</a>
 							<br />
-							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
-							<br />
 							<a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
+							<br />
+							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR OTRO ESTUDIANTE</a>
+							<br />
+							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
 		</div>
 			<div id="texto1"><br>
 				<p></p>
