@@ -2,7 +2,7 @@
 //Insertamos el c�digo PHP donde nos conectamos a la base de datos *******************************
 require_once "conexion.php";
 // Escribimos la consulta para recuperar los registros de la tabla de MySQL
-$sql = 'SELECT departamento, descripcion FROM departamentos';
+$sql = 'SELECT numero, nombre FROM empleados';
 
 // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
 $result = $conn->query($sql);
@@ -116,8 +116,8 @@ $rows = $result->fetchAll();
 				<table border="1" style="width:100%;">
 					<thead>
 						<tr>
-							<th>Codigo Dpto</th>
-							<th>Departamento</th>
+							<th>Numero del Empleado</th>
+							<th>Nombre del Empleado</th>
 							<th>Eliminar</th>
 							<th>Editar</th>
 						</tr>
@@ -131,18 +131,18 @@ $rows = $result->fetchAll();
 							<tr>
 								<!-- En estas celdas de HTML se muestran los valores recuperados de la consulta SELECT de SQL -->
 								<!-- En esta parte mostrar�s tus propios campos de tu TABLA CATALOGO (todos los que conforman tu tabla) -->
-								<td><?php echo $row['departamento']; ?></td>
-								<td><?php echo $row['descripcion']; ?></td>
+								<td><?php echo $row['numero']; ?></td>
+								<td><?php echo $row['nombre']; ?></td>
 
 								<!-- CELDA 1 para la ilga de BORRAR -->
-								<td><a href="eliminar_departamentos.php?id=<?php echo $row['departamento']; ?>">
+								<td><a href="eliminar_departamentos.php?id=<?php echo $row['numero']; ?>">
 										eliminar
 									</a>
 								</td>
 
 								<!-- CELDA 2 para la ilga de EDITAR -->
 								<!-- Esta es la LIGA o LINK para enviar el valor del campo llave al archivo 2 de la pr�ctica -->
-								<td><a href="editar_departamentos.php?id=<?php echo $row['departamento']; ?>">
+								<td><a href="editar_empleado.php?id=<?php echo $row['numero']; ?>">
 										editar
 									</a>
 								</td>

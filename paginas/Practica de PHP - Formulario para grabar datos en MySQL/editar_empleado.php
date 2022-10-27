@@ -3,13 +3,13 @@
 require_once "conexion.php";
 
 // Recuperamos los valores de los objetos de QUERYSTRING que viene desde la URL mediante GET ******
-$idDepartamento = $_GET["id"];
+$idEmpleado = $_GET["id"];
 //Eliminamos los posibles espacios en blanco que tenga a ambos lados la variable $idDepartamento usando trim()
-$idDepartamento = trim($idDepartamento);
+$idEmpleado = trim($idEmpleado);
 
 // Escribimos la consulta para recuperar el UNICO REGISTRO de MySQL mediante el ID obtenido por _GET
 // Debido a que el campo llave en este ejemplo es de tipo STRING la variable en SQL va encerrada entre ''
-$sql = "SELECT * FROM departamentos WHERE departamento='$idDepartamento'";
+$sql = "SELECT * FROM empleados WHERE numero='$idEmpleado'";
 
 // Ejecutamos la consulta SQL y asignamos el resultado a la variable llamada $result
 $result = $conn->query($sql);
@@ -20,7 +20,7 @@ $rows = $result->fetchAll();
 // El resultado se mostrará en la página, en el BODY del HTML **********************************************
 if (empty($rows)) {
 	$result = "No se encontraron departamentos con esa información !!";
-	header("Location: reporte_editar_departamentos.php");
+	header("Location: ");
 	exit;
 }
 ?>
@@ -29,7 +29,7 @@ if (empty($rows)) {
 
 <head>
 	<meta charset="utf-8">
-	<title>Regitro de departamentos desde PHP hacia MySQL</title>
+	<title>Regitro de empleados desde PHP hacia MySQL</title>
 
 	<style type="text/css" media="screen">
 		body {
@@ -115,20 +115,24 @@ if (empty($rows)) {
 
 	<script language="javascript">
 		function ValidaFormulario1() {
-			var id_departamento = document.getElementById("txt_id_departamento").value;
-			var departamento = document.getElementById("txt_departamento").value;
+			var numero = document.getElementById("txtnumero").value;
+			var nombre = document.getElementById("txtnombre").value;
+			var numero = document.getElementById("txtsalario").value;
+			var nombre = document.getElementById("txtcategoria").value;
+			var numero = document.getElementById("txtsexo").value;
+			var nombre = document.getElementById("txtdepartamento").value;
 			//VALIDACIONES *****************************************************************
 			//Caja de Texto ****************************************************************
-			if (id_departamento == null || id_departamento.length == 0 || /^\s+$/.test(id_departamento)) {
+			if (numero == null || numero.length == 0 || /^\s+$/.test(numero)) {
 				alert("Debes escribir la CLAVE del departamento usando solo 1 letra y 1 número");
-				document.getElementById("txt_id_departamento").value = "";
-				document.getElementById("txt_id_departamento").style.background = 'lightgreen';
-				document.getElementById("txt_id_departamento").focus();
+				document.getElementById("txtnumero").value = "";
+				document.getElementById("txtnumero").style.background = 'lightgreen';
+				document.getElementById("txtnumero").focus();
 				return false;
-			} else if (departamento == null || departamento.length == 0 || /^\s+$/.test(departamento)) {
+			} else if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
 				alert("Debes escribir el nombre del departamento");
-				document.getElementById("txt_departamento").style.background = 'lightgreen';
-				document.getElementById("txt_departamento").focus();
+				document.getElementById("txtnombre").style.background = 'lightgreen';
+				document.getElementById("txtnombre").focus();
 				return false;
 			}
 			return true;
@@ -144,17 +148,17 @@ if (empty($rows)) {
 
 		<div id="caja1">Licenciatura en Tecnologías de la Información</div>
 		<div id="caja2">Programación web</div>
-		<div id="caja3">Formulario para modificar departamentos en la base de datos desde una página web</div>
+		<div id="caja3">Formulario para modificar empleados en la base de datos desde una página web</div>
 
 		<div id="caja4">
 			<div id="texto1"><br>
 				<p></p>
 
 				<fieldset style="width: 90%; font-weight: bold;">
-					<legend>ACTUALIZAR UN DEPARTAMENTO</legend>
+					<legend>ACTUALIZAR UN EMPLEADO</legend>
 
 					<!-- el atributo ACTION del Formulario apunta al archivo 3 de esta práctica: actualizar_departamento.php -->
-					<form action="actualizar_departamento.php" method="post" id="formulario1" onsubmit="return ValidaFormulario1();">
+					<form action="actualizar_empleado.php" method="post" id="formulario1" onsubmit="return ValidaFormulario1();">
 						<?php
 						foreach ($rows as $row) {
 							//Imprimimos en la página EL UNICO REGISTRO de MySQL en un renglon de HTML
@@ -162,20 +166,20 @@ if (empty($rows)) {
 							<div>
 								<br />
 								<!-- Cada valor recuperado de tu tabla CATALOGO va en 1 caja de texto del formulario -->
-								Número de departamento:
-								<input type="text" name="txt_id_departamento" id="txt_id_departamento" size="10" maxlength="2" disabled value="<?php echo $row['departamento']; ?>" />
+								Número de empleado:
+								<input type="text" name="txtnombre" id="txtnombre" size="10" maxlength="2" disabled value="<?php echo $row['numero']; ?>" />
 
 								<!-- Cada valor recuperado de tu tabla CATALOGO va en 1 caja de texto del formulario -->
-								<input type="hidden" name="txt_id_departamento_oculto" id="txt_id_departamento_oculto" size="10" maxlength="2" value="<?php echo $row['departamento']; ?>" />
+								<input type="hidden" name="txt_numero_oculto" id="txt_numero_oculto" size="10" maxlength="2" value="<?php echo $row['numero']; ?>" />
 
 								<br />
 								<br />
 								<!-- Cada valor recuperado de tu tabla CATALOGO va en 1 caja de texto del formulario -->
-								Nombre de departamento:
-								<input type="text" name="txt_departamento" id="txt_departamento" size="40" maxlength="50" value="<?php echo $row['descripcion']; ?>" />
+								Nombre del empleado:
+								<input type="text" name="txtnombre" id="txt_departamento" size="40" maxlength="50" value="<?php echo $row['nombre']; ?>" />
 								<br />
 								<br />
-								<input type="submit" name="AddDepartamento" id="AddDepartamento" value="  Actualizar este departamento " />
+								<input type="submit" name="AddEmpleado" id="AddEmpleado" value="  Actualizar este Empleado " />
 								<br />
 							</div>
 						<?php } ?>
