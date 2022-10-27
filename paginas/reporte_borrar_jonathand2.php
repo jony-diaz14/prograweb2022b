@@ -1,23 +1,18 @@
 <?php
-//ESTA ES U8NA PAGINA DE REPORTE PARA BORRAR ESTUDIANTES
-// *******************************************************
+//ESTA ES UNA PAGINA DE REPORTE PARA BORRAR ESTUDIANTES
 //Insertamos el código PHP donde nos conectamos a la base de datos 
 require_once "conn_mysql_jonathan.php";
 $result;
 // Escribimos la consulta para recuperar los registros de la tabla de MySQL
 $sql = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera FROM estudiantes E ';
 $sql2 = $sql . 'INNER JOIN carrera C ON E.id_carrera = C.id_carrera';
-
 // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
 $result = $conn->query($sql2);
-
 // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
 $rows = $result->fetchAll();
-
 // Los valores que tendrá la variable $rows se organizan en un arreglo asociativo
-// (Variable con varias valores)
-// y se usará un ciclo foreach para recuper los valores uno a uno de ese arreglo
-// El resultado se mostrará en una tabla HTML ***************************************************
+// (Variable con varias valores) y se usará un ciclo foreach para recuper los valores uno a uno de ese arreglo
+// El resultado se mostrará en una tabla HTML 
 ?>
 <!doctype html>
 <html>
