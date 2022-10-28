@@ -107,7 +107,6 @@ body { background-color:#999;}
 </style>
 
 <script language="javascript">
-  <!--
 	  function ValidaFormulario1()
 	  {
 		 var id_departamento = document.getElementById("txt_id_departamento").value;
