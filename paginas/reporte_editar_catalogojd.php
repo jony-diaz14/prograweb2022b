@@ -12,94 +12,29 @@ $rows = $result->fetchAll();
 
 // Los valores que tendr� la variable $rows se organizan en un arreglo asociativo
 // (Variable con varias valores)
-// y se usar� un ciclo foreach para recuper los valores uno a uno de ese arreglo
-// El resultado se mostrar� en una tabla HTML 
+// y se usara un ciclo foreach para recuper los valores uno a uno de ese arreglo
+// El resultado se mostrara en una tabla HTML 
 ?>
 <!doctype html>
 <html>
 
 <head>
 	<meta charset="UTF-8">
-	<title>Regitro de registros a eliminar</title>
+	<title>Regitro de registros a eliminar/editar</title>
+	<link href="../css/editarc1.css" rel="stylesheet" type="text/css" media="screen">
+	<link rel="icon" href="/imagenes/eliminar_r.png" type="image/x-icon">
 
-	<style type="text/css" media="screen">
-		body {
-			background-color: #999;
-		}
-
-		#wrapper {
-			margin: auto;
-			width: 960px;
-			height: 570px;
-			background-color: #CCC;
-		}
-
-		#caja1 {
-			width: 300px;
-			height: 60px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #FFC;
-			float: left;
-		}
-
-		#caja2 {
-			width: 300px;
-			height: 60px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #FFC;
-			float: left;
-		}
-
-		#caja3 {
-			width: 300px;
-			height: 60px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #FFC;
-			float: left;
-		}
-
-		#caja4 {
-			width: 940px;
-			height: 480px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 40px;
-			background-color: #333;
-			clear: both;
-			/*
-		 position:absolute; 
-		 top:200px;
-    */
-
-			position: relative;
-			top: 10px;
-		}
-
-		#imagen1 {
-			position: relative;
-			top: 10px;
-			right: -10px;
-		}
-
-		#texto1 {
-			width: 900px;
-			margin-left: 5px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #CCC;
-			padding: 5px;
-			float: right;
-			right: -10px;
-			top: 10px;
-		}
-	</style>
-
+	<!-- <style type="text/css" media="screen">
+	</style> -->
+	<script language="javascript">
+        function eliminar_carrera(idcarrera) {
+            if (confirm("¿Estás seguro de eliminar esta carrera con codigo: " + idcarrera + "?") == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -108,7 +43,7 @@ $rows = $result->fetchAll();
 
 		<div id="caja1">Licenciatura en Tecnolog&iacute;as de la Informaci&oacute;n</div>
 		<div id="caja2">Programaci&oacute;n web</div>
-		<div id="caja3">Reporte de registros de una tabla para ser ACTUALIZADOS en l&iacute;nea (PHP con PDP y MySQL)</div>
+		<div id="caja3">Reporte de Registro para ser Actualizados desde una pagina Web</div>
 
 		<div id="caja4">
 			<div id="texto1"><br>
@@ -135,7 +70,7 @@ $rows = $result->fetchAll();
 								<td><?php echo $row['nombre_carrera']; ?></td>
 
 								<!-- CELDA 1 para la ilga de BORRAR -->
-								<td><a href="eliminar_carreras.php?id=<?php echo $row['id_carrera']; ?>">
+								<td><a onClick="return eliminar_carrera(<?php echo $row['id_carrera']; ?>);" href="eliminar_carreras.php?id=<?php echo $row['id_carrera']; ?>">
 										eliminar
 									</a>
 								</td>

@@ -7,59 +7,52 @@ body {
 #wrapper {
     margin: auto;
     width: 960px;
-    height: 360px;
+    height: 410px;
     background-color: #808000;
 }
 
 #caja1 {
     width: 300px;
-    height: 60px;
+    height: 50px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    float: left;
     background-color: #80ff40;
     text-align: center;
     font-weight: bold;
+    float: left;
 }
 
 #caja2 {
     width: 300px;
-    height: 60px;
+    height: 50px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
     background-color: #80ff40;
-    float: left;
-    text-align: center;
-    font-weight: bold;
+text-align: center;
+font-weight: bold;            float: left;
 }
 
 #caja3 {
     width: 300px;
-    height: 60px;
+    height: 50px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
     background-color: #80ff40;
-    float: left;
-    text-align: center;
-    font-weight: bold;
-
+text-align: center;
+font-weight: bold;            float: left;
 }
 
 #caja4 {
     width: 940px;
-    height: 270px;
+    height: 330px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;
     background-color: #023f40;
     clear: both;
-    /*
- position:absolute; 
- top:200px;
-*/
 
     position: relative;
     top: 10px;
@@ -72,7 +65,8 @@ body {
 }
 
 #texto1 {
-    width: 900px;
+    width: 500px;
+    height: 290px;
     margin-left: 5px;
     margin-right: 10px;
     margin-top: 10px;

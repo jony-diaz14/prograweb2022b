@@ -7,7 +7,7 @@ body {
 #wrapper {
     margin: auto;
     width: 960px;
-    height: 360px;
+    height: 570px;
     background-color: #808000;
 }
 
@@ -17,10 +17,10 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    float: left;
     background-color: #80ff40;
     text-align: center;
     font-weight: bold;
+    float: left;
 }
 
 #caja2 {
@@ -29,8 +29,8 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    background-color: #80ff40;
     float: left;
+    background-color: #80ff40;
     text-align: center;
     font-weight: bold;
 }
@@ -41,16 +41,15 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    background-color: #80ff40;
     float: left;
+    background-color: #80ff40;
     text-align: center;
     font-weight: bold;
-
 }
 
 #caja4 {
     width: 940px;
-    height: 270px;
+    height: 480px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Regitro de Carreras desde PHP hacia MySQL</title>
-	<link href="../css/alta_tablaC.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../css/alta_tablac.css" rel="stylesheet" type="text/css" media="screen">
 	<link rel="icon" href="/imagenes/estudiante2.png" type="image/x-icon">
 
 	<!-- <style type="text/css" media="screen">

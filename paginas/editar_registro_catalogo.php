@@ -30,98 +30,21 @@ if (empty($rows)) {
 <head>
 	<meta charset="utf-8">
 	<title>Regitro de Carreras desde PHP hacia MySQL</title>
-
+	<link href="../css/editarc2.css" rel="stylesheet" type="text/css" media="screen">
+	<link rel="icon" href="/imagenes/editar.png" type="image/x-icon">
+<!-- 
 	<style type="text/css" media="screen">
-		body {
-			background-color: #999;
-		}
-
-		#wrapper {
-			margin: auto;
-			width: 960px;
-			height: 470px;
-			background-color: #CCC;
-		}
-
-		#caja1 {
-			width: 300px;
-			height: 50px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #FFC;
-			float: left;
-		}
-
-		#caja2 {
-			width: 300px;
-			height: 50px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #FFC;
-			float: left;
-		}
-
-		#caja3 {
-			width: 300px;
-			height: 50px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #FFC;
-			float: left;
-		}
-
-		#caja4 {
-			width: 940px;
-			height: 370px;
-			margin-left: 10px;
-			margin-right: 10px;
-			margin-top: 40px;
-			background-color: #333;
-			clear: both;
-
-			position: relative;
-			top: 10px;
-		}
-
-		#imagen1 {
-			position: relative;
-			top: 10px;
-			right: -10px;
-		}
-
-		#texto1 {
-			width: 500px;
-			height: 340px;
-			margin-left: 5px;
-			margin-right: 10px;
-			margin-top: 10px;
-			background-color: #CCC;
-			padding: 5px;
-			float: right;
-			right: -10px;
-			top: 10px;
-		}
-
-		#AddEmpleado {
-			position: absolute;
-			right: 50px;
-			border: 3px solid #009;
-			padding: 10px;
-		}
-	</style>
+	</style> -->
 
 	<script language="javascript">
 		function ValidaFormulario1() {
-            // Validaciones con JavaScript
+			// Validaciones con JavaScript
 			var codigo = document.getElementById("txtcodigo").value;
 			var nombre = document.getElementById("txtnombre").value;
 			var cordi = document.getElementById("txtcordi").value;
 			var nomUni = document.getElementById("txtuni").value;
-			
-            if (codigo == null || codigo.length == 0 || /^\s+$/.test(codigo)) {
+
+			if (codigo == null || codigo.length == 0 || /^\s+$/.test(codigo)) {
 				alert("Escribe un codigo con numero enteros");
 				document.getElementById("txtcodigo").value = "";
 				document.getElementById("txtcodigo").style.background = 'lightgreen';
@@ -162,11 +85,20 @@ if (empty($rows)) {
 		<div id="caja3">Formulario para modificar empleados en la base de datos desde una página web</div>
 
 		<div id="caja4">
+		<div id="texto2">
+							<a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERAS</a>
+							<br />
+							<a id="estudiante" href="reporte_general_jonathand2.php">REPORTE GENERAL DE ESTUDIANTES</a>
+							<br />
+							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
+							<br />
+							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
+		</div>
 			<div id="texto1"><br>
 				<p></p>
 
 				<fieldset style="width: 90%; font-weight: bold;">
-					<legend>ACTUALIZAR UN EMPLEADO</legend>
+					<legend>ACTUALIZAR UNA CARRERA</legend>
 
 					<!-- el atributo ACTION del Formulario apunta al archivo 3 de esta práctica: actualizar_departamento.php -->
 					<form action="actualizar_carrera.php" method="post" id="formulario1" onsubmit="return ValidaFormulario1();">
@@ -196,7 +128,7 @@ if (empty($rows)) {
 								<input type="text" name="txtuni" id="txtuni" size="40" maxlength="50" value="<?php echo $row['nom_uni']; ?>" />
 								<br />
 								<br />
-								<input type="submit" name="AddEmpleado" id="AddEmpleado" value="  Actualizar esta Carrera " />
+								<input type="submit" name="AddUpdate" id="AddUpdate" value="  Actualizar esta Carrera " />
 								<br />
 							</div>
 						<?php } ?>

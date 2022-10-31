@@ -29,81 +29,11 @@ $mensaje = "CARRERA ACTUALIZADA SATISFACTORIAMENTE";
 <head>
     <meta charset="utf-8">
     <title>Actualización de Carreras desde PHP hacia MySQL</title>
+    <link href="../css/editarc3.css" rel="stylesheet" type="text/css" media="screen">
+	<link rel="icon" href="/imagenes/update.png" type="image/x-icon">
 
-    <style type="text/css" media="screen">
-        body {
-            background-color: #999;
-        }
-
-        #wrapper {
-            margin: auto;
-            width: 960px;
-            height: 410px;
-            background-color: #CCC;
-        }
-
-        #caja1 {
-            width: 300px;
-            height: 50px;
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-top: 10px;
-            background-color: #FFC;
-            float: left;
-        }
-
-        #caja2 {
-            width: 300px;
-            height: 50px;
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-top: 10px;
-            background-color: #FFC;
-            float: left;
-        }
-
-        #caja3 {
-            width: 300px;
-            height: 50px;
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-top: 10px;
-            background-color: #FFC;
-            float: left;
-        }
-
-        #caja4 {
-            width: 940px;
-            height: 330px;
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-top: 40px;
-            background-color: #333;
-            clear: both;
-
-            position: relative;
-            top: 10px;
-        }
-
-        #imagen1 {
-            position: relative;
-            top: 10px;
-            right: -10px;
-        }
-
-        #texto1 {
-            width: 500px;
-            height: 290px;
-            margin-left: 5px;
-            margin-right: 10px;
-            margin-top: 10px;
-            background-color: #CCC;
-            padding: 5px;
-            float: right;
-            right: -10px;
-            top: 10px;
-        }
-    </style>
+    <!-- <style type="text/css" media="screen">
+    </style> -->
 
 </head>
 
@@ -113,11 +43,10 @@ $mensaje = "CARRERA ACTUALIZADA SATISFACTORIAMENTE";
 
         <div id="caja1">Licenciatura en Tecnologías de la Información</div>
         <div id="caja2">Programación web</div>
-        <div id="caja3">Formulario de tabla de carreras modificado en una pagina web hacia MySQL</div>
+        <div id="caja3">Datos de la tabla Carrera modificado en una paginas Web</div>
 
         <div id="caja4">
             <div id="texto1"><br>
-                <p></p>
 
                 <fieldset style="width: 90%;">
                     <legend><?php echo ($mensaje); ?></legend>
