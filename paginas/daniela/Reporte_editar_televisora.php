@@ -134,7 +134,7 @@ body { background-color:#999;}
                 
                 <!-- CELDA 2 para la ilga de EDITAR -->
 				<!-- Esta es la LIGA o LINK para enviar el valor del campo llave al archivo 2 de la práctica -->
-                 <td><a href="Editar_programa.php?id=<?php echo $row['id_televisora']; ?>">
+                 <td><a href="Editar_televisora.php?id=<?php echo $row['id_televisora']; ?>">
 				        editar
                      </a>
                 </td>

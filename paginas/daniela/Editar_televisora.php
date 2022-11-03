@@ -108,27 +108,54 @@ body { background-color:#999;}
 </style>
 
 <script language="javascript">
-	  function ValidaFormulario1()
-	  {
-		 var id_programa = document.getElementById("txt_id_programa").value;
-		 var programa = document.getElementById("txt_programa").value;
-		 //VALIDACIONES *****************************************************************
-		 //Caja de Texto ****************************************************************
-         if(id_programa == null || id_programa.length == 0 || /^\s+$/.test(id_programa)) 
-		 {
-			 alert("Debes escribir la CLAVE del programa usando solo 1 letra y 1 número");
-			 document.getElementById("txt_id_programa").value = "";
-			 document.getElementById("txt_id_programa").style.background = 'lightgreen';
-			 document.getElementById("txt_id_programa").focus();
-             return false;
-		 } else if (programa == null || programa.length == 0 || /^\s+$/.test(programa)){
-			 alert("Debes escribir el nombre del programa");
-			 document.getElementById("txt_programa").style.background = 'lightgreen';
-			 document.getElementById("txt_programa").focus();
-             return false;	 
-	     } 
-			 return true; 
-		 }
+	  function ValidaFormulario1(){
+	  //Recuperamos lo elegido en el combo de los departamento
+	  var codigo_televisora = document.getElementById("txttelevisora").value;
+			//Recuperamos lo escrito en la caja del número de empleado:
+			var nombre_televisora = document.getElementById("txtnombre").value;
+			//Recuperamos lo escrito en la caja del nombre del empleado:
+			var sede = document.getElementById("txtsede").value;
+			//Recuperamos lo escrito en la caja del salario del empleado:
+			var fecha_estreno = document.getElementById("txtestreno").value;
+
+			var tipo_televsiora = document.getElementById("txttipo").value;
+			//Recuperamos lo escrito en la caja de la categoría del empleado:
+			//VALIDACIONES ***********************
+			//Caja de Texto **********************
+			if (codigo_televisora == null || codigo_televisora == 0 ||  !/^([0-9])*$/.test(codigo_televisora)) {
+				alert("Tienes que elegir el nombre de la televisora");
+				document.getElementById("txttelevisora").value = "";
+				document.getElementById("txttelevisora").focus();
+				document.getElementById("txttelevisora").style.background = "#bfedbe20";
+				return false;
+			} else if (nombre_televisora == null || nombre_televisora.length == 0 || /^\s+$/.test(nombre_televisora)) {
+				alert("Escribe la sede de la televisora");
+				document.getElementById("txtnombre").value = "";
+				document.getElementById("txtnombre").focus();
+				document.getElementById("txtnombre").style.background = "#199C9920";
+				return false;
+			} else if (sede == null || sede.length == 0 || /^\s+$/.test(sede)) {
+				alert("Escribe la fecha de estreno ");
+				document.getElementById("txtsede").value = "";
+				document.getElementById("txtsede").focus();
+				document.getElementById("txtsede").style.background = "#199C9920";
+				return false;
+			} else if (fecha_estreno == null || fecha_estreno.length == 0 || /^\d{4}([\-/.])(0?[1-9]|1[1-2])([\-/.])1(3[01]|[12][0-9]|0?[1-9])$/.test(fecha_estreno)) {
+				alert("Escribe el tipo de televisora");
+				document.getElementById("txtestreno").value = "";
+				document.getElementById("txtestreno").focus();
+				document.getElementById("txtestreno").style.background = "#199C9920";
+				return false;
+			} //Cuando ya están contestadas todas las cajas de texto y seleccionados los combobox enviamos el form 
+			else if (tipo_televsiora == null || tipo_televsiora.length == 0 || /^\s+$/.test(tipo_televsiora)) {
+				alert("Escribe el tipo de televisora");
+				document.getElementById("txttipo").value = "";
+				document.getElementById("txttipo").focus();
+				document.getElementById("txttipo").style.background = "#199C9920";
+				return false;
+			} //Cuando ya están contestadas todas las cajas de texto y seleccionados los combobox enviamos el form 
+			return true;
+		}
   //-->
 </script>
 
@@ -150,7 +177,7 @@ body { background-color:#999;}
             <legend>ACTUALIZAR EL PROGRAMA</legend>
           
 		  <!-- el atributo ACTION del Formulario apunta al archivo 3 de esta práctica: actualizar_departamento.php -->
-          <form action="Actualizar_Televisora.php" method="post" id="formulario1" onsubmit="return ValidaFormulario1();">
+          <form action="Actualiza_Televisora.php" method="post" id="formulario1" onsubmit="return ValidaFormulario1();">
 		  <?php
             foreach ($rows as $row) {
 			//Imprimimos en la página EL UNICO REGISTRO de MySQL en un renglon de HTML
@@ -159,26 +186,21 @@ body { background-color:#999;}
                     <br />
 					<!-- Cada valor recuperado de tu tabla CATALOGO va en 1 caja de texto del formulario -->
                          Número de departamento: 
-                         <input type="text" 
-						 name="txt_id_departamento" 
-						 id="txt_id_departamento" 
+                         <input type="text"
+						 name="txttelevisora" 
+						 id="txttelevisora" 
 						 size="10" maxlength="2" disabled
 						 value="<?php echo $row['id_televisora']; ?>" />
-					
-                        <!-- Cada valor recuperado de tu tabla CATALOGO va en 1 caja de texto del formulario -->					
-						 <input type="hidden" 
-						 name="txt_id_departamento_oculto" 
-						 id="txt_id_departamento_oculto" 
-						 size="10" maxlength="2"
-						 value="<?php echo $row['id_televisora']; ?>" />
+
+						 <input type="hidden" name="txttelevisora_oculto" id="txttelevisora_oculto" size="10" maxlength="2" value="<?php echo $row['id_televisora']; ?>" />
 						 
                     <br />
                     <br />
 					    <!-- Cada valor recuperado de tu tabla CATALOGO va en 1 caja de texto del formulario -->
                          Nombre de departamento: 
                          <input type="text" 
-						 name="txt_departamento" 
-						 id="txt_departamento" 
+						 name="txtnombre" 
+						 id="txtnombre" 
 						 size="40" 
 						 maxlength="50" 
 						 value="<?php echo $row['nombre_televisora']; ?>" />
@@ -186,8 +208,8 @@ body { background-color:#999;}
                     <br />
                          Nombre de departamento: 
                          <input type="text" 
-						 name="txt_departamento" 
-						 id="txt_departamento" 
+						 name="txtsede" 
+						 id="txtsede" 
 						 size="40" 
 						 maxlength="50" 
 						 value="<?php echo $row['sede']; ?>" />
@@ -195,8 +217,8 @@ body { background-color:#999;}
                     <br />
                          Nombre de departamento: 
                          <input type="text" 
-						 name="txt_departamento" 
-						 id="txt_departamento" 
+						 name="txtestreno" 
+						 id="txtestreno" 
 						 size="40" 
 						 maxlength="50" 
 						 value="<?php echo $row['fecha_estreno']; ?>" />
@@ -204,8 +226,8 @@ body { background-color:#999;}
                     <br />
                          Nombre de departamento: 
                          <input type="text" 
-						 name="txt_departamento" 
-						 id="txt_departamento" 
+						 name="txttipo" 
+						 id="txttipo" 
 						 size="40" 
 						 maxlength="50" 
 						 value="<?php echo $row['tipo_televisora']; ?>" />

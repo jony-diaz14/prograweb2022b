@@ -4,7 +4,7 @@
 	
 	//Recuperamos los valores de las cajas de texto y de los demás objetos de formulario
 	//Como los valores vienen desde un FORMULARIO web, se debe usar la supervariable de PHP -- $_POST[ ];
-$id_televisora = trim($_POST["id_televisora"]);
+$id_televisora = $_POST["txttelevisora_oculto"];
 $nombre_televisora = trim($_POST["txtnombre"]);
 $sede = trim($_POST["txtsede"]);
 $fecha_estreno = trim($_POST["txtestreno"]);
@@ -16,7 +16,7 @@ $tipo_televisora = trim($_POST["txttipo"]);
     // Escribimos la consulta para ACTUALIZAR LOS DATOS EN LA TABLA de departamentos (PDO)
 	// Debido a que en esta tabla los 2 campos son de tipo STRING se encierran en '' las 2 variables de PHP
 	// Al ser una sentecia UPDATE de SQL es OBLIGATORIO usar la sentecia WHERE apuntando al campo Llave Primario
-       $sqlUPDATE = "UPDATE televisora SET nombre_televisora = '$nombre_televisora', sede = '$sede', fecha_estreno  = '$fecha_estreno ', tipo_televisora = '$tipo_televisora', WHERE id_televisora = $id_televisora";
+       $sqlUPDATE = "UPDATE televisora SET nombre_televisora = '$nombre_televisora', sede = '$sede', fecha_estreno  = '$fecha_estreno ', tipo_televisora = '$tipo_televisora' WHERE id_televisora = $id_televisora";
 	   
     // Ejecutamos la sentencia UPDATE de SQL a partir de la conexión usando PDO 
 	// mediante la propiedad "EXEC" de la linea de conexión ***************************
