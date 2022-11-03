@@ -72,10 +72,17 @@ $conn->exec($sqlBorrar);
                         <tr>
                             <td>&nbsp;</td>
                             <td><a href="reporte_editar_catalogojd.php">
-                                    Regresar al reporte Carreras </a>
+                                    Regresar al reporte editar/borrar carreras </a>
                             </td>
                             <td>&nbsp;</td>
                             <td><a href="alta_tabla1_jonathand.php">Agregar otra Carrera</a></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><a href="reporte_general_jonathand1.php">
+                                    Regresar al Reporte General</a></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
                         </tr>
                     </tbody>
                 </table>

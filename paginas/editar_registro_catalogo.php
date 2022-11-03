@@ -86,13 +86,17 @@ if (empty($rows)) {
 
 		<div id="caja4">
 		<div id="texto2">
+							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
+							<br />
 							<a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERAS</a>
 							<br />
 							<a id="estudiante" href="reporte_general_jonathand2.php">REPORTE GENERAL DE ESTUDIANTES</a>
 							<br />
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<br />
-							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
+							<a id="carrera" href="alta_tabla1_jonathand.php">AGREGAR CARRERA</a>
+							<br />
+							<a id="estudiante" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
 		</div>
 			<div id="texto1"><br>
 				<p></p>

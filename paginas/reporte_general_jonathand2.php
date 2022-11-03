@@ -88,6 +88,7 @@ $rows = $result->fetchAll(); //
         <a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
         <a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
         <a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
+        <a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
     </div>
 </body>
 

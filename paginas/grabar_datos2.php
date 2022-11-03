@@ -88,6 +88,8 @@ if (empty($rows))
 							<br />
 							<a id="estudiante" href="reporte_general_jonathand2.php" >REPORTE GENERAL DE ESTUDIANTES</a>
 							<br />
+							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
+							<br />
 							<a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
 							<br />
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR OTRO ESTUDIANTE</a>

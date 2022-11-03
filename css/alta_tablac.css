@@ -8,7 +8,7 @@ body {
 #wrapper {
     margin: auto;
     width: 960px;
-    height: 700px;
+    height: 650px;
     background-color: #808000;
 }
 
@@ -50,7 +50,7 @@ body {
 
 #caja4 {
     width: 940px;
-    height: 580PX;
+    height: 560PX;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;
@@ -72,7 +72,7 @@ top:200px;
 
 #texto1 {
     width: 500px;
-    height: 550PX;
+    height: 540PX;
     margin-left: 5px;
     margin-right: 10px;
     margin-top: 10px;
@@ -96,15 +96,6 @@ top:200px;
     
 }
 
-#AddEstudiante {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    right: 50px;
-    border: 3px solid #5c5c5c;
-    padding: 10px;
-    position: relative;
-    left: 20px;
-}
 #AddCarrera {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;

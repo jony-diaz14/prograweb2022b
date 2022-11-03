@@ -62,6 +62,7 @@ $rows = $result->fetchAll();
     $conn = null;
     ?>
     <br />
+							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
 							<a id="estudiante" href="reporte_general_jonathand2.php" >REPORTE GENERAL DE ESTUDIANTES</a>
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>

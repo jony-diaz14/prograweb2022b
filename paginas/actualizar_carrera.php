@@ -67,7 +67,7 @@ $mensaje = "CARRERA ACTUALIZADA SATISFACTORIAMENTE";
                         <a href="alta_tabla2_jonathand.php">REGISTRAR OTRA CARRERA</a>
                         <br />
                         <br />
-                        <a href="reporte_editar_catalogojd.php">REPORTE GENERAL DE CARRERAS</a>
+                        <a href="reporte_editar_catalogojd.php">REPORTE DE CARRERAS</a>
                     </div>
                 </fieldset>
             </div>

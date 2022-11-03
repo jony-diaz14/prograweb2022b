@@ -101,7 +101,7 @@ $rows = $result->fetchAll();
                             <th>&nbsp;</th>
                             <th><a href="alta_tabla1_jonathand.php">Agregar Carrera</a></th>
                             <th>&nbsp;</th>
-                            <th>&nbsp;</th>
+                            <th><a href="reporte_editar_catalogojd.php" >Editar/Borrar Carreras</a></th>
                             <th>&nbsp;</th>
                         </tr>
                     </tbody>

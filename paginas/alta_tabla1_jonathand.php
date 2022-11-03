@@ -73,6 +73,9 @@
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<br />
 							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
+							<br />
+							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
+
 		</div>
 			<div id="texto1"><br>
 				<fieldset style="width: 92%; height: 300px; font-weight: bold;">
