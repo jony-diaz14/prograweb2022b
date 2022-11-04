@@ -191,7 +191,7 @@ if (empty($rows)) {
 			} //Cuando ya están contestadas todas las cajas de texto y seleccionados los combobox enviamos el form
 			return true;
 		}
-		//
+		//-->
 	</script>
 
 </head>
