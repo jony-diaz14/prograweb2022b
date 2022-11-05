@@ -1,7 +1,7 @@
 <?php
 // Insertamos el código PHP donde nos conectamos a la base de datos 
 require_once "conn_mysql_jonathan.php";
-
+// a
 //Recuperamos los valores de las cajas de texto y de los demás objetos de formulario
 //Como los valores vienen desde un FORMULARIO web, se debe usar la supervariable de PHP -- $_POST[ ];
 $idCarrera = $_POST["txtcodigo_oculto"];
