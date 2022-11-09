@@ -39,9 +39,9 @@ $rows = $result->fetchAll();
 
     <div id="wrapper">
 
-        <div id="caja1">Licenciatura en Tecnolog&iacute;as de la Informaci&oacute;n</div>
-        <div id="caja2">Programaci&oacute;n web</div>
-        <div id="caja3">Reporte de registros de una tabla para ser ACTUALIZADOS en l&iacute;nea (PHP con PDP y MySQL)</div>
+        <div id="caja1">Licenciatura en Tecnologías de la Información</div>
+        <div id="caja2">Programación web</div>
+        <div id="caja3">Reporte de los registros Estudiantes para ser Actualizados en linea</div>
 
         <div id="caja4">
             <div id="texto1"><br>
@@ -61,7 +61,7 @@ $rows = $result->fetchAll();
 
                         <?php
                         foreach ($rows as $row) {
-                            //Imprimimos en la p�gina un renglon de tabla HTML por cada registro de tabla de MySQL
+                            //Imprimimos en la pagina un renglon de tabla HTML por cada registro de tabla de MySQL
                         ?>
                             <tr>
                                 <td><?php echo $row['codigo']; ?></td>
@@ -103,7 +103,7 @@ $rows = $result->fetchAll();
                             <td colspan="8">&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
+                            <td><a href="reporte_general_jonathand2.php">Rerporte General Estudiantes</a></td>
                             <td><a href="alta_tabla2_jonathand.php">Agregar otro Estudiante</a></td>
                             <td>&nbsp;</td>
                             <td colspan="5">&nbsp;</td>

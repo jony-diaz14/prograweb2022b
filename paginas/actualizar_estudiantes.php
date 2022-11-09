@@ -59,7 +59,7 @@ if (empty($rows2)) {
 		<div id="caja3">Formulario para alta de estudiantes en la base de datos desde una página web</div>
 
 		<div id="caja4">
-		<div id="texto2">
+		<!-- <div id="texto2">
 							<br />
 							<a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERAS</a>
 							<br />
@@ -72,13 +72,12 @@ if (empty($rows2)) {
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR OTRO ESTUDIANTE</a>
 							<br />
 							<a id="carrera" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
-							<!-- <a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a> -->
-		</div>
+							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a> </div>-->
 			<div id="texto1"><br>
 				<p></p>
 
 				<fieldset style="width: 90%;">
-					<legend></legend>
+					<legend>DATOS ACTUALIZADOS</legend>
 					<div>
                         <br />
 						<b>Codigo:</b> <?php echo ($codigo); ?>
@@ -115,7 +114,10 @@ if (empty($rows2)) {
 						<b>Correo del alumno:</b> <?php echo ($correo); ?>
 						<br />
 						<br />
-						<a href="reporte_editar_relacionadojd.php" >EDITAR OTRO ESTUDIANTES</a>
+                        <a href="alta_tabla2_jonathand.php">REGISTRAR OTRO ESTUDIANTE</a>
+                        <br />
+                        <br />
+                        <a href="reporte_editar_relacionadojd.php">REPORTE DE ESTUDIANTES</a>
 					</div>
 				</fieldset>
 			</div>

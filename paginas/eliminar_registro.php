@@ -90,8 +90,8 @@ $conn->exec($sqlBorrar);
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td><a href="reporte_borrar_jonathand2.php">
-                                    Regresar al reporte borrar Estudiantes </a>
+                            <td><a href="reporte_editar_relacionadojd.php">
+                                    Regresar al reporte editar/borrar Estudiantes </a>
                             </td>
                             <td>&nbsp;</td>
                             <td><a href="reporte_general_jonathand2.php">

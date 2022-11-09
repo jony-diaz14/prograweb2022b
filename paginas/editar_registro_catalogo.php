@@ -82,7 +82,7 @@ if (empty($rows)) {
 
 		<div id="caja1">Licenciatura en Tecnologías de la Información</div>
 		<div id="caja2">Programación web</div>
-		<div id="caja3">Formulario para modificar empleados en la base de datos desde una página web</div>
+		<div id="caja3">Formulario para modificar carreras en la base de datos desde una página web</div>
 
 		<div id="caja4">
 		<div id="texto2">
@@ -95,8 +95,11 @@ if (empty($rows)) {
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<br />
 							<a id="carrera" href="alta_tabla1_jonathand.php">AGREGAR CARRERA</a>
+							<!-- <br />
+							<a id="estudiante" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a> -->
 							<br />
-							<a id="estudiante" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
+							<a id="carrera" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
+
 		</div>
 			<div id="texto1"><br>
 				<p></p>

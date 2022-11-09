@@ -133,7 +133,7 @@ if (empty($rows)) {
 
 		<div id="caja1">Licenciatura en Tecnologías de la Información</div>
 		<div id="caja2">Programación web</div>
-		<div id="caja3">Formulario para editar la información de los empleados en la BD desde una página web</div>
+		<div id="caja3">Formulario para editar los estudiantes en la BD desde una página web</div>
 
 		<div id="caja4">
 		<div id="texto2"> <br />

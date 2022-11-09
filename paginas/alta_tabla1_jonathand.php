@@ -120,7 +120,6 @@
 							<br />
 						</div>
 					</form>
-					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->
 				</fieldset>
 
 			</div>

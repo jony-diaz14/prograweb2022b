@@ -64,7 +64,7 @@ $mensaje = "CARRERA ACTUALIZADA SATISFACTORIAMENTE";
                         <b>Nombre de la Uni:</b> <?php echo ($nomUni); ?>
                         <br />
                         <br />
-                        <a href="alta_tabla2_jonathand.php">REGISTRAR OTRA CARRERA</a>
+                        <a href="alta_tabla1_jonathand.php">REGISTRAR OTRA CARRERA</a>
                         <br />
                         <br />
                         <a href="reporte_editar_catalogojd.php">REPORTE DE CARRERAS</a>

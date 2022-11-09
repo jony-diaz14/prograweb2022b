@@ -196,13 +196,12 @@ if (empty($rows)) {
 							
 						</div>
 					</form>
-					<!-- <button  onclick="location.href='../paginas/reporte_general_jonathand.php'">Reporte general</button> -->
 				</fieldset>
 			</div>
 		</div>
 	</div>
 	<?php
-	//Cerramos la oonexion a la base de datos **********************************************
+	//Cerramos la oonexion a la base de datos 
 	$conn = null;
 	?>
 </body>

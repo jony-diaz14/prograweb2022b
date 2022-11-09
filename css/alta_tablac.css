@@ -8,7 +8,7 @@ body {
 #wrapper {
     margin: auto;
     width: 960px;
-    height: 650px;
+    height: 580px;
     background-color: #808000;
 }
 
@@ -50,7 +50,7 @@ body {
 
 #caja4 {
     width: 940px;
-    height: 560PX;
+    height: 540PX;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;

@@ -42,7 +42,7 @@ $rows = $result->fetchAll();
 	<div id="wrapper">
 
 		<div id="caja1">Licenciatura en Tecnolog&iacute;as de la Informaci&oacute;n</div>
-		<div id="caja2">Programaci&oacute;n web</div>
+		<div id="caja2">Programación web</div>
 		<div id="caja3">Reporte de Registro para ser Actualizados desde una pagina Web</div>
 
 		<div id="caja4">
