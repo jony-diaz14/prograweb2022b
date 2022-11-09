@@ -7,7 +7,7 @@
 $servername = "localhost";   // *****servidor donde esta la BD
 $username ="root";           // *****Usuario para entrar a la BD
 $password ="";               // *****Contraseña para entrar a la BD
-$BasedeDatos = "bdeber";     // ***** Nombre de la BD
+$BasedeDatos = "3914263_prograweb";     // ***** Nombre de la BD
 // En un bloque try, escribimos la linea de conexion
 try {
     /*

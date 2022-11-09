@@ -127,10 +127,11 @@ if (empty($rows)) {
 							<br />
 							<a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
 							<br />
-							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
-							<br />
+							<!-- <a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
+							<br /> -->
 							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
-
+							<br />
+							<a id="carrera" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
 
 		</div>
 			<div id="texto1"><br>
@@ -138,8 +139,6 @@ if (empty($rows)) {
 
 				<fieldset style="width: 90%; font-weight: bold;">
 					<legend>REGISTRAR UN NUEVO ALUMNO</legend>
-
-
 
 					<form action="grabar_datos2.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
 						<div>

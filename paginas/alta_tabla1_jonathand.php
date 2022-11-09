@@ -72,9 +72,11 @@
 							<br />
 							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
 							<br />
-							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
-							<br />
+							<!-- <a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a>
+							<br /> -->
 							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
+							<br />
+							<a id="carrera" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
 
 		</div>
 			<div id="texto1"><br>
