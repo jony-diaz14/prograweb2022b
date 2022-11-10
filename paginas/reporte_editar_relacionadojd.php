@@ -17,7 +17,7 @@ $rows = $result->fetchAll();
 
 <head>
     <meta charset="UTF-8">
-    <title>Regitro de registros a eliminar</title>
+    <title>Reporte de Estudiantes para editar/borrar</title>
     <link href="../css/editarc1.css" rel="stylesheet" type="text/css" media="screen">
 	<link rel="icon" href="/imagenes/eliminar_r.png" type="image/x-icon">
 

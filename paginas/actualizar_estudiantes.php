@@ -124,7 +124,7 @@ if (empty($rows2)) {
 		</div>
 	</div>
 	<?php
-	//Cerramos la conexion a la base de datos *************************************
+	//Cerramos la conexion a la base de datos 
 	$conn = null;
 	?>
 </body>

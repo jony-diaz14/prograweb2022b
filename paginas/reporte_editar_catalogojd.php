@@ -10,10 +10,6 @@ $result = $conn->query($sql);
 // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
 $rows = $result->fetchAll();
 
-// Los valores que tendr� la variable $rows se organizan en un arreglo asociativo
-// (Variable con varias valores)
-// y se usara un ciclo foreach para recuper los valores uno a uno de ese arreglo
-// El resultado se mostrara en una tabla HTML 
 ?>
 <!doctype html>
 <html>

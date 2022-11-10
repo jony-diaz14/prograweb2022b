@@ -1,5 +1,5 @@
 <?php
-// Insertamos el código PHP donde nos conectamos a la base de datos 
+// Insertamos el código que nos hace conectarnos a la BD
 require_once "conn_mysql_jonathan.php";
 $result = "";
 $result2 = "";
@@ -9,12 +9,12 @@ $sqlDptos = 'SELECT id_carrera,nombre_carrera FROM carrera';
 $stmt2 = $conn->query($sqlDptos);
 $rows2 = $stmt2->fetchAll();
 if (empty($rows2)) {
-	$result2 = "No se encontraron departamentos !!";
+	$result2 = "No se encontraron estudiantes !!";
 }
 // Recuperamos los valores de los objetos que vienen desde la URL mediante GET
 $idestudiante = $_GET["id"];
-// Conversión de CARACTER a ENTERO
-$idestudiante = (int)$idestudiante;
+$idestudiante = (int)$idestudiante;//conversion de string a entero
+
 // Escribimos la consulta para recuperar el UNICO REGISTRO de MySQL mediante el ID obtenido por GET
 $sql3 = 'SELECT E.codigo, E.nombre_estudiante, E.apeido,E.telefono, E.fecha_nac,E.genero, E.direccion, E.correo, C.nombre_carrera, C.nom_uni
 FROM estudiantes E INNER JOIN carrera C ON E.id_carrera = C.id_carrera WHERE E.codigo=' . $idestudiante;
@@ -25,11 +25,7 @@ $result = $conn->query($sql3);
 // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
 $rows = $result->fetchAll();
 
-if (empty($rows)) {
-	$result = "No se encontraron empleados !!";
-	header("Location: reporte_para_editar_pdo.php");
-	exit;
-}
+
 ?>
 <!doctype html>
 <html>
@@ -148,7 +144,6 @@ if (empty($rows)) {
 							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
 							<br />
 							<a id="carrera" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
-
 		</div>
 			<div id="texto1"><br>
 				<fieldset style="width: 90%; font-weight: bold;">
