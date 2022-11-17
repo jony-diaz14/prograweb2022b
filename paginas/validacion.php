@@ -15,7 +15,6 @@ $rows = $result->fetchAll();
 // Verificamos si la variable $rows trae el valor de 1 o de 0  
 $cuantos = (int)$rows;
 // SI $rows es igual a 1 es que SI encontro al usuario, si es igual a 0 es que no lo encontro
-
 if ($cuantos > 0) {
 	//Para saber si es usuario
 	//Jonathan Jesus Diaz Jimenez
@@ -25,7 +24,6 @@ if ($cuantos > 0) {
 	//En caso de haber encontrado al usuario, le creamos una variable de SESION para su ingreso
 	$_SESSION["validado"] = "true";
 	$_SESSION["tipo_usuario"] = $tipo_usuario;
-
 	//Redireccionamos a una de las páginas del sistema en linea
 	$conn = null;
 	echo'<script type="text/javascript">
@@ -40,9 +38,9 @@ if ($cuantos > 0) {
 	$conn = null;
 	echo'<script type="text/javascript">
         alert("Error. \nEl usuario o la contraseña que has introducido son incorrectas");
-        window.location.href="../index.php";
+        window.location.href="../index_jesus.php";
         </script>';
-	// header("Location: ../index.php");
+	//header("Location: ../index_jesus");
 	//Cerramos la conexion a la base de datos
 	exit;
 }

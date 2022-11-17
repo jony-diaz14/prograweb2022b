@@ -7,13 +7,11 @@ body {
 #wrapper {
     margin: auto;
     width: 960px;
-    height: 580px;
+    height: 360px;
     background-color: #808000;
 }
 
 #caja1 {
-    font-weight: bold;
-    text-align: center;
     width: 300px;
     height: 50px;
     margin-left: 10px;
@@ -21,11 +19,11 @@ body {
     margin-top: 10px;
     background-color: #80ff40;
     float: left;
+    text-align: center;
+    font-weight: bold;
 }
 
 #caja2 {
-    font-weight: bold;
-    text-align: center;
     width: 300px;
     height: 50px;
     margin-left: 10px;
@@ -33,11 +31,11 @@ body {
     margin-top: 10px;
     background-color: #80ff40;
     float: left;
+    text-align: center;
+    font-weight: bold;
 }
 
 #caja3 {
-    font-weight: bold;
-    text-align: center;
     width: 300px;
     height: 50px;
     margin-left: 10px;
@@ -45,19 +43,21 @@ body {
     margin-top: 10px;
     background-color: #80ff40;
     float: left;
+    text-align: center;
+    font-weight: bold;
 }
 
 #caja4 {
     width: 940px;
-    height: 540PX;
+    height: 280px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;
     background-color: #023f40;
     clear: both;
     /*
-position:absolute; 
-top:200px;
+ position:absolute; 
+ top:200px;
  */
     position: relative;
     top: 10px;
@@ -71,7 +71,7 @@ top:200px;
 
 #texto1 {
     width: 500px;
-    height: 540PX;
+    height: 250px;
     margin-left: 5px;
     margin-right: 10px;
     margin-top: 10px;
@@ -81,21 +81,13 @@ top:200px;
     right: -10px;
     top: 10px;
 }
-#texto2 {
-    /* background-color: #107a28; */
-    width: auto;
-    height: 300px;
-    position: relative;
-    float: left;
-    left: 70px;
-    top: 10px;
-    margin-left: 5px;
-    margin-right: 10px;
-    margin-top: 10px;
-    
-}
 
-#AddCarrera {
+#btn_aceptar {
+    /* position: absolute;
+    right: 50px;
+    border: 3px solid #009;
+    padding: 10px; */
+    font-size: large;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     position: absolute;
@@ -103,22 +95,3 @@ top:200px;
     border: 3px solid #5c5c5c;
     padding: 10px;
 }
-#carrera {
-    border-radius: 5px;
-    padding: 10px 7px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #333;
-    margin: 5px;
-    float: right;
-} 
-
-#estudiante {
-    border-radius: 5px;
-    padding: 10px 7px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #333;
-    margin: 5px;
-    float: right;
-} 

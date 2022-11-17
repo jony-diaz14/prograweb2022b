@@ -1,8 +1,29 @@
 <?php
+//Inicializamos el uso de las sesiones 
+session_start();
+if ($_SESSION["validado"] != "true"){
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! LOGUEATE");
+        window.location.href="../index_jesus.php";
+        </script>';
+    // header("Location: ../index_jesus.php");
+    exit;
+}
+if ($_SESSION["tipo_usuario"] == 2) {
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! tipo de usuario no valido");
+        window.location.href="../index_jesus.php";
+        </script>';
+    //header("Location: ../index_jesus.php");
+    exit;
+}
+?>
+<?php
 // Insertamos el código PHP donde nos conectamos a la base de datos *******************************
 require_once "conn_mysql_jonathan.php";
 $result = "";
-//
 // Escribimos la consulta para recuperar los departamentos de la tabla departamentos **************
 $sql = 'SELECT id_carrera,nombre_carrera FROM carrera';
 // DELETE FROM carrera WHERE id_carrera = 1234;

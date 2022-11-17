@@ -1,26 +1,24 @@
 <?php
-//Inicializamos el uso de las sesiones ***********************
+//Inicializamos el uso de las sesiones 
 session_start();
-//Verificamos que la variable de SESION tenga datos validos
-//Si los trae, dejamos visualizar esta página, de lo contrario
-//lo regresamos a la página de firma de usuarios (LOGIN)
-if ($_SESSION["validado"] != "true") {
-	//Redireccionamos a la página de firma de usuarios (LOGIN)
-	header("Location: ../index.php");
-	exit;
+if ($_SESSION["validado"] != "true"){
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! LOGUEATE");
+        window.location.href="../index_jesus.php";
+        </script>';
+    // header("Location: ../index_jesus.php");
+    exit;
 }
 if ($_SESSION["tipo_usuario"] == 2) {
-	//Redireccionamos a la página de firma de usuarios (LOGIN)
-	header("Location: ../index.php");
-	exit;
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! tipo de usuario no valido");
+        window.location.href="../index_jesus.php";
+        </script>';
+    //header("Location: ../index_jesus.php");
+    exit;
 }
-// require_once "conn_mysql_jonathan.php";
-// $idUser = $_GET["id"];
-// $idUser = (int)$idUser;
-// $sql = 'SELECT * FROM usuarios WHERE id_usuario =' . $idUser;
-// $sql = 'SELECT * FROM usuarios';
-// $result = $conn->query($sql);
-// $rows = $result->fetchAll();
 ?>
 <!doctype html>
 <html lang="es">
@@ -28,9 +26,11 @@ if ($_SESSION["tipo_usuario"] == 2) {
 <head>
 	<meta charset="utf-8">
 	<title>Menú de opciones de la aplicación web</title>
+	<link rel="icon" href="/imagenes/inicio.png" type="image/x-icon">
+	<link href="../css/menu.css" rel="stylesheet" type="text/css" media="screen">
 
 	<style type="text/css" media="screen">
-		body {
+		/* body {
 			background-color: #999;
 		}
 
@@ -82,7 +82,7 @@ if ($_SESSION["tipo_usuario"] == 2) {
 			/*
 		 position:absolute; 
 		 top:200px;
-		 */
+		 
 			position: relative;
 			top: 10px;
 		}
@@ -111,7 +111,7 @@ if ($_SESSION["tipo_usuario"] == 2) {
 			right: 50px;
 			border: 3px solid #009;
 			padding: 10px;
-		}
+		} */
 	</style>
 
 </head>
@@ -127,13 +127,14 @@ if ($_SESSION["tipo_usuario"] == 2) {
 				</p>
 				<!-- <h3>Bienvenido <?php echo $rows['nombreU']; ?>!!</h3> -->
 				<ul>
-					<li><a href="alta_empleados.php">Registro de nuevos empleados</a></li>
-					<li><a href="reporte_con_enlaces_pdo.php">Reporte de empleados</a></li>
-					<li><a href="reporte_para_editar_pdo.php">Modificación de datos de empleados</a></li>
-					<li><a href="reporte_para_borrar_pdo.php">Eliminar empleados</a></li>
-
-
-					<li><a href="../index.php">CERRAR SESION</a></li>
+					<li><a href="reporte_general_jonathand1.php">Reporte General de Carreras</a></li>
+					<li><a href="reporte_general_jonathand2.php">Reporte General de Estudiantes</a></li>
+					<li><a href="reporte_editar_catalogojd.php">reporte Editar/Eliminar Carreras</a></li>
+					<li><a href="reporte_editar_relacionadojd.php">Reporte Editar/Eliminar Estudiantes</a></li>
+					<li><a href="alta_tabla1_jonathand.php">Agregar Carreras</a></li>
+					<li><a href="alta_tabla2_jonathand.php">Agregar Estudiantes</a></li>
+					<br><br>
+					<li><a href="../index_jesus.php">CERRAR SESION</a></li>
 
 
 				</ul>

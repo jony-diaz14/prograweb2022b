@@ -24,6 +24,6 @@ try {
 } 
 catch (PDOException $e) {
     // Imprimimos en pantalla en caso de que no se pueda conectar a la BD
-    echo "<div align = 'center'><h1>No me conecte, vuelve a intentar</h1></div>".$e->getMessage();
+    // echo "<div align = 'center'><h1>No me conecte, vuelve a intentar</h1></div>".$e->getMessage();
 }
 ?>

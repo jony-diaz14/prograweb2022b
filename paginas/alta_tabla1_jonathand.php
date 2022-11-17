@@ -1,3 +1,25 @@
+<?php
+//Inicializamos el uso de las sesiones 
+session_start();
+if ($_SESSION["validado"] != "true"){
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! LOGUEATE");
+        window.location.href="../index_jesus.php";
+        </script>';
+    // header("Location: ../index_jesus.php");
+    exit;
+}
+if ($_SESSION["tipo_usuario"] == 2) {
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! tipo de usuario no valido");
+        window.location.href="../index_jesus.php";
+        </script>';
+    //header("Location: ../index_jesus.php");
+    exit;
+}
+?>
 <!doctype html>
 <html>
 
@@ -112,7 +134,6 @@
 							<option value="CUCSH">CUCSH</option>
 							<option value="CUCEI">CUCEI</option>
 							<option value="CUCEA">CUCEA</option>
-
 							</select>
 							<br />
 							<br />

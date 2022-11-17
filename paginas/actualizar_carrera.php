@@ -1,4 +1,26 @@
 <?php
+//Inicializamos el uso de las sesiones 
+session_start();
+if ($_SESSION["validado"] != "true"){
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! LOGUEATE");
+        window.location.href="../index_jesus.php";
+        </script>';
+    // header("Location: ../index_jesus.php");
+    exit;
+}
+if ($_SESSION["tipo_usuario"] == 2) {
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! tipo de usuario no valido");
+        window.location.href="../index_jesus.php";
+        </script>';
+    //header("Location: ../index_jesus.php");
+    exit;
+}
+?>
+<?php
 // Insertamos el código PHP donde nos conectamos a la base de datos 
 require_once "conn_mysql_jonathan.php";
 // a
@@ -9,7 +31,7 @@ $idCarrera = $_POST["txtcodigo_oculto"];
 //Se convierte a MAYUSCULAS usando la función  strtoupper()
 $nombre = trim($_POST["txtnombre"]);
 $cordi = trim($_POST["txtcordi"]);
-$nomUni = strtoupper(trim($_POST["txtuni"]));
+$nomUni = ($_POST["combo_uni"]);
 
 // Escribimos la consulta para ACTUALIZAR LOS DATOS EN LA TABLA de Carreras (PDO)
 // Debido a que en esta tabla los 2 campos son de tipo STRING se encierran en '' las 2 variables de PHP
@@ -30,7 +52,7 @@ $mensaje = "CARRERA ACTUALIZADA SATISFACTORIAMENTE";
     <meta charset="utf-8">
     <title>Actualización de Carreras desde PHP hacia MySQL</title>
     <link href="../css/editarc3.css" rel="stylesheet" type="text/css" media="screen">
-	<link rel="icon" href="/imagenes/update.png" type="image/x-icon">
+    <link rel="icon" href="/imagenes/update.png" type="image/x-icon">
 
     <!-- <style type="text/css" media="screen">
     </style> -->

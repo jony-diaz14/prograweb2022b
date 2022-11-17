@@ -1,4 +1,26 @@
 <?php
+//Inicializamos el uso de las sesiones 
+session_start();
+if ($_SESSION["validado"] != "true"){
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! LOGUEATE");
+        window.location.href="../index_jesus.php";
+        </script>';
+    // header("Location: ../index_jesus.php");
+    exit;
+}
+if ($_SESSION["tipo_usuario"] == 2) {
+    //Redireccionamos a la página de firma de usuarios (LOGIN)
+	echo'<script type="text/javascript">
+        alert("ERROR!! tipo de usuario no valido");
+        window.location.href="../index_jesus.php";
+        </script>';
+    //header("Location: ../index_jesus.php");
+    exit;
+}
+?>
+<?php
 // Insertamos el código PHP donde nos conectamos a la base de datos 
 require_once "conn_mysql_jonathan.php";
 
@@ -42,8 +64,15 @@ if (empty($rows)) {
 			var codigo = document.getElementById("txtcodigo").value;
 			var nombre = document.getElementById("txtnombre").value;
 			var cordi = document.getElementById("txtcordi").value;
-			var nomUni = document.getElementById("txtuni").value;
-
+			//var nomUni = document.getElementById("txtuni").value;
+			var uni = document.getElementById("combo_uni").selectedIndex;
+// else if (nomUni == null || nomUni.length == 0 || /^\s+$/.test(nomUni)) {
+// 				alert("Escoge una Universidad");
+// 				document.getElementById("txtuni").value = "";
+// 				document.getElementById("txtuni").style.background = 'lightgreen';
+// 				document.getElementById("txtuni").focus();
+// 				return false;
+// 			}
 			if (codigo == null || codigo.length == 0 || /^\s+$/.test(codigo)) {
 				alert("Escribe un codigo con numero enteros");
 				document.getElementById("txtcodigo").value = "";
@@ -62,11 +91,10 @@ if (empty($rows)) {
 				document.getElementById("txtcordi").style.background = 'lightgreen';
 				document.getElementById("txtcordi").focus();
 				return false;
-			} else if (nomUni == null || nomUni.length == 0 || /^\s+$/.test(nomUni)) {
-				alert("Escoge una Universidad");
-				document.getElementById("txtuni").value = "";
-				document.getElementById("txtuni").style.background = 'lightgreen';
-				document.getElementById("txtuni").focus();
+			}else if (uni == null || uni == 0) {
+				alert("Escoge la universidad");
+				document.getElementById("combo_uni").focus();
+				document.getElementById("combo_uni").style.background = "#bd373790";
 				return false;
 			}
 			return true;
@@ -131,8 +159,29 @@ if (empty($rows)) {
 								<input type="text" name="txtcordi" id="txtcordi" size="40" maxlength="50" value="<?php echo $row['coordinador']; ?>" />
 								<br />
 								<br />
-								Nombre de la Univseridad:
-								<input type="text" name="txtuni" id="txtuni" size="40" maxlength="50" value="<?php echo $row['nom_uni']; ?>" />
+								<!-- Nombre de la Univseridad:
+								<input type="text" name="txtuni" id="txtuni" size="40" maxlength="50" value="<?php echo $row['nom_uni']; ?>" /> -->
+								<label for="carrera">Nombre de la Universidad:</label>
+								<select name="combo_uni" id="combo_uni">
+								<option value="0">-- Selecciona una Universidad --</option>
+								<option value="CUVALLES">CUVALLES</option>
+								<option value="CUCSUR">CUCSUR</option>
+								<option value="CUNORTE">CUNORTE</option>
+								<option value="CUCOSTA">CUCOSTA</option>
+								<option value="CUTONALA">CUTONALA</option>
+								<option value="CUALTOS">CUALTOS</option>
+								<option value="CUAAD">CUAAD</option>
+								<option value="UCBA">UCBA</option>
+								<option value="CUCS">CUCS</option>
+								<option value="CUCSH">CUCSH</option>
+								<option value="CUCEI">CUCEI</option>
+								<option value="CUCEA">CUCEA</option>
+
+
+								<option value="<?php echo $row['nom_uni']; ?>" selected>
+										<?php echo $row['nom_uni']; ?>
+									</option>
+								</select>
 								<br />
 								<br />
 								<input type="submit" name="AddUpdate" id="AddUpdate" value="  Actualizar esta Carrera " />
