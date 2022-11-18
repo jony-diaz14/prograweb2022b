@@ -108,7 +108,8 @@ $rows = $result->fetchAll();
 						<tr>
 							<td><a href="reporte_general_jonathand1.php">Reporte General Carreras</a></td>
 							<td><a href="alta_tabla1_jonathand.php">Agregar otra Carrera</a></td>
-							<td>&nbsp;</td>
+							<td>
+							<a href="menu_principal.php" >MENU PRINCIPAL</a></td>
 							<td colspan="4">&nbsp;</td>
 						</tr>
 					</tbody>

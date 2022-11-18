@@ -112,6 +112,8 @@ $rows = $result->fetchAll(); //
         <!-- <a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a> -->
         <a id="estudiante" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
         <a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
+        <br><br><br>
+		<a id="carrera" href="menu_principal.php" >MENU PRINCIPAL</a>
     </div>
 </body>
 

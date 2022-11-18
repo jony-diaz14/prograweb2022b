@@ -166,6 +166,8 @@ $rows = $result->fetchAll();
 							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
 							<br />
 							<a id="carrera" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
+							<br><br><br>
+							<a id="carrera" href="menu_principal.php" >MENU PRINCIPAL</a>
 		</div>
 			<div id="texto1"><br>
 				<fieldset style="width: 90%; font-weight: bold;">

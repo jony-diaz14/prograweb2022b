@@ -127,6 +127,8 @@ if (empty($rows)) {
 							<a id="estudiante" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a> -->
 							<br />
 							<a id="carrera" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
+							<br><br><br>
+							<a id="carrera" href="menu_principal.php" >MENU PRINCIPAL</a>
 
 		</div>
 			<div id="texto1"><br>
