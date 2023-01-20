@@ -71,7 +71,7 @@ if (empty($rows))
 
 } else {
 
-	// En caso de que si exista ya capturado ese empleado en la base de datos
+	// En caso de que si exista ya capturado ese estudiante en la base de datos
 	$mensaje = "Ese ID de empleado ya existe en la base de datos";
 	$nombre_carrera = "Ya esta";
 	$codigo = "El codigo ya esta registrado";

@@ -75,66 +75,66 @@ if (empty($rows))
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>Regitro de Carrera desde PHP hacia MySQL</title>
-	<link href="../css/alta_tablac.css" rel="stylesheet" type="text/css" media="screen">
-	<link rel="icon" href="/imagenes/registro1.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Regitro de Carrera desde PHP hacia MySQL</title>
+    <link href="../css/alta_tablac.css" rel="stylesheet" type="text/css" media="screen">
+    <link rel="icon" href="/imagenes/registro1.png" type="image/x-icon">
 
 </head>
 
 <body>
 
-	<div id="wrapper">
+    <div id="wrapper">
 
-		<div id="caja1">Licenciatura en Tecnologías de la Información</div>
-		<div id="caja2">Programación web</div>
-		<div id="caja3">Formulario para alta de carrera en la base de datos desde una página web</div>
+        <div id="caja1">Licenciatura en Tecnologías de la Información</div>
+        <div id="caja2">Programación web</div>
+        <div id="caja3">Formulario para alta de carrera en la base de datos desde una página web</div>
 
-		<div id="caja4">
-		<div id="texto2"> <br />
-							<a id="carrera" href="reporte_general_jonathand1.php" >REPORTE GENERAL DE CARRERAS</a>
-							<br />
-							<a id="estudiante" href="reporte_general_jonathand2.php" >REPORTE GENERAL ESTUDIANTES</a>
-							<br />
-							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
-							<br />
-							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
-							<br />
-							<a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
-							<!-- <br />
+        <div id="caja4">
+            <div id="texto2"> <br />
+                <a id="carrera" href="reporte_general_jonathand1.php">REPORTE GENERAL DE CARRERAS</a>
+                <br />
+                <a id="estudiante" href="reporte_general_jonathand2.php">REPORTE GENERAL ESTUDIANTES</a>
+                <br />
+                <a id="carrera" href="reporte_editar_catalogojd.php">REPORTE EDITAR/BORRAR CARRERAS</a>
+                <br />
+                <a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
+                <br />
+                <a id="carrera" href="alta_tabla2_jonathand.php">REGISTRAR CARRERA</a>
+                <!-- <br />
 							<a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a> -->
-							<br />
-							<a id="carrera" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
-							<br><br><br>
-							<a id="carrera" href="menu_principal.php" >MENU PRINCIPAL</a>
+                <br />
+                <a id="carrera" href="reporte_editar_relacionadojd.php">REPORTE EDITAR/BORRAR ESTUDIANTES</a>
+                <br><br><br>
+                <a id="carrera" href="menu_principal.php">MENU PRINCIPAL</a>
 
-		</div>
-			<div id="texto1"><br>
-				<p></p>
+            </div>
+            <div id="texto1"><br>
+                <p></p>
 
-				<fieldset style="width: 90%;">
-					<legend><?php echo $mensaje; ?></legend>
-					<div>
-						<br />
-						<b>Codigo de la Carrera:</b> <?php echo ($id); ?>
-						<br />
-						<br />
-						<b>Nombre de la carrera:</b> <?php echo ($nombre); ?>
-						<br />
-						<br />
-						<b>Nombre del coordinador:</b> <?php echo ($coordi); ?>
-						<br />
-						<br />
-						<b>Nombre de la universidad:</b> <?php echo ($uni); ?>
-						<br />
-						<br />
-						
-					</div>
-				</fieldset>
-			</div>
-		</div>
-	</div>
-	<?php
+                <fieldset style="width: 90%;">
+                    <legend><?php echo $mensaje; ?></legend>
+                    <div>
+                        <br />
+                        <b>Codigo de la Carrera:</b> <?php echo ($id); ?>
+                        <br />
+                        <br />
+                        <b>Nombre de la carrera:</b> <?php echo ($nombre); ?>
+                        <br />
+                        <br />
+                        <b>Nombre del coordinador:</b> <?php echo ($coordi); ?>
+                        <br />
+                        <br />
+                        <b>Nombre de la universidad:</b> <?php echo ($uni); ?>
+                        <br />
+                        <br />
+
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <?php
 	//Cerramos la conexion a la base de datos
 	$conn = null;
 	?>

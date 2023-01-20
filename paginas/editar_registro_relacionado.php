@@ -47,7 +47,6 @@ $result = $conn->query($sql3);
 // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
 $rows = $result->fetchAll();
 
-
 ?>
 <!doctype html>
 <html>

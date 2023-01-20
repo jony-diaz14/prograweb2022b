@@ -48,23 +48,23 @@ $rows = $result->fetchAll();
 </head>
 
 <body>
-<div>
+    <div>
 
-    <h2>Reporte de la tabla de MySQL en tabla de HTML</h2>
-    <div align="center">
-        <table border="1" width="90%">
-            <thead>
-                <tr>
-                    <!-- estos son los titulos de la primera fila de la tabla HTML -->
-                    <th>Codigo de la Carrera</th>
-                    <th>Nombre de la Carrera</th>
-                    <th>Nombre del Coordinador</th>
-                    <th>Nombre de la Universidad</th>
-                </tr>
-            </thead>
-            <tbody>
+        <h2>Reporte de la tabla de MySQL en tabla de HTML</h2>
+        <div align="center">
+            <table border="1" width="90%">
+                <thead>
+                    <tr>
+                        <!-- estos son los titulos de la primera fila de la tabla HTML -->
+                        <th>Codigo de la Carrera</th>
+                        <th>Nombre de la Carrera</th>
+                        <th>Nombre del Coordinador</th>
+                        <th>Nombre de la Universidad</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                <?php
+                    <?php
                 foreach ($rows as $row) {
                     //Imprimimos en la página un renglon de tabla HTML por cada registro de tabla de MySQL
                     //Tenemos que tener mucho cuidado de llamar las tablas con exactamente el mismo nombre de la Base de Datos
@@ -75,25 +75,25 @@ $rows = $result->fetchAll();
                         <td><?php echo $row['coordinador']; ?></td>
                         <td><?php echo $row['nom_uni']; ?></td>
                     </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-    </div>
-    <?php
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+        <?php
     //Cerramos la Coonexion a la base de datos, limpiamos memoria
     $conn = null;
     ?>
-    <br />
-							<a id="carrera" href="reporte_editar_catalogojd.php" >REPORTE EDITAR/BORRAR CARRERAS</a>
-							<a id="estudiante" href="reporte_general_jonathand2.php" >REPORTE GENERAL DE ESTUDIANTES</a>
-							<a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
-							<a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
-                            <a id="carrera" href="reporte_editar_relacionadojd.php" >REPORTE EDITAR/BORRAR ESTUDIANTES</a>
-                            <br><br><br>
-							<a id="carrera" href="menu_principal.php" >MENU PRINCIPAL</a>
-                            <!-- <a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a> -->
+        <br />
+        <a id="carrera" href="reporte_editar_catalogojd.php">REPORTE EDITAR/BORRAR CARRERAS</a>
+        <a id="estudiante" href="reporte_general_jonathand2.php">REPORTE GENERAL DE ESTUDIANTES</a>
+        <a id="estudiante" href="alta_tabla2_jonathand.php">REGISTRAR ESTUDIANTE</a>
+        <a id="carrera" href="alta_tabla1_jonathand.php">REGISTRAR CARRERA</a>
+        <a id="carrera" href="reporte_editar_relacionadojd.php">REPORTE EDITAR/BORRAR ESTUDIANTES</a>
+        <br><br><br>
+        <a id="carrera" href="menu_principal.php">MENU PRINCIPAL</a>
+        <!-- <a id="carrera" href="reporte_borrar_jonathand2.php">ELIMINAR ESTUDIANTE</a> -->
 
-</div>
+    </div>
 </body>
 
 </html>

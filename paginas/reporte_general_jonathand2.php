@@ -49,7 +49,6 @@ $rows = $result->fetchAll(); //
 
 <body>
     <div>
-
         <h2>Reporte de la tabla de MySQL en tabla de HTML</h2>
         <div align="center">
             <table border="1" width="90%">

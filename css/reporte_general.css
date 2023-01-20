@@ -4,10 +4,11 @@ body {
     background-color: #107a2975;
 }
 
-table{
+table {
     background-color: #f3f7f7d2;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -60,11 +61,12 @@ a{
     margin-top: 40px;
     background-color: #023f40;
     clear: both;
+    position: relative;
+
     /*
  position:absolute; 
  top:200px;
  */
-    position: relative;
     top: 10px;
 }
 
@@ -78,7 +80,7 @@ a{
     font-weight: bold;
     width: 500px;
     height: 290px;
-    margin-left: 5px;
+    margin-left: 150px;
     margin-right: 10px;
     margin-top: 10px;
     background-color: #008083;
@@ -96,7 +98,7 @@ a{
     background-color: #333;
     margin: 5px;
     float: right;
-} 
+}
 
 #estudiante {
     border-radius: 5px;
@@ -107,7 +109,8 @@ a{
     margin: 5px;
     float: right;
 }
-#estudiante:link{
+
+#estudiante:link {
     background-color: #333;
-    
+
 }
